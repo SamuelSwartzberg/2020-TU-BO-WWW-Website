@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  max-width: 1200px;
+}
+body > *{
+  width: 100%;
+}
+header{
+  display: flex;
+  flex-flow: row wrap;
+}
+header .image-container{
+  height: 100%;
+}
