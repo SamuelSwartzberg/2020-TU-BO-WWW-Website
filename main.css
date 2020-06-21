@@ -1,16 +1,92 @@
-body {
+/* CSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+
+button{ font: inherit; background-color: transparent; border: none;}
+a {color: inherit; text-decoration: none;}
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+select { -webkit-appearance: initial; text-rendering: auto; color: inherit; letter-spacing: normal; word-spacing: normal; text-transform: none; text-indent: unset; text-shadow: none; display: inline-block; text-align: unset; white-space: normal; background-color: transparent; cursor: default; margin: 0; font: inherit; border-radius: 0; border: none; font-size: inherit; }
+*:focus{	outline: none; border: none;}  button::-moz-focus-inner { border: 0; }
+input[type=text]{ border: none; font: inherit; color: inherit; resize: none; line-height: 1rem; }
+html{scroll-behavior: smooth;}
+*{box-sizing: border-box;}
+abbr{text-decoration: none;}
+body{
+  display: flex;
+  justify-content: center;
+  font-family: "Source Serif Pro";
+}
+.site-container {
+  height: 100%;
+  width: 95%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   max-width: 1200px;
 }
-body > *{
+.site-container > *{
   width: 100%;
 }
 header{
+  margin-top: 1.5em;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 header .image-container{
-  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+header .non-image-container{
+  flex: 1 1 auto;
+  width: 60%;
+  padding: 1em;
+}
+
+.image-container-inner{
+  clip-path: circle(50%);
+  background-color: black;
+}
+.profile-image{
+  clip-path: circle(49%);
+  height: 15em;
+}
+.name-container{
+  margin: 1em 0;
+}
+.name-header{
+  font-size: 3em;
+  font-family: "Libre Baskerville";
+}
+
+.first-name::after{
+  content: " ";
+}
+.contact-links-container{
+  margin-bottom: 1em;
+}
+li {
+  display: inline-block;
+}
+:link, :visited{
+  color: rgba(0,0,0,0.6);
+}
+li:not(:last-child)::after{
+  content: "•";
+  margin: 0 1ch;
+}
+.description-container{
+  line-height: 1.2;
 }
