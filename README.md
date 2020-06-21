@@ -19,6 +19,8 @@ Since this site runs completely client-side and can't rely on a server to do the
       markdown ${POSTS[i]} --flavor markdown --template markdown-template.html > "${POSTS[i]%.md}".html
     done
 
+For which you need to `npm install -g cwjohan/markdown-to-html`, for which you need to install `npm` if you haven't already.
+
 ## Use Case & Unique Features
 
 ### Ease of Writing
