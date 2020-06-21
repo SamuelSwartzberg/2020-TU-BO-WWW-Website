@@ -10,6 +10,15 @@ A self-hosted vanilla HTML/CSS/JS site that acts as a storage for all your acade
 
 Unpublished/Little-published academics who want to share their work, perhaps on a personal home page.
 
+## Making the site
+
+Since this site runs completely client-side and can't rely on a server to do the converting, whenever you change a markdown file, you must run the command-line tool markdown-to-html from the root folder of the website with the following command:
+
+    POSTS=(posts/*.md)
+    for (( i = 0; i < ${#POSTS[@]}; i++ )); do
+      markdown ${POSTS[i]} --flavor markdown --template markdown-template.html > "${POSTS[i]%.md}".html
+    done
+
 ## Use Case & Unique Features
 
 ### Ease of Writing

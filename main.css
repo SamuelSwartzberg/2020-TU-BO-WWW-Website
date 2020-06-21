@@ -35,13 +35,15 @@ body{
 }
 .site-container > *{
   width: 100%;
+	padding-bottom: 2em;
+	border-bottom: 0.1em solid rgba(0,0,0,0.4);
 }
-header{
+#site-header{
   margin-top: 1.5em;
   display: flex;
   flex-flow: row nowrap;
 }
-header .image-container{
+#site-header .image-container{
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
@@ -49,7 +51,7 @@ header .image-container{
   padding: 1em;
 }
 
-header .non-image-container{
+#site-header .non-image-container{
   flex: 1 1 auto;
   width: 60%;
   padding: 1em;
@@ -89,4 +91,19 @@ li:not(:last-child)::after{
 }
 .description-container{
   line-height: 1.2;
+}
+
+.post-item{
+	margin: 2em 1em;
+	line-height: 1.2;
+}
+h2{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.creation-date{
+	color: rgba(0,0,0,0.7);
+}
+.post-item > *{
+	margin-bottom: 1em;
 }
