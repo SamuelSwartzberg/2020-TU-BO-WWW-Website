@@ -50,6 +50,14 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
         ${urlString}
         <figcaption>${captionText}</figcaption>
       </figure>`
+      return figureText;
     }
   );
+});
+document.querySelectorAll('figure').forEach((item, i) => {
+  let newItem = item.cloneNode(true);
+  if(!item.parentNode.matches("#main-article")){
+    item.parentNode.before(newItem);
+    item.remove()};
+
 });
