@@ -48,6 +48,10 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
 
  Markup does not support footnotes out of the box. Specify them like so: `fn:{some footnote content}`.
 
+ ### Extension of Markup - Figures
+
+ Markup does not support figures out of the box. Specify them like so: `fig:{somecaption:someplace:somesize:someurl1(:optionally more urls)}`, where someplace is left|right|center and somesize is a value from 0 - 100 (percent).
+
  # Style Guide
 
  ## Colors
