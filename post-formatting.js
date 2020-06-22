@@ -32,7 +32,7 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
 
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   console.log(item);
-  let fileLocation = document.location.split('.html')[0];
+  let fileLocation = document.location.href.split('.html')[0];
   item.innerHTML = item.innerHTML.replace(/fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]+)\}/g, (match, $1) => {
     console.log(match);
     let captionText = $1;
