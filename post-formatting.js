@@ -19,7 +19,7 @@ function htmlToElement(html) {
 
 var footnoteCounter = 0;
 //Footnotes
-document.querySelectorAll('p').forEach((item, i) => {
+document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   console.log(item);
   item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, $1) => {
     console.log(match);
