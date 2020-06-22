@@ -24,6 +24,7 @@ let contactLinkList = document.querySelector(".contact-link-list");
 let personDescription = document.querySelector(".person-description");
 
 nameHeader.innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
+document.querySelector('title').innerHTML= `${firstName} ${lastName}'s Papers'`;
 let linkListInnerHTML = "";
 for (var [text, href] of links) {
   linkListInnerHTML += `<li><a href='${href}'>${text}</a></li>`

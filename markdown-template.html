@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" href="../main.css" charset="utf-8">
-  <link rel="stylesheet" href="../post.css" charset="utf-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-</head>
-<body>
-  <div class="site-container">
-    <header id="site-header">
-    </header>
-    <main>
-      <header>
-        <h2 class="title">{title}</h2>
-        <time class="creation-date">{date}</time>
+<html>
+  <head>
+    <link rel="stylesheet" href="../main.css" charset="utf-8">
+    <link rel="stylesheet" href="../post.css" charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div class="site-container">
+      <header id="site-header">
       </header>
-      <section class="abstract">
-        {abstract}
-      </section>
-      <section id="table-of-contents">
-      </section>
-      <article id="#main-article">{markdown}</article>
-      <footer id="footnote-container">
-        <ol>
+      <main>
+        <header>
+          <h2 class="title">{title}</h2>
+          <time class="creation-date">{date}</time>
+        </header>
+        <section class="abstract">
+          {abstract}
+        </section>
+        <section id="table-of-contents">
+        </section>
+        <article id="#main-article">{markdown}</article>
+        <footer id="footnote-container">
+          <ol>
 
-        </ol>
-      </footer>
-    </main>
-    <footer id="site-footer"></footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-  <script src="../post-formatting.js"></script>
-</body>
+          </ol>
+        </footer>
+      </main>
+      <footer id="site-footer"></footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script src="../post-formatting.js"></script>
+  </body>
+</html>
