@@ -46,7 +46,7 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
 
  ### Extension of Markup - Footnotes
 
- Markup does not support footnotes out of the box. Specify them like so: `fn:[some footnote content]`.
+ Markup does not support footnotes out of the box. Specify them like so: `fn:{some footnote content}`.
 
  # Style Guide
 
@@ -61,3 +61,7 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
  # Thanks
 
  This page uses [tocbot](https://tscanlin.github.io/tocbot/) to generate tables of contents.
+
+ # Other
+
+ Regex for replacing footnotes `\\\[(\d+)\\\]([^$]*?\n\1. +)(.*)`

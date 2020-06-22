@@ -20,7 +20,7 @@ function htmlToElement(html) {
 var footnoteCounter = 0;
 //Footnotes
 document.querySelectorAll('p').forEach((item, i) => {
-  const item.innerHTML = item.innerHTML.replace(/fn:\[([^\]]\])/g, (match, $1) => {
+  const item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]\})/g, (match, $1) => {
     footnoteCounter++;
     let bottomFootnote = htmlToElement(`<li><a class="footnote" id="fn-${footnoteCounter}-content" href="fn-${footnoteCounter}"><span>${$1}</span></li>`);
     document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
