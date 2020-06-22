@@ -1,4 +1,4 @@
-# Paperify.me
+# Paperify
 
 By Group \#2, sole member David Samuel (Sam) Swartzberg
 
@@ -9,6 +9,10 @@ A self-hosted vanilla HTML/CSS/JS site that acts as a storage for all your acade
 ## Target Audience
 
 Unpublished/Little-published academics who want to share their work, perhaps on a personal home page.
+
+## Content
+
+Term papers, essays, and any other academic or academia-adjacent writing.
 
 ## Making the site
 
@@ -26,11 +30,19 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
 
 ### Easy Printing
 
-### Eternal Archive
+Via CSS print styling, easy printing or export to .pdf.
 
-### Extensibility
+### Archival function
+
+Show off your past writing while making it incredibly easy to edit out small errors. Since the text is stored as markdown, don't be worried that the file format will ever become unsupported, or produce errors or weird formatting after a couple of years.
+
+### Unified style
+
+Since one CSS stylesheet is being applied across all posts, all your papers will have the same styling, without you even having to worry about it.
 
 ### Self-Hosting
+
+You control your instance of paperify, host it yourself, and can modify it as you see fit. No need to deal with researchgate or academia.edu and their incessant spam mail.
 
  ## Implementation of prior considerations from web research
 
@@ -38,9 +50,9 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
 
  ## Navigational Structure
 
- One index.html, which contains 0 - n cards that link to each article.
+ One index.html, which contains 0 - n post preview items that link to each article.
  The links and the articles are generated automatically from markdown files.
- Sub-pages for the legally required stuff.
+ Sub-pages for the legally required stuff in the footer.
 
  ## List of Functions
 
