@@ -9,17 +9,17 @@ Since Grice introduced the concept of implicature, its study has become an impor
 
 Sentences can say things. For our purposes, let us say they say *that*, i.e. they express a proposition (One could also say they perform the illocutionary act of saying that). fn:{Davis (1998) 5} Sentences can also imply things one has not, strictly speaking, said. One way a sentence can imply another is to entail it. Another way one can imply something is to *implicate* something. *Implicature* is a technical term introduced by Grice, and described by him so:
 
-> **Implicature (Grice):** “\[…\] whatever \[a person\] implied, suggested, meant \[…\], is distinct from what \[that person\] said \[…\] “fn:{Grice (1991) 24}
+> **Implicature (Grice):** \[…\] whatever \[a person\] implied, suggested, meant \[…\], is distinct from what \[that person\] said \[…\] fn:{Grice (1991) 24}
 
 Saying here is meant as saying *that*, as defined above. Davis reads Grice’s definition as follows:
 
-**Implicature (Davis):** “the act of meaning or implying something by saying something else.”fn:{Davis (1998) 5}
+> **Implicature (Davis):** the act of meaning or implying something by saying something else. fn:{Davis (1998) 5}
 
 For example, if I say ‘There’s the door’, but I mean ‘Leave now.’, I haven’t *said* that you have to leave. But I have certainly meant it, and said it by saying ‘There’s the door’. Therefore, I have implicated it.fn:{Cf. Lycan (2000) 157}
 
 Grice distinguishes two types of implicature: conventional, which follows from the conventional meaning of words. The conventional meaning of a sentence is what a sentence would mean, assuming basic things, like the speaker speaking a standard version of English. (e.g. The conventional meaning of ‘The die is green and heavy.’ is that the die is both green and heavy, a conventional implicature that the die is green.) fn:{Cf. Davis (1998) 4}
 
-The counterpart to conventional implicature is nonconventional implicature, which doesn’t arise simply from the conventional meanings of words. How, then, do they arise? Grice’s theory of conversational implicature attempts to explain this phenomenon for one type of nonconventional implicature: conversational implicature, which is what we will limit our exploration to. fn:{Cf. Grice (1991) 25f.} Grice does not define conversational implicature, but simply says it is “essentially connected with certain general features of discourse.”fn:{Ibid. 26.} Let us then examine what these features are, and how these features give rise to implicature.
+The counterpart to conventional implicature is nonconventional implicature, which doesn’t arise simply from the conventional meanings of words. How, then, do they arise? Grice’s theory of conversational implicature attempts to explain this phenomenon for one type of nonconventional implicature: conversational implicature, which is what we will limit our exploration to. fn:{Cf. Grice (1991) 25f.} Grice does not define conversational implicature, but simply says it is <q>essentially connected with certain general features of discourse.</q>fn:{Ibid. 26.} Let us then examine what these features are, and how these features give rise to implicature.
 
 ## Grice’s theory of conversational implicature, according to Grice
 
@@ -27,7 +27,7 @@ The counterpart to conventional implicature is nonconventional implicature, whic
 
 Grice starts with the assumption that our conversations are cooperative efforts. Based on this, he sketches a rule which participants in a conversation would, since they are cooperative efforts, be expected to follow:fn:{Cf. ibid.}
 
-> **Cooperative Principle** (henceforth CP): “Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose or direction of the talk exchange in which you are engaged.”fn:{Ibid.}
+> **Cooperative Principle** (henceforth CP): Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose or direction of the talk exchange in which you are engaged. fn:{Ibid.}
 
 How does one ‘make one’s conversational contribution such as is required’? How does one say something cooperative? For this, Grice proposes that there are certain maxims that, if followed, will (in general) result in cooperation with the CP. Put another way, these are rules that, taken together, will result in a conversational contribution that is cooperative. Grice divides these into four categories with certain supermaxims and submaxims:fn:{Cf. ibid.}
 
@@ -37,7 +37,7 @@ How does one ‘make one’s conversational contribution such as is required’?
     current purpose of the exchange)
 
   - Do not make your contribution more informative than is required.
-    fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated “’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995).” I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
+    fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated <q>’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995).</q> I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
 
 - **Quality**: Try to make your contribution one that is true.
 
@@ -63,15 +63,15 @@ Grice admits there might be other maxims that are at work in talk exchanges, but
 
 Our starting question was: ‘How do we say one thing, and mean another?’ We now know the rules of cooperatively contributing to a conversation. How are these connected? To answer that; to connect the CP and its maxims with conversational implicature, Grice offers the following definition:
 
-**Grice’s definition of conversational implicature (d1):** “A man \[…\] may be said to have conversationally implicated that q, provided that \[Or: A person has conversationally implicated q iff\]
+> **Grice’s definition of conversational implicature (d1):**  A man \[…\] may be said to have conversationally implicated that q, provided that \[Or: A person has conversationally implicated q iff\]
 
-0. \[he said p, and by saying (or making as if to say) that p he has implicated that q;\]
+> 0. \[he said p, and by saying (or making as if to say) that p he has implicated that q;\]
 
-1. he is to be presumed to be observing the conversational maxims, or at least the Cooperative Principle;
+> 1. he is to be presumed to be observing the conversational maxims, or at least the Cooperative Principle;
 
-2. the supposition that he is aware that, or thinks that, q is required to make his saying or making as if to say p \[…\] consistent with this presumption;
+> 2. the supposition that he is aware that, or thinks that, q is required to make his saying or making as if to say p \[…\] consistent with this presumption;
 
-3. and the speaker thinks (and would expect the hearer to think that the speaker thinks) that it is within the competences of the hearer to work out, or grasp intuitively, that the supposition mentioned in (2) is required.”fn:{Ibid. 30f.}
+> 3. and the speaker thinks (and would expect the hearer to think that the speaker thinks) that it is within the competences of the hearer to work out, or grasp intuitively, that the supposition mentioned in (2) is required.fn:{Ibid. 30f.}
 
 So, the fact that the speaker is presumed to be observing the Cooperative Principle, and the fact that the speaker thinks that the only way to observe the Cooperative Principle while saying what theyfn:{I use the singular they as a gender-neutral pronoun whenever possible, i.e. whenever I am not quoting or directly referring to a formulation of an author who used ‘he’ as a generic pronoun.} have said is to implicate q, is what connects the CP and implicature. (To be precise, it only connects presumption of the observance of the CP with conversational implicature while presuming that there is an implicature.fn:{This explanation also leaves out (3), the mutual knowledge clause. We will work with Davis’ definition, though, so nothing is lost by simplifying for explanatory purposes for now.})
 
@@ -89,7 +89,7 @@ Grice additionally believed that, for something to count as a conversational imp
 
 5. he has done nothing to stop me thinking that q; he intends me to think, or is at least willing to allow me to think, that q; and so he has implicated that q.”fn:{Ibid. 31}
 
-While using this schema, the hearer will rely on different kinds of data: “(1) the conventional meaning of the words used, together with the identity of any references that may be involved; (2) the Cooperative Principle and its maxims; (3) the context, linguistic or otherwise, of the utterance; (4) other items of background knowledge; and (5) the fact (or supposed fact) that all relevant items falling under the previous headings are available to both participants and both participants know or assume this to be the case.”fn:{Ibid.}
+While using this schema, the hearer will rely on different kinds of data: <q>(1) the conventional meaning of the words used, together with the identity of any references that may be involved; (2) the Cooperative Principle and its maxims; (3) the context, linguistic or otherwise, of the utterance; (4) other items of background knowledge; and (5) the fact (or supposed fact) that all relevant items falling under the previous headings are available to both participants and both participants know or assume this to be the case.</q>fn:{Ibid.}
 
 ### Generating implicatures through the Cooperative Principle and its maxims
 
@@ -133,23 +133,23 @@ Davis covers much of the same groundwork as Grice, although he does slightly alt
 
 ### The theoretical backbone
 
-The **theoretical definition:** “S conversationally implicates p iff
+> The **theoretical definition:** S conversationally implicates p iff
 
-1)  S implicates p;
+> 1)  S implicates p;
 
-2)  S is presumed to be observing the Cooperative Principle. (*cooperative presumption*);
+> 2)  S is presumed to be observing the Cooperative Principle. (*cooperative presumption*);
 
-3)  The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle (*determinacy*); and
+> 3)  The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle (*determinacy*); and
 
-4)  S believes (or knows), and expects H to believe that S believes, that H is able to determine that (iii) is true (*mutual knowledge*).”fn:{Ibid. 13}
+> 4)  S believes (or knows), and expects H to believe that S believes, that H is able to determine that (iii) is true (*mutual knowledge*).fn:{Ibid. 13}
 
-**Calculability Assumption**: “Conversational implicatures must be capable of being worked out.”fn:{Ibid. 14}
+> **Calculability Assumption**:Conversational implicatures must be capable of being worked out. fn:{Ibid. 14}
 
 ### The Generative Assumption
 
 In the theoretical definition, the fact that ‘s implicates p’ is a premise to get to the conclusion that ‘s conversationally implicates p’. Davis argues that this isn’t actually the view Grice holds. Looking at the working-out schema from above, it is clear that Grice thinks that (ii) – (iv) actually generate the implicatures. Not just the conversationality, but the *existence of the implicature itself* depends on (ii) – (iv).fn:{Cf. ibid. 16} Therefore, he holds the view that:
 
-**“Generative Assumption**: Conversational implicatures exist because of the fact that the cooperative presumption, determinacy, and mutual knowledge conditions \[(ii)- (iv)\] hold.”fn:{Ibid. 17}
+> **Generative Assumption**: Conversational implicatures exist because of the fact that the cooperative presumption, determinacy, and mutual knowledge conditions \[(ii)- (iv)\] hold. fn:{Ibid. 17}
 
 Therefore, one can simplify the definition above by removing (i) from the premises.fn:{Cf. ibid. 17f. This is also how Saul (2001) 631 reads it.}
 
@@ -157,7 +157,7 @@ Therefore, one can simplify the definition above by removing (i) from the premis
 
 Why do we need all this complex theory, though? Take the sentence from the beginning: ‘There’s the door.’ Why don’t we just simply say: ‘Well, there’s one sense in which the sentence means that the door is there, and another in which it means ›leave now.‹ It just has two senses, and that’s that.’ Well, this is where Grice’s Razor comes into play:
 
-> **Grice’s Razor:** “Other things equal, it is preferable to postulate conversational implicatures rather than senses, conventional implicatures, or semantic presuppositions because conversational implicatures can be derived from independently motivated psychosocial principles.”fn:{Ibid. 19}
+> **Grice’s Razor:** Other things equal, it is preferable to postulate conversational implicatures rather than senses, conventional implicatures, or semantic presuppositions because conversational implicatures can be derived from independently motivated psychosocial principles.fn:{Ibid. 19}
 
 That is, if we postulate two senses, then we need conventions for every word and every sentence, too many to ever write down. But with Gricean theory, we can just derive the implicatures from a short list of principles and some definitions\! fn:{Cf. ibid.}
 
@@ -201,7 +201,7 @@ Let us now begin examining the criticisms of Gricean theory. Davis offers a whol
 
 ### Gricean implicatures conflicts with the theory’s premises – failures of determinacy
 
-One important part of Gricean theory is determinacy: “The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle.” That is, there cannot be a competing supposition - that S believes q - that would make the utterance consistent with the CP. Relying on determinacy is the Calculability Assumption: Conversational implicatures must be capable of being worked out. Since we cannot work out an implicature if there are multiple possible implicata, if determinacy fails, so does the Calculability Assumption. fn:{Cf. ibid. 62}
+One important part of Gricean theory is determinacy: <q>The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle.</q> That is, there cannot be a competing supposition - that S believes q - that would make the utterance consistent with the CP. Relying on determinacy is the Calculability Assumption: Conversational implicatures must be capable of being worked out. Since we cannot work out an implicature if there are multiple possible implicata, if determinacy fails, so does the Calculability Assumption. fn:{Cf. ibid. 62}
 
 How does determinacy then fail?
 
@@ -229,7 +229,7 @@ There exist many ways in which the implicatures generated by Gricean theory do n
 
 1.  **Disjunctions are predicted to be implicated, but not always actually implicated**
 
-Returning to disjunctions: Consider the following example: One writes a letter of recommendation for Claudette, writing ‘I cannot recommend Claudette highly enough.’ This sentence is violating the Maxim of Quantity, but there are two ways to make this sentence cooperative: Either I can say no more because I can’t find adequate words of praise or because she is so lacking I can’t give a sufficiently positive recommendation for the job. fn:{Cf. Saul (2001) 634 f.} If we don’t want determinacy to fail, I must mean the disjunction “either Claudette is so wonderful that I cannot find adequate words of praise, or she is so lacking that I don’t feel I can give a sufficiently positive recommendation for the job.”fn:{Ibid. 635} Clearly, this isn’t what I mean, a completely false implicature is generated.fn:{Cf. ibid.} Therefore, positing disjunctions does not save determinacy in all cases, and the problem of 6.1 persists.
+Returning to disjunctions: Consider the following example: One writes a letter of recommendation for Claudette, writing ‘I cannot recommend Claudette highly enough.’ This sentence is violating the Maxim of Quantity, but there are two ways to make this sentence cooperative: Either I can say no more because I can’t find adequate words of praise or because she is so lacking I can’t give a sufficiently positive recommendation for the job. fn:{Cf. Saul (2001) 634 f.} If we don’t want determinacy to fail, I must mean the disjunction <q>either Claudette is so wonderful that I cannot find adequate words of praise, or she is so lacking that I don’t feel I can give a sufficiently positive recommendation for the job.</q>fn:{Ibid. 635} Clearly, this isn’t what I mean, a completely false implicature is generated.fn:{Cf. ibid.} Therefore, positing disjunctions does not save determinacy in all cases, and the problem of 6.1 persists.
 
 2.  **Many of the maxims fail when applied to other languages**
 
@@ -279,7 +279,7 @@ And suppose S answers it with ‘Yes.’ ‘Yes’ is a fully cooperative answer
 
 Suppose one were to, as a rejoinder, reword the Maxim of Quantity as follows: ‘Be as informative as possible.’ Then imagine S is asked ‘Who won the game?’, and S answers truthfully ‘Real Madrid.’. From this, one could implicate that S does not know the final score, or even in which league Real Madrid plays in, or that Madrid is in Spain etc., because if they did, to comply with the reworded Maxim of Quantity, they would have said it.fn:{Cf. ibid. 82}
 
-Observe that we claimed when examining failures of determinacy that “Therefore, making a less informative statement implicates that one is not able to make a more informative statement.”fn:{See p. 12} This is a statement only derivable from the reworded Maxim of Quantity, and yet, it is necessary to derive the implicature of ‘Some S are P.’ For the only way for ‘Some S are P.’ to always implicate ¬’All S are P.’ is to either assert the obviously false stronger Maxim of Quantity, or for it to be always true (true in every context) that implicating ¬’All S are P’ is required for the talk exchange. There exist many contexts where this isn’t true, for example, if one wants to establish the truth of a proposition z, and one has established that ‘If some S are P, then Q.’fn:{Cf. Davis (1998) 85. A longer list of contexts can be found ibid.} Lacking context, the Maxim of Quantity cannot generate any implicatures.
+Observe that we claimed when examining failures of determinacy that <q>Therefore, making a less informative statement implicates that one is not able to make a more informative statement.</q>fn:{See p. 12} This is a statement only derivable from the reworded Maxim of Quantity, and yet, it is necessary to derive the implicature of ‘Some S are P.’ For the only way for ‘Some S are P.’ to always implicate ¬’All S are P.’ is to either assert the obviously false stronger Maxim of Quantity, or for it to be always true (true in every context) that implicating ¬’All S are P’ is required for the talk exchange. There exist many contexts where this isn’t true, for example, if one wants to establish the truth of a proposition z, and one has established that ‘If some S are P, then Q.’fn:{Cf. Davis (1998) 85. A longer list of contexts can be found ibid.} Lacking context, the Maxim of Quantity cannot generate any implicatures.
 
 #### Every statement could be flouting
 
