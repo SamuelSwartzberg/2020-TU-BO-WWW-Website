@@ -12,13 +12,7 @@ Unpublished/Little-published academics who want to share their work, perhaps on 
 
 ## Making the site
 
-Since this site runs completely client-side and can't rely on a server to do the converting, whenever you change a markdown file, you must run the command-line tool markdown-to-html from the root folder of the website with the following command:
-
-    POSTS=(posts/*.md)
-    for (( i = 0; i < ${#POSTS[@]}; i++ )); do
-      markdown ${POSTS[i]} --flavor markdown --template markdown-template.html > "${POSTS[i]%.md}".html
-    done
-
+Since this site runs completely client-side and can't rely on a server to do the converting, whenever you change a markdown file, you must run the init.sh script.
 For which you need to `npm install -g cwjohan/markdown-to-html`, for which you need to install `npm` if you haven't already.
 
 ## Use Case & Unique Features

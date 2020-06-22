@@ -73,3 +73,7 @@ h2{
 .post-item > *{
 	margin-bottom: 1em;
 }
+.site-content-inner{
+  display: flex;
+  flex-flow: column-reverse;
+}

@@ -6,7 +6,16 @@
   <div class="site-container">
     <header id="site-header">
     </header>
-    {markdown}
+    <main>
+      <header>
+        <h2 class="title">{title}</h2>
+        <time class="creation-date">{date}</time>
+      </header>
+      <section class="abstract">
+        {abstract}
+      </section>
+      <article>{markdown}</article>
+    </main>
     <footer id="site-footer"></footer>
   </div>
 </body>
