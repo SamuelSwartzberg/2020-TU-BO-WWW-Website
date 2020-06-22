@@ -20,10 +20,12 @@ function htmlToElement(html) {
 var footnoteCounter = 0;
 //Footnotes
 document.querySelectorAll('p').forEach((item, i) => {
-  const item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]\})/g, (match, $1) => {
+  console.log(item);
+  item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, $1) => {
+    console.log(match);
     footnoteCounter++;
-    let bottomFootnote = htmlToElement(`<li><a class="footnote" id="fn-${footnoteCounter}-content" href="fn-${footnoteCounter}"><span>${$1}</span></li>`);
+    let bottomFootnote = htmlToElement(`<li><a class="footnote" id="fn-${footnoteCounter}-content" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${$1}</span></li>`);
     document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
-    return `<a class="footnote" id="fn-${footnoteCounter}" href="fn-${footnoteCounter}-content">${footnoteCounter}</a>`
+    return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
     });
 });

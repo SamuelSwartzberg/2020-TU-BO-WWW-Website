@@ -12,23 +12,23 @@ When talking about the standardization of German, what are we even talking about
 
 1)  Melchior Lotther, Wittenberg, 1522:
 
-> “Vnd es war ynn yhrer schulen eyn mensch besessen mit eynem vnsaubern geyst/ der schrey vnd sprach/ Hallt/ was haben wyr mit dyr zu schaffen/ Jhesu von Nazareth? Du bist komen vns zu verderben/ ich weys \[...\] Jhesus bedrawete yhn \[...\] vnd fur aus von yhm \[...\] was ist das fur ein newe lere \[...\]“
+> Vnd es war ynn yhrer schulen eyn mensch besessen mit eynem vnsaubern geyst/ der schrey vnd sprach/ Hallt/ was haben wyr mit dyr zu schaffen/ Jhesu von Nazareth? Du bist komen vns zu verderben/ ich weys \[...\] Jhesus bedrawete yhn \[...\] vnd fur aus von yhm \[...\] was ist das fur ein newe lere \[...\]
 
 2)  Adam Petri, Basel, 1522:
 
-> Vnd es war in iren schuͦlen ein mensch besessen mit einem vnsauberen geyst/ der schrey vnd sprach/ Halt/ was haben wir mit dir zuͦ schaffen/ Jesu von Nazareth? du bist komen vns zuͦ verderben/ ich weysz \[...\] Jesus betrauwete \[...\] vnd fuͦr ausz von im \[...\] was ist das für ein neuwe lere \[...\]“
+> Vnd es war in iren schuͦlen ein mensch besessen mit einem vnsauberen geyst/ der schrey vnd sprach/ Halt/ was haben wir mit dir zuͦ schaffen/ Jesu von Nazareth? du bist komen vns zuͦ verderben/ ich weysz \[...\] Jesus betrauwete \[...\] vnd fuͦr ausz von im \[...\] was ist das für ein neuwe lere \[...\]
 
 3)  Hanns Schönsperger, Augsburg, 1523:
 
-> Vnd es war in*n* jrer schuͦlen ein mensch besessen mit einem vnsaubern geyst/ der schrey vn*d* sprach/ Hallt/ was haben wir mit dir zuͦschaffen/ Jesu von Nazareth? du bist komen vns zuͦuerderben/ ich weisz \[...\] nd Jhesus bedrawete jn \[...\] vnd fuͦr ausz von jm \[...\] was ist das für ein newe lere? \[...\]“
+> Vnd es war in*n* jrer schuͦlen ein mensch besessen mit einem vnsaubern geyst/ der schrey vn*d* sprach/ Hallt/ was haben wir mit dir zuͦschaffen/ Jesu von Nazareth? du bist komen vns zuͦuerderben/ ich weisz \[...\] nd Jhesus bedrawete jn \[...\] vnd fuͦr ausz von jm \[...\] was ist das für ein newe lere? \[...\]
 
 4)  Silvan Otmar, Augsburg, 1524:
 
-> Vnd es was in irer schuͦlen ain mensch besessen mit ainem vnsauberen gaist/ der schry vnd sprach/ Halt/ was haben wir mit dir zuͦschaffen Jesu von Nazareth? du bist kōmen vns zuͦ verderben/ ich waisz \[...\] vnd Jesus bedroͤwet jn \[...\] vnd fuͦr ausz von jm \[...\] was ist das für ain new̌e leer? \[...\]“
+> Vnd es was in irer schuͦlen ain mensch besessen mit ainem vnsauberen gaist/ der schry vnd sprach/ Halt/ was haben wir mit dir zuͦschaffen Jesu von Nazareth? du bist kōmen vns zuͦ verderben/ ich waisz \[...\] vnd Jesus bedroͤwet jn \[...\] vnd fuͦr ausz von jm \[...\] was ist das für ain new̌e leer? \[...\]
 
 5)  Melchior Ramminger, Augsburg, 1526:
 
-> Und es was in iren schuͦlen ain mensch besessenn mitt ainem vnsauberen gaist/ der schray und sprach: Halt/ wz haben wir mit dir zeschaffen Jesu vonn Nazareth? du bist komēn vns zuͦ verderben: ich waisz \[...\] Und Jesus beschalckt jn mit trōwen \[...\] vnd fuͦr ausz von jm. \[...\] Was ist das für ain neuwe leer \[...\]“ fn:{Ibid. p. 207f.}
+> Und es was in iren schuͦlen ain mensch besessenn mitt ainem vnsauberen gaist/ der schray und sprach: Halt/ wz haben wir mit dir zeschaffen Jesu vonn Nazareth? du bist komēn vns zuͦ verderben: ich waisz \[...\] Und Jesus beschalckt jn mit trōwen \[...\] vnd fuͦr ausz von jm. \[...\] Was ist das für ain neuwe leer \[...\] fn:{Ibid. p. 207f.}
 
 6)  Modern Standard German spelling:
 
