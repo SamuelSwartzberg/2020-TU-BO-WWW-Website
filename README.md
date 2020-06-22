@@ -44,6 +44,10 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
 
  ## List of Functions
 
+ ### Extension of Markup - Footnotes
+
+ Markup does not support footnotes out of the box. Specify them like so: `fn:[some footnote content]`.
+
  # Style Guide
 
  ## Colors
@@ -53,3 +57,7 @@ See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
  ## Inspiration
 
  https://www.gwern.net/
+
+ # Thanks
+
+ This page uses [tocbot](https://tscanlin.github.io/tocbot/) to generate tables of contents.

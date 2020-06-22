@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="main.css" charset="utf-8">
   <link rel="stylesheet" href="post.css" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 </head>
 <body>
   <div class="site-container">
@@ -14,8 +15,17 @@
       <section class="abstract">
         {abstract}
       </section>
-      <article>{markdown}</article>
+      <section id="table-of-contents">
+      </section>
+      <article id="#main-article">{markdown}</article>
+      <footer id="footnote-container">
+        <ol>
+          
+        </ol>
+      </footer>
     </main>
     <footer id="site-footer"></footer>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  <script src="post-formatting.js"></script>
 </body>
