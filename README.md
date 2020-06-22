@@ -46,6 +46,26 @@ You control your instance of paperify, host it yourself, and can modify it as yo
 
  ## Implementation of prior considerations from web research
 
+ ### Links
+
+ Possible appearance of deeplinks: Links below header, as sources in papers.
+
+ ### Images
+
+ ??
+
+ ### Impressum
+
+ Link im Footer.
+
+ ### DATENSCHUTZERKLÄRUNG
+
+ Ggf. für Server-Logfiles.
+
+ ### Cookies
+
+Von haus aus keine - allerdings könnte je nach webserver der welche setzen.
+
  ## Mockups
 
  ## Navigational Structure

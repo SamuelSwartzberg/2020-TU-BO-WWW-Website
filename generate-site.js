@@ -12,7 +12,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 let links = /* [text, href] */[
   ["Home page", "samswartzberg.com"],
-  ["Lorem ipsum", "https://www.rickrolled.com/"]]
+  ["me@samswartzberg.com", "mailto:samswartzberg.com"]]
 
 /*
 END
@@ -25,6 +25,7 @@ let personDescription = document.querySelector(".person-description");
 
 nameHeader.innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
 document.querySelector('title').innerHTML= `${firstName} ${lastName}'s Papers'`;
+document.querySelector('.profile-image').alt= `A picture of ${firstName} ${lastName}.`;
 let linkListInnerHTML = "";
 for (var [text, href] of links) {
   linkListInnerHTML += `<li><a href='${href}'>${text}</a></li>`
