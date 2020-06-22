@@ -33,24 +33,23 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   console.log(item);
   let fileLocation = document.location.href.split('.html')[0];
-  item.innerHTML = item.innerHTML.replace(/fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]+)\}/g, (match, $1) => {
-    console.log(match);
-    let captionText = $1;
-    let side = $2;
-    let size = $3;
-    let url = $4;
-    if($5){
-      let urlArray = $5.split(":");
-      var urlString = "";
-      for (let urlElement of urlArray) {
-        urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`
+  item.innerHTML = item.innerHTML.replace(
+    /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]+)\}/g,
+    (match, captionText, side, size, url, moreUrls) => {
+      console.log(match);
+      if(moreUrls){
+        let urlArray = moreUrls.split(":");
+        var urlString = "";
+        for (let urlElement of urlArray) {
+          urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`
+        }
       }
+      let figureText =
+      `<figure class="${side}" style="--size: ${size}%">
+        <img src="${fileLocation}/${url}" alt="${captionText}">
+        ${urlString}
+        <figcaption>${captionText}</figcaption>
+      </figure>`
     }
-    let figureText =
-    `<figure class="${side}" style="--size: ${size}%">
-      <img src="${fileLocation}/${url}" alt="${captionText}">
-      ${urlString}
-      <figcaption>${captionText}</figcaption>
-    </figure>`
-    });
+  );
 });
