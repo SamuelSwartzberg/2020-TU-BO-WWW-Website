@@ -35,10 +35,11 @@ body{
   display: flex;
   justify-content: center;
   font-family: "Source Serif Pro";
+	width: 100%;
 }
 .site-container {
   height: 100%;
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
