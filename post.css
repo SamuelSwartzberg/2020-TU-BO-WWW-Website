@@ -53,6 +53,7 @@
   list-style-type: none;
   line-height: 1;
   counter-reset: section-counter 0;
+    margin-left: 2em;
 }
 #table-of-contents li{
   counter-increment: section-counter;
@@ -67,4 +68,16 @@
 #bibliography~ol{
   list-style-type: none;
   margin-left: 0
+}
+
+@media print {
+  #site-footer, #site-header{
+    display: none;
+  }
+}
+@page{
+  margin: 2cm;
+}
+@page:first{
+  margin: 2.5cm;
 }

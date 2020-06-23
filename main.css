@@ -89,7 +89,7 @@ p{
 	line-height: 1.5;
 }
 ul{
-	list-style: inside;
+	list-style-type: disc;
 }
 ol{
 	list-style: decimal;
@@ -97,6 +97,7 @@ ol{
 ul, ol{
 	line-height: 1.5;
 	margin: 1em 0 1em 2em;
+	list-style-position: outside;
 }
 li{
 	margin-bottom: .5em;
