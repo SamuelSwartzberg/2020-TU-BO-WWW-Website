@@ -34,14 +34,17 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   console.log(item);
   let fileLocation = document.location.href.split('.html')[0];
   item.innerHTML = item.innerHTML.replace(
-    /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]+)\}/g,
+    /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]*)\}/g,
     (match, captionText, side, size, url, moreUrls) => {
-      console.log(match);
+      var urlString = "";
       if(moreUrls){
         let urlArray = moreUrls.split(":");
-        var urlString = "";
         for (let urlElement of urlArray) {
-          urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`
+          if(urlElement){
+            console.log(urlElement);
+            urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`;
+          }
+
         }
       }
       let figureText =

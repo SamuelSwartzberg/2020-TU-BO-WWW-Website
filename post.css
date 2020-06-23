@@ -1,3 +1,6 @@
 #footnote-container{
+  margin-top: 3em;
+  border-top: 0.1em solid black;
+  padding-top: 1em;
   line-height: 1.5;
 }
