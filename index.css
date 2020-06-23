@@ -4,7 +4,6 @@
 	margin-bottom: 4em;
 }
 #site-header{
-  margin-top: 1.5em;
   display: grid;
   grid-template-areas:
       "image title"
@@ -39,6 +38,8 @@
 .name-header{
   font-size: 3em;
   font-family: "Libre Baskerville";
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .first-name::after{
@@ -48,8 +49,13 @@
   margin-bottom: 1em;
   grid-area: links;
 }
+.contact-link-list{
+  list-style: none;
+  margin: 0;
+}
 .contact-link-list li {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 
@@ -67,6 +73,7 @@
 	line-height: 1.2;
 }
 .post-item h2{
+  margin-top: 0;
 	font-size: 1.5em;
 	font-weight: bold;
   margin-bottom: 0.25em;
