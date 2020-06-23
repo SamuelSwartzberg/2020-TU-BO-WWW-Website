@@ -58,13 +58,25 @@ li{
 li > ul{
 	margin: 0.5em 0 0.5em 2em;
 }
+figure{
+	width: var(--size);
+}
+figure img{
+	width: 100%;
+}
 .footnote{
 	vertical-align: super;
   font-size: 0.7em;
 	line-height: 0;
+
 }
-.footnote:target{
-	color: red;
+li:target .footnote{
+	padding-left: 3.5ch;
+}
+li:target:before{
+	margin-left: -3.5ch;
+	color: rgba(0,0,0,0.6);
+	content: ">";
 }
 .footnote::after{
 	content:" ";

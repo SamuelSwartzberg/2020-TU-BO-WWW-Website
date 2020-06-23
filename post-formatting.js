@@ -46,8 +46,10 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
       }
       let figureText =
       `<figure class="${side}" style="--size: ${size}%">
-        <img src="${fileLocation}/${url}" alt="${captionText}">
-        ${urlString}
+        <div class="image-container">
+          <img src="${fileLocation}/${url}" alt="${captionText}">
+          ${urlString}
+        </div>
         <figcaption>${captionText}</figcaption>
       </figure>`
       return figureText;
