@@ -16,7 +16,10 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   done
   postTemplate=${postTemplate/"{url}"/"${POSTS[i]%.md}.html"} # Replace the {key} instances in postTemplate by their values, filling the template
   tail -n +4 "${POSTS[i]}" > tempMDpost.md
-  markdown tempMDpost.md --template "${POSTS[i]%.md}temp.html" | recode html..ascii > "${POSTS[i]%.md}.html"#create the article html files
+  markdown tempMDpost.md --template "${POSTS[i]%.md}temp.html" > "${POSTS[i]%.md}.html" #create the article html files
+  # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
+  perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
+  # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
   echo $postTemplate > tempPostItem.html # create a temporary post item
   sed -i'.original' '/INSERT HERE-->/r tempPostItem.html' index.html # add the contents of the post item to the generated index.html
 done

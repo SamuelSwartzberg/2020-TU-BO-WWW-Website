@@ -1,5 +1,5 @@
 title|There’s the door: The paradigm of the Gricean theory of implicature and its criticisms
-date|06.10.18
+date|06.10.2018
 abstract|Grice's theory of implicature has, since he introduced the concept, remained the most popular theory of implicature. Reviewing criticisms by Davis, I conclude that Gricean theory, while undeniably clever in its basic ideas, is flawed beyond saving once analyzed critically. Future research in this field should focus on different approaches for generating accounts of implicature.
 ## Introduction
 
@@ -19,7 +19,7 @@ For example, if I say ‘There’s the door’, but I mean ‘Leave now.’, I h
 
 Grice distinguishes two types of implicature: conventional, which follows from the conventional meaning of words. The conventional meaning of a sentence is what a sentence would mean, assuming basic things, like the speaker speaking a standard version of English. (e.g. The conventional meaning of ‘The die is green and heavy.’ is that the die is both green and heavy, a conventional implicature that the die is green.) fn:{Cf. Davis (1998) 4}
 
-The counterpart to conventional implicature is nonconventional implicature, which doesn’t arise simply from the conventional meanings of words. How, then, do they arise? Grice’s theory of conversational implicature attempts to explain this phenomenon for one type of nonconventional implicature: conversational implicature, which is what we will limit our exploration to. fn:{Cf. Grice (1991) 25f.} Grice does not define conversational implicature, but simply says it is <q>essentially connected with certain general features of discourse.</q>fn:{Ibid. 26.} Let us then examine what these features are, and how these features give rise to implicature.
+The counterpart to conventional implicature is nonconventional implicature, which doesn’t arise simply from the conventional meanings of words. How, then, do they arise? Grice’s theory of conversational implicature attempts to explain this phenomenon for one type of nonconventional implicature: conversational implicature, which is what we will limit our exploration to. fn:{Cf. Grice (1991) 25f.} Grice does not define conversational implicature, but simply says it is  <q> essentially connected with certain general features of discourse. </q> fn:{Ibid. 26.} Let us then examine what these features are, and how these features give rise to implicature.
 
 ## Grice’s theory of conversational implicature, according to Grice
 
@@ -37,7 +37,7 @@ How does one ‘make one’s conversational contribution such as is required’?
     current purpose of the exchange)
 
   - Do not make your contribution more informative than is required.
-    fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated <q>’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995).</q> I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
+    fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated  <q> ’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995). </q>  I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
 
 - **Quality**: Try to make your contribution one that is true.
 
@@ -89,7 +89,7 @@ Grice additionally believed that, for something to count as a conversational imp
 
 5. he has done nothing to stop me thinking that q; he intends me to think, or is at least willing to allow me to think, that q; and so he has implicated that q.”fn:{Ibid. 31}
 
-While using this schema, the hearer will rely on different kinds of data: <q>(1) the conventional meaning of the words used, together with the identity of any references that may be involved; (2) the Cooperative Principle and its maxims; (3) the context, linguistic or otherwise, of the utterance; (4) other items of background knowledge; and (5) the fact (or supposed fact) that all relevant items falling under the previous headings are available to both participants and both participants know or assume this to be the case.</q>fn:{Ibid.}
+While using this schema, the hearer will rely on different kinds of data:  <q> (1) the conventional meaning of the words used, together with the identity of any references that may be involved; (2) the Cooperative Principle and its maxims; (3) the context, linguistic or otherwise, of the utterance; (4) other items of background knowledge; and (5) the fact (or supposed fact) that all relevant items falling under the previous headings are available to both participants and both participants know or assume this to be the case. </q> fn:{Ibid.}
 
 ### Generating implicatures through the Cooperative Principle and its maxims
 
@@ -201,7 +201,7 @@ Let us now begin examining the criticisms of Gricean theory. Davis offers a whol
 
 ### Gricean implicatures conflicts with the theory’s premises – failures of determinacy
 
-One important part of Gricean theory is determinacy: <q>The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle.</q> That is, there cannot be a competing supposition - that S believes q - that would make the utterance consistent with the CP. Relying on determinacy is the Calculability Assumption: Conversational implicatures must be capable of being worked out. Since we cannot work out an implicature if there are multiple possible implicata, if determinacy fails, so does the Calculability Assumption. fn:{Cf. ibid. 62}
+One important part of Gricean theory is determinacy:  <q> The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle. </q>  That is, there cannot be a competing supposition - that S believes q - that would make the utterance consistent with the CP. Relying on determinacy is the Calculability Assumption: Conversational implicatures must be capable of being worked out. Since we cannot work out an implicature if there are multiple possible implicata, if determinacy fails, so does the Calculability Assumption. fn:{Cf. ibid. 62}
 
 How does determinacy then fail?
 
@@ -229,7 +229,7 @@ There exist many ways in which the implicatures generated by Gricean theory do n
 
 1.  **Disjunctions are predicted to be implicated, but not always actually implicated**
 
-Returning to disjunctions: Consider the following example: One writes a letter of recommendation for Claudette, writing ‘I cannot recommend Claudette highly enough.’ This sentence is violating the Maxim of Quantity, but there are two ways to make this sentence cooperative: Either I can say no more because I can’t find adequate words of praise or because she is so lacking I can’t give a sufficiently positive recommendation for the job. fn:{Cf. Saul (2001) 634 f.} If we don’t want determinacy to fail, I must mean the disjunction <q>either Claudette is so wonderful that I cannot find adequate words of praise, or she is so lacking that I don’t feel I can give a sufficiently positive recommendation for the job.</q>fn:{Ibid. 635} Clearly, this isn’t what I mean, a completely false implicature is generated.fn:{Cf. ibid.} Therefore, positing disjunctions does not save determinacy in all cases, and the problem of 6.1 persists.
+Returning to disjunctions: Consider the following example: One writes a letter of recommendation for Claudette, writing ‘I cannot recommend Claudette highly enough.’ This sentence is violating the Maxim of Quantity, but there are two ways to make this sentence cooperative: Either I can say no more because I can’t find adequate words of praise or because she is so lacking I can’t give a sufficiently positive recommendation for the job. fn:{Cf. Saul (2001) 634 f.} If we don’t want determinacy to fail, I must mean the disjunction  <q> either Claudette is so wonderful that I cannot find adequate words of praise, or she is so lacking that I don’t feel I can give a sufficiently positive recommendation for the job. </q> fn:{Ibid. 635} Clearly, this isn’t what I mean, a completely false implicature is generated.fn:{Cf. ibid.} Therefore, positing disjunctions does not save determinacy in all cases, and the problem of 6.1 persists.
 
 2.  **Many of the maxims fail when applied to other languages**
 
@@ -279,7 +279,7 @@ And suppose S answers it with ‘Yes.’ ‘Yes’ is a fully cooperative answer
 
 Suppose one were to, as a rejoinder, reword the Maxim of Quantity as follows: ‘Be as informative as possible.’ Then imagine S is asked ‘Who won the game?’, and S answers truthfully ‘Real Madrid.’. From this, one could implicate that S does not know the final score, or even in which league Real Madrid plays in, or that Madrid is in Spain etc., because if they did, to comply with the reworded Maxim of Quantity, they would have said it.fn:{Cf. ibid. 82}
 
-Observe that we claimed when examining failures of determinacy that <q>Therefore, making a less informative statement implicates that one is not able to make a more informative statement.</q>fn:{See p. 12} This is a statement only derivable from the reworded Maxim of Quantity, and yet, it is necessary to derive the implicature of ‘Some S are P.’ For the only way for ‘Some S are P.’ to always implicate ¬’All S are P.’ is to either assert the obviously false stronger Maxim of Quantity, or for it to be always true (true in every context) that implicating ¬’All S are P’ is required for the talk exchange. There exist many contexts where this isn’t true, for example, if one wants to establish the truth of a proposition z, and one has established that ‘If some S are P, then Q.’fn:{Cf. Davis (1998) 85. A longer list of contexts can be found ibid.} Lacking context, the Maxim of Quantity cannot generate any implicatures.
+Observe that we claimed when examining failures of determinacy that  <q> Therefore, making a less informative statement implicates that one is not able to make a more informative statement. </q> fn:{See p. 12} This is a statement only derivable from the reworded Maxim of Quantity, and yet, it is necessary to derive the implicature of ‘Some S are P.’ For the only way for ‘Some S are P.’ to always implicate ¬’All S are P.’ is to either assert the obviously false stronger Maxim of Quantity, or for it to be always true (true in every context) that implicating ¬’All S are P’ is required for the talk exchange. There exist many contexts where this isn’t true, for example, if one wants to establish the truth of a proposition z, and one has established that ‘If some S are P, then Q.’fn:{Cf. Davis (1998) 85. A longer list of contexts can be found ibid.} Lacking context, the Maxim of Quantity cannot generate any implicatures.
 
 #### Every statement could be flouting
 
