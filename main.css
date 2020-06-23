@@ -24,6 +24,7 @@ blockquote:before, q:before{ content: open-quote;}
 q:after, blockquote:after{ content: close-quote;}
 :link, :visited{
   color: rgba(0,0,0,0.6);
+	text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6{
 	color: black;
@@ -36,11 +37,17 @@ h1{
 h2{
 	font-size: 1.5em;
 }
-h2,h3{
+h2,h3{	font-weight: bold;}
+h2,h3,h4{
 	margin-top: 2em;
 	margin-bottom: 1em;
-
-	font-weight: bold;
+}
+h4,h5{
+	font-style: italic;
+}
+h5{
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
 
 p{
@@ -49,6 +56,8 @@ p{
 }
 ul{
 	list-style: inside;
+}
+ul, ol{
 	margin: 1em 0 1em 2em;
 }
 li{
@@ -83,6 +92,7 @@ figure.center{
 	vertical-align: super;
   font-size: 0.7em;
 	line-height: 0;
+	text-decoration: none;
 
 }
 li:target .footnote{

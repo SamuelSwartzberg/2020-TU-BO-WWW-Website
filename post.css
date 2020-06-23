@@ -4,3 +4,27 @@
   padding-top: 1em;
   line-height: 1.5;
 }
+#post-header .abstract{
+  line-height: 1.5;
+  font-style: italic;
+  color: rgba(0,0,0,0.6);
+}
+#post-header h1{
+  margin-bottom: 0.5em;
+}
+.creation-date{
+  color: black;
+  font-style: normal;}
+.creation-date::before{
+  content: "•";
+  margin: 0 1ch;
+  color: rgba(0,0,0,0.6);
+}
+#table-of-contents{
+  padding: 1em;
+  border: 0.05em solid rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.02);
+}
+#table-of-contents a{
+  text-decoration: none;
+}
