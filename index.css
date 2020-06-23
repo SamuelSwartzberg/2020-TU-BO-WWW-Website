@@ -71,6 +71,10 @@
 .post-item{
 	margin-bottom: 2em;
 	line-height: 1.2;
+
+}
+.post-item * {
+  text-decoration: none;
 }
 .post-item h2{
   margin-top: 0;
@@ -87,7 +91,7 @@
 
 .site-content-inner{
   display: flex;
-  flex-flow: column-reverse;
+  flex-flow: column;
 }
 
 @media (max-width: 700px) {
