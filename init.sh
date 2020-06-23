@@ -22,6 +22,9 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
   # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
   echo $postTemplate > tempPostItem.html # create a temporary post item
+  if [[ ${POSTS[i]} == *nopreview* ]]; then
+    continue
+  fi
   sed -i'.original' '/INSERT HERE-->/r tempPostItem.html' index.html # add the contents of the post item to the generated index.html
 done
 rm *.original

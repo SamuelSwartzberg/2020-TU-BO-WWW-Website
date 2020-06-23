@@ -1,26 +1,28 @@
-## Paper
+title|Paperify
+date|24.06.2020
+abstract|Generate a personal website of papers, nicely and academically formatted, from Markdown files. This text is also available in <a href="2020-06-24-documentation-de-nopreview"> German</a>.
+By Group \##2, sole member David Samuel (Sam) Swartzberg
 
-Gruppe \##2, David Samuel (Sam) Swartzberg
+## Concept
 
-## Konzept
+A self-hosted vanilla HTML/CSS/JS site that acts as a storage for all your academic work, published or not, generated from Markdown files. Can also act as an easy way to write papers for people who don't know or don't want to deal with Latex, and then to print them.
 
-Eine vanilla HTML/CSS/JS Website ohne Ansprüche ans Backend, die als Showcase für akademische oder ähnliche Werke des Autors fungiert, unabhängig davon, ob diese publiziert wurden. Wird aus Markdown-dateien (.md) generiert. Kann auch dafür genutzt werden, Paper, Essays und ähnliches ohne Stylingschwierigkeiten und unnötiges Markup zu schreiben.
+### Target Audience
 
-### Zielgruppe
+Unpublished/Little-published academics who want to share their work, perhaps on a personal home page.
 
-Studenten und ehemalige Studenten, Professoren und Lehrangestellte sowie andere Leute, die Papers, Essays, Artikel oder ähnliches teilen wollen. Kann auch als persönliche Homepage oder Blog fungieren.
+### Content
 
-### Inhalte
-
-S.o.
+Term papers, essays, and any other academic or academia-adjacent writing.
 
 ### Making the site
 
-Da wir keinen Server haben, müssen wir vor deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks machen. Dafür muss das script init.sh aus einer shell aufrufen `./init.sh`. Init.sh verlangt als dependency `markdown-to-html`, was man so erhalten kann: `npm install -g cwjohan/markdown-to-html`. Ggf. muss man davor noch `npm` installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!
+Since this site runs completely client-side and can't rely on a server to do the converting, whenever you change a markdown file, you must run the init.sh script.
+For which you need to `npm install -g cwjohan/markdown-to-html`, for which you need to install `npm` if you haven't already.
 
-### Use Case & Features
+### Use Case & Unique Features
 
-#### Einfacher Schreibprozess
+#### Ease of Writing
 
 Markdown allows for incredibly rapid writing without worrying about formatting, and is sublimely readable even when not rendered, given you are using a reasonable text editor (For example Atom, although many work).
 Compared to the two main alternatives, Word and Latex:

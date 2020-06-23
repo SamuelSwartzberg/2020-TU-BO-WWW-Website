@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../main.css" charset="utf-8">
+    <link rel="stylesheet" href="../post.css" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <script src="../config.js" charset="utf-8"></script>
+    <div class="site-container">
+      <header id="site-header">
+        <a href="../" class="site-name">Home</a>
+      </header>
+      <main>
+        <header id="post-header">
+          <h1 class="title">Paperify</h1>
+          <section class="abstract">
+            Generate a personal website of papers, nicely and academically formatted, from Markdown files. This text is also available in <a href="2020-06-24-documentation-de-nopreview"> German</a>.<time class="creation-date">24.06.2020</time>
+          </section>
+        </header>
+        <section id="table-of-contents">
+        </section>
+        <article id="main-article"><p>By Group ##2, sole member David Samuel (Sam) Swartzberg</p>
+<h2 id="concept">Concept</h2>
+<p>A self-hosted vanilla HTML/CSS/JS site that acts as a storage for all your academic work, published or not, generated from Markdown files. Can also act as an easy way to write papers for people who don&#39;t know or don&#39;t want to deal with Latex, and then to print them.</p>
+<h3 id="target-audience">Target Audience</h3>
+<p>Unpublished/Little-published academics who want to share their work, perhaps on a personal home page.</p>
+<h3 id="content">Content</h3>
+<p>Term papers, essays, and any other academic or academia-adjacent writing.</p>
+<h3 id="making-the-site">Making the site</h3>
+<p>Since this site runs completely client-side and can&#39;t rely on a server to do the converting, whenever you change a markdown file, you must run the init.sh script.<br>For which you need to <code>npm install -g cwjohan/markdown-to-html</code>, for which you need to install <code>npm</code> if you haven&#39;t already.</p>
+<h3 id="use-case-unique-features">Use Case &amp; Unique Features</h3>
+<h4 id="ease-of-writing">Ease of Writing</h4>
+<p>Markdown allows for incredibly rapid writing without worrying about formatting, and is sublimely readable even when not rendered, given you are using a reasonable text editor (For example Atom, although many work).<br>Compared to the two main alternatives, Word and Latex:<br>Markdown obstructs the writing process less than Word, with endlessly-breaking formatting, or Latex, which is too verbose in its syntax, should you not be writing in the natural sciences.<br>See further: <a href="https://blog.kdheepak.com/writing-papers-with-markdown.html">https://blog.kdheepak.com/writing-papers-with-markdown.html</a></p>
+<h4 id="easy-printing">Easy Printing</h4>
+<p>Via CSS print styling, easy printing or export to .pdf.</p>
+<h4 id="archival-function">Archival function</h4>
+<p>Show off your past writing while making it incredibly easy to edit out small errors. Since the text is stored as markdown, don&#39;t be worried that the file format will ever become unsupported, or produce errors or weird formatting after a couple of years.</p>
+<h4 id="unified-style">Unified style</h4>
+<p>Since one CSS stylesheet is being applied across all posts, all your papers will have the same styling, without you even having to worry about it.</p>
+<h4 id="self-hosting">Self-Hosting</h4>
+<p>You control your instance of paperify, host it yourself, and can modify it as you see fit. No need to deal with researchgate or academia.edu and their incessant spam mail.</p>
+<h3 id="implementation-of-prior-considerations-from-web-research">Implementation of prior considerations from web research</h3>
+<h4 id="links">Links</h4>
+<p> Possible appearance of deeplinks: Links below header, as sources in papers. Wegen Problematizität des Contents einzeln überprüfen.</p>
+<h4 id="impressum">Impressum</h4>
+<p> Link im Footer.</p>
+<h4 id="datenschutzerkl-rung">Datenschutzerklärung</h4>
+<p>Link im Footer.</p>
+<h4 id="frames-hotlinking">Frames / Hotlinking</h4>
+<p> Keine.</p>
+<h4 id="cookies">Cookies</h4>
+<p>Von haus aus keine - allerdings könnte je nach webserver der welche setzen.</p>
+<h4 id="urheberrecht">Urheberrecht</h4>
+<h5 id="texte">Texte</h5>
+<p>Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.</p>
+<h5 id="zitate">Zitate</h5>
+<p>Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.</p>
+<h5 id="bilder">Bilder</h5>
+<p>Können ggf. in artikeln vorkommen. Wenn, dann ist urheberrecht individuell zu klären. Die Bilder, die in time-of-eve.md zu sehen sind, sind screenshots von einer Serie, ich dürfte sie daher nicht verwenden, sobald ich die</p>
+<h4 id="barrierefreiheit">Barrierefreiheit</h4>
+<ul>
+<li>Nutzung von semantischen HTML elementen wie <code>&lt;q&gt;</code>, <code>&lt;article&gt;</code> etc. wo immer möglich.</li>
+<li>Alt-text für Bilder.</li>
+<li>Browser-eigene cmd/ctrl + / - funktion für zoom.</li>
+<li><p>Sprachliches Niveau der Texte nicht Barrierefrei! (inhärent in den texten)</p>
+<h3 id="mockups">Mockups</h3>
+<p>Simple Header - Body - Footer design.<br>$INSERT SCREENSHOTS</p>
+<h3 id="navigational-structure">Navigational Structure</h3>
+<p>One index.html, which contains 0 - n post preview items that link to each article.<br>The links and the articles are generated automatically from markdown files.<br>Sub-pages for the legally required stuff in the footer.</p>
+<h3 id="list-of-functions">List of Functions</h3>
+<h4 id="extension-of-markup-footnotes">Extension of Markup - Footnotes</h4>
+<p>Markup does not support footnotes out of the box. Specify them like so: <code>fn:{some footnote content}</code>.</p>
+<h4 id="extension-of-markup-figures">Extension of Markup - Figures</h4>
+<p>Markup does not support figures out of the box. Specify them like so: <code>fig:{somecaption:someplace:somesize:someurl1(:optionally more urls)}</code>, where someplace is left|right|center and somesize is a value from 0 - 100 (percent).</p>
+<h2 id="style-guide">Style Guide</h2>
+<h3 id="colors">Colors</h3>
+<h3 id="typography">Typography</h3>
+<h3 id="inspiration">Inspiration</h3>
+<p><a href="https://www.gwern.net/">https://www.gwern.net/</a></p>
+<h2 id="thanks">Thanks</h2>
+<p>This page uses <a href="https://tscanlin.github.io/tocbot/">tocbot</a> to generate tables of contents.</p>
+<h2 id="other">Other</h2>
+<p>Regex for replacing footnotes <code>\\\[(\d+)\\\]([^$]*?\n\1. +)(.*)</code></p>
+</li>
+</ul>
+</article>
+        <footer id="footnote-container">
+          <ol>
+
+          </ol>
+        </footer>
+      </main>
+      <footer id="site-footer"><a href="../impressum.html">Impressum / Datenschutzerklärung</a><span>Made with &lt;3 by <a href="https://samswartzberg.com">Sam Swartzberg</a></span></footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script src="../post-formatting.js"></script>
+  </body>
+</html>
