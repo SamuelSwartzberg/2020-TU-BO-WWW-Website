@@ -26,3 +26,12 @@ let logfileStorageDurationDays = 7;
 /*
 END
 */
+
+/* Global Helpers /*/
+
+function massReplaceInnerHTMLWithArgument(...args) {
+  // requires arguments [selector, replacement]
+  for (let [selector, replacement] of ...args) {
+    document.querySelector(selector).innerHTML = replacement;
+  }
+}
