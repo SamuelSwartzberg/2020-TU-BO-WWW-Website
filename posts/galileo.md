@@ -1,6 +1,6 @@
-title:Who framed Galileo Galilei? The institutional reasons for Galileo’s conviction
-date:22.06.2020
-abstract:In defending himself from criticisms on his scientific works, Galileo arrogated epistemological privileges from the Church, which the Church was obliged to defend.
+title::Who framed Galileo Galilei? The institutional reasons for Galileo’s conviction
+date::22.06.2020
+abstract::In defending himself from criticisms on his scientific works, Galileo arrogated epistemological privileges from the Church, which the Church was obliged to defend.
 ## The Background: Those Pesky Bible-Interpreting Protestants
 
 The background against which 'the Galileo affair' must be viewed, is, of course, the Reformation and the Catholic Counter-Reformation. Since Martin Luther, Calvin and others had started the trend of interpreting the Bible by themselves, the Catholic side generally was opposed to such personal interpretation. Seeing the many, many varieties and denominations of Protestantism that had formed and would form, it is not hard to see why the Catholic Church would want to clamp down on these views: It would be hard to achieve doctrinal unity with such ideas floating around. However, while this is important background information, the prerogative Galileo infringed upon was not only important because of the Reformation, but was important to the vitality and the very existence of the Church, as I hope to demonstrate.

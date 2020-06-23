@@ -1,6 +1,6 @@
-title:Printing ‘German’? The Printing Press and the Standardization of Early New High German
-date:01.10.2019
-abstract:How did the printing press impact the standardization of German=
+title::Printing ‘German’? The Printing Press and the Standardization of Early New High German
+date::01.10.2019
+abstract::How did the printing press impact the standardization of German=
 
 # Early New High German and the idea of Standard German
 
