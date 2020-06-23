@@ -20,8 +20,15 @@ html{scroll-behavior: smooth;}
 abbr{text-decoration: none;}
 
 blockquote, q { quotes: '"' '"' "'" "'"; }
-blockquote:before, q:before{ content: open-quote;}
-q:after, blockquote:after{ content: close-quote;}
+blockquote p:before, q:before{ content: open-quote;}
+q:after, blockquote p:after{ content: close-quote;}
+blockquote{
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+blockquote p{
+	display: inline;
+}
 :link, :visited{
   color: rgba(0,0,0,0.6);
 	text-decoration: underline;
@@ -62,7 +69,11 @@ p{
 ul{
 	list-style: inside;
 }
+ol{
+	list-style: decimal;
+}
 ul, ol{
+	line-height: 1.5;
 	margin: 1em 0 1em 2em;
 }
 li{
@@ -133,4 +144,21 @@ body{
 	padding: 2em 0;
 	display: flex;
 	justify-content: space-between;
+}
+table{
+		margin: 1.5em auto;
+		border: 0.05em solid rgba(0,0,0,0.3);
+		padding: 1em;
+		background-color: rgba(0,0,0,0.02);
+}
+
+td,th{padding: 0.5em;}
+th{
+	padding-top: 1em;
+}
+td:first-child, th:first-child{padding-left: 1em;}
+td:last-child, th:last-child{padding-right: 1em;}
+tr:last-child td{padding-bottom: 1em;}
+td:first-of-type, thead{
+	font-weight: bold;
 }

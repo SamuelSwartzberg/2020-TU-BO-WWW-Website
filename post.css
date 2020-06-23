@@ -2,10 +2,10 @@
   margin-top: 3em;
   border-top: 0.05em solid rgba(0,0,0,0.6);
   padding-top: 1em;
-  line-height: 1.5;
 }
 #footnote-container ol{
   margin-left: 0;
+  list-style-type: none;
 }
 #post-header .abstract{
   line-height: 1.5;
@@ -42,6 +42,8 @@
   text-decoration: none;
 }
 #table-of-contents ol{
+  list-style-type: none;
+  line-height: 1;
   counter-reset: section-counter 0;
 }
 #table-of-contents li{
@@ -53,4 +55,8 @@
 }
 #main-article p{
   margin-bottom: 1em;
+}
+#bibliography~ol{
+  list-style-type: none;
+  margin-left: 0
 }

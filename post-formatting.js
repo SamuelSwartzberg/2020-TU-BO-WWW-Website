@@ -34,6 +34,16 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
     document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
     return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
     });
+  document.querySelectorAll('blockquote p a.footnote').forEach((footnote, i) => {
+    let parent = footnote.parentNode;
+    while (parent.nodeName !== "BLOCKQUOTE"){
+      parent = parent.parentNode;
+    }
+    let newFootnote = footnote.cloneNode(true);
+    parent.appendChild(newFootnote);
+    footnote.remove();
+  });
+
 });
 
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {

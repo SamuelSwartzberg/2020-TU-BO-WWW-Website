@@ -1,6 +1,6 @@
 title|Printing ‘German’? The Printing Press and the Standardization of Early New High German
 date|01.10.2019
-abstract|How did the printing press impact the standardization of German=
+abstract|How did the printing press impact the standardization of German?
 
 ## Early New High German and the idea of Standard German
 
@@ -28,7 +28,7 @@ When talking about the standardization of German, what are we even talking about
 
 5)  Melchior Ramminger, Augsburg, 1526:
 
-> Und es was in iren schuͦlen ain mensch besessenn mitt ainem vnsauberen gaist/ der schray und sprach: Halt/ wz haben wir mit dir zeschaffen Jesu vonn Nazareth? du bist komēn vns zuͦ verderben: ich waisz \[...\] Und Jesus beschalckt jn mit trōwen \[...\] vnd fuͦr ausz von jm. \[...\] Was ist das für ain neuwe leer \[...\] fn:{Ibid. p. 207f.}
+> Und es was in iren schuͦlen ain mensch besessenn mitt ainem vnsauberen gaist/ der schray und sprach: Halt/ wz haben wir mit dir zeschaffen Jesu vonn Nazareth? du bist komēn vns zuͦ verderben: ich waisz \[...\] Und Jesus beschalckt jn mit trōwen \[...\] vnd fuͦr ausz von jm. \[...\] Was ist das für ain neuwe leer \[...\]fn:{Ibid. p. 207f.}
 
 6)  Modern Standard German spelling:
 
@@ -48,10 +48,9 @@ So a norm for Standard German does seem to have begun evolving – but in how fa
 
 To determine whether printing was influential in the standardization of German, we first need to examine what was being printed, where it was being printed, and how much of it. After Gutenberg establishes his movable type press, the technology starts spreading all over Germany.fn:{Hartweg (2005), p.99, Abb. 22} Importantly, most books being printed at this time were still being printed in Latin. For the end of the fifteenth century, Schirokauer (1951) notes the ratios of 27 : 2, 9 : 2, 3 : 1 of books printed in Latin to those printed in German.fn:{To be specific, this refers to three different print shops: Zainer, Hohenwang, and Reger. See Schirokauer (1951) for more examples.} The numbers remain similar for the begin of the sixteenth century, and by 1570, 70% of prints are still in Latin.fn:{Schirokauer (1951), p. 327} It will take until 1681 for German-language prints to overtake Latin ones. As for the amount, for the early phases of printing (though it is not specified when exactly that is) Schirokauer quotes an estimate of 200 copies per print runfn:{Schirokauer (1951), p. 328}, though this likely varies a lot, especially later in our time period – with the number of works printed varying as well. These are the amount of German-language prints during the begin and heyday of the reformation:
 
-| Year          | 1518 | 1519 | 1520 | 1521 | 1522 | 1523 | 1524        |
+| Year          | 1518 | 1519 | 1520 | 1521 | 1522 | 1523 | 1524 fn:{Hartweg (2005), p. 80}|
 | ------------- | ---- | ---- | ---- | ---- | ---- | ---- | ----------- |
 | German prints | 150  | 260  | 570  | 620  | 680  | 935  | 990         |
-fn:{Hartweg (2005), p. 80}
 
 ## Printing as a factor in standardization – potential factors
 
@@ -97,10 +96,12 @@ To conclude: In how far did printing contribute to the formation of Standard Ger
 
 There is a way, though, in which this analysis cannot reveal the true impact of the printing press, in which it misses the point entirely. Most of the linguistic standardization and reform occurred later, from 1650 onward via the establishment of a German state, universal schooling system and near-universal literacy. All these phenomena are bound up in a world in which the printing press is inextricably enmeshed. The world of the eighteenth and nineteenth century, of imperial Germany is unimaginable without newspapers, a complex bureaucratic and legal system reliant on print, and teachers and schoolmasters teaching rules from compact grammars of the German language. Similarly, 17th- and 18th-century German intellectuals might have debated the corruption or enrichment of the German language via loanwordsfn:{Hartweg (2005), p. 108ff.}, but these would have never had the cultural cachet or the exposure to influence the German language if they hadn't been featured in widely-printed foreign-language military manuals or scientific treatises. The world of the early modern period and beyond itself, the world that produced the very standardized German language used today, is - inevitably or contingently - in part a product of the printing press.
 
-Hartweg, F. (2005). *Frühneuhochdeutsch: eine Einführung in die deutsche Sprache des Spätmittelalters und der frühen Neuzeit* (2., neu bearb. Aufl.). Tübingen: Niemeyer.
-Huffines, M. L. (1974). Sixteenth-Century Printers and Standardization of New High German. *The Journal of English and Germanic Philology*, *73*(1), 60–72.
-Polenz, P. von, & Sperber, H. (1978). *Geschichte der deutschen Sprache: erweiterte Neubearbeitung der früheren Darstellung von Hans Sperber* (9., überarb. Aufl., \[Nachdr.\]). Berlin: de Gruyter.
-Salmons, J. (2012). *A history of German: what the past reveals about today’s language* (1st ed). Oxford, U.K: Oxford University Press.
-Schirokauer, A. (1951). Der Anteil des Buchdrucks an der Bildung des Gemeindeutschen. *Deutsche Vierteljahrsschrift für Literaturwissenschaft und Geistesgeschichte*, *25*(3), 317–350. https://doi.org/10.1007/BF03376092
-Schulz, M. (2014). Deutsch in Handschrift und gedrucktem Buch im 15. und 16. Jahrhundert. *Aus Buchwerkstatt und Bibliothek / hrsg. von Lorenz Korn, Birgitt Hoffmann und Stefanie Stricker.*
+## Bibliography
+
+1. Hartweg, F. (2005). *Frühneuhochdeutsch: eine Einführung in die deutsche Sprache des Spätmittelalters und der frühen Neuzeit* (2., neu bearb. Aufl.). Tübingen: Niemeyer.
+2. Huffines, M. L. (1974). Sixteenth-Century Printers and Standardization of New High German. *The Journal of English and Germanic Philology*, *73*(1), 60–72.
+3. Polenz, P. von, & Sperber, H. (1978). *Geschichte der deutschen Sprache: erweiterte Neubearbeitung der früheren Darstellung von Hans Sperber* (9., überarb. Aufl., \[Nachdr.\]). Berlin: de Gruyter.
+4. Salmons, J. (2012). *A history of German: what the past reveals about today’s language* (1st ed). Oxford, U.K: Oxford University Press.
+5. Schirokauer, A. (1951). Der Anteil des Buchdrucks an der Bildung des Gemeindeutschen. *Deutsche Vierteljahrsschrift für Literaturwissenschaft und Geistesgeschichte*, *25*(3), 317–350. https://doi.org/10.1007/BF03376092
+6. Schulz, M. (2014). Deutsch in Handschrift und gedrucktem Buch im 15. und 16. Jahrhundert. *Aus Buchwerkstatt und Bibliothek / hrsg. von Lorenz Korn, Birgitt Hoffmann und Stefanie Stricker.*
 Wells, C. J. (1990). *Deutsch, eine Sprachgeschichte bis 1945*. Tübingen: Niemeyer.
