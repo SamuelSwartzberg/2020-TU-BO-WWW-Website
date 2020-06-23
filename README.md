@@ -48,23 +48,44 @@ You control your instance of paperify, host it yourself, and can modify it as yo
 
  ### Links
 
- Possible appearance of deeplinks: Links below header, as sources in papers.
-
- ### Images
-
- ??
+ Possible appearance of deeplinks: Links below header, as sources in papers. Wegen Problematizität des Contents einzeln überprüfen.
 
  ### Impressum
 
  Link im Footer.
 
- ### DATENSCHUTZERKLÄRUNG
+ ### Datenschutzerklärung
 
- Ggf. für Server-Logfiles.
+Link im Footer.
+
+ ###  Frames / Hotlinking
+
+ Keine.
 
  ### Cookies
 
 Von haus aus keine - allerdings könnte je nach webserver der welche setzen.
+
+### Urheberrecht
+
+#### Texte
+
+Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.
+
+#### Zitate
+
+Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.
+
+#### Bilder
+
+Können ggf. in artikeln vorkommen. Wenn, dann ist urheberrecht individuell zu klären. Die Bilder, die in time-of-eve.md zu sehen sind, sind screenshots von einer Serie, ich dürfte sie daher nicht verwenden, sobald ich die
+
+### Barrierefreiheit
+
+- Nutzung von semantischen HTML elementen wie `<q>`, `<article>` etc. wo immer möglich.
+- Alt-text für Bilder.
+- Browser-eigene cmd/ctrl + / - funktion für zoom.
+- Sprachliches Niveau der Texte nicht Barrierefrei! (inhärent in den texten)
 
  ## Mockups
 
