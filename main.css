@@ -63,7 +63,7 @@ ul, ol{
 li{
 	margin-bottom: .5em;
 }
-li > ul{
+li > ul, li > ol{
 	margin: 0.5em 0 0.5em 2em;
 }
 figure{
