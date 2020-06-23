@@ -1,4 +1,4 @@
-#!bin/bash
+#!/usr/bin/env bash
 POSTS=(posts/*.md)
 echo "<!-- This is the generated index.html. Any edits here will be overwritten! -->" > index.html #add a warning to the generated index.html
 cat _index.html >> index.html # add the content of the master index.html file to the generated one
