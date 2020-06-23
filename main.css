@@ -162,3 +162,7 @@ tr:last-child td{padding-bottom: 1em;}
 td:first-of-type, thead{
 	font-weight: bold;
 }
+
+.first-name::after{
+  content: " ";
+}

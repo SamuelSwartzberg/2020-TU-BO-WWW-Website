@@ -42,9 +42,7 @@
   margin-bottom: 0;
 }
 
-.first-name::after{
-  content: " ";
-}
+
 .contact-links-container{
   margin-bottom: 1em;
   grid-area: links;
@@ -67,6 +65,9 @@
 .description-container{
   grid-area: text;
   line-height: 1.2;
+  text-align: left;
+  text-align: start;
+
 }
 
 .post-item{

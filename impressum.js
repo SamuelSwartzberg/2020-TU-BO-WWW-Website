@@ -6,3 +6,4 @@ massReplaceInnerHTMLWithArgument(
   [".legal-phone", legalPhone],
   [".legal-storage-duration", logfileStorageDurationDays],
 )
+console.log(fullLegalName);

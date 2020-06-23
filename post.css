@@ -1,3 +1,11 @@
+#site-header{
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+#site-header::after{
+  content: " / ";
+  text-decoration: none;
+}
 #footnote-container{
   margin-top: 3em;
   border-top: 0.05em solid rgba(0,0,0,0.6);

@@ -23,6 +23,8 @@ function htmlToElement(html) {
     return template.content.firstChild;
 }
 
+document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
+
 var footnoteCounter = 0;
 //Footnotes
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
@@ -46,6 +48,7 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
 
 });
 
+//Figures
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   console.log(item);
   let fileLocation = document.location.href.split('.html')[0];
