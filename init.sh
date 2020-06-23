@@ -9,8 +9,8 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   postTemplate=$(cat post-item-template.html) # get the html post template
   cat markdown-template.html > "${POSTS[i]%.md}temp.html"
   for (( j = 0; j < ${#headerLineArray[@]}; j++ )); do
-    key=$(echo ${headerLineArray[j]} | cut -d ":" -f1)
-    value=$(echo ${headerLineArray[j]} | cut -d ":" -f2)
+    key=$(echo ${headerLineArray[j]} | cut -d "|" -f1)
+    value=$(echo ${headerLineArray[j]} | cut -d "|" -f2)
     postTemplate=${postTemplate/"{$key}"/"$value"} # Replace the {key} instances in postTemplate by their values, filling the template
     sed -i'.original' -e "s|{$key}|${value}|" "${POSTS[i]%.md}temp.html"
   done

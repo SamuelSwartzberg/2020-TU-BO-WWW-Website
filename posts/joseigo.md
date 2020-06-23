@@ -1,6 +1,6 @@
-title::Women's Language in Japanese: Forms, Ideology, and Change
-date::23.03.2020
-abstract::How did the norm of 'women's language' in Japanese develop into it's current form, and how does this norm contribute to the subordination of women while sustaining itself?
+title|Women's Language in Japanese: Forms, Ideology, and Change
+date|23.03.2020
+abstract|How did the norm of 'women's language' in Japanese develop into it's current form, and how does this norm contribute to the subordination of women while sustaining itself?
 
 ## Discourse on Language and Gender
 
