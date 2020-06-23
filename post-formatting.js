@@ -47,6 +47,9 @@ document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
   });
 
 });
+if(footnoteCounter===0){
+  document.querySelector('#footnote-container').style.display = "none";
+}
 
 //Figures
 document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
