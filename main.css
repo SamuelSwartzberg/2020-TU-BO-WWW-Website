@@ -169,6 +169,9 @@ body{
 	display: flex;
 	justify-content: space-between;
 }
+#site-footer > :nth-child(2){
+	text-align: right;
+}
 table{
 		margin: 1.5em auto;
 		border: 0.05em solid rgba(0,0,0,0.3);
