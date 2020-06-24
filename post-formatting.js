@@ -12,7 +12,8 @@ tocbot.init({
 // there are only 6 heading levels and number 0 will collapse them all.
 // The sections that are hidden will open
 // and close as you scroll to headings within them.
-  collapseDepth: 6
+  collapseDepth: 6,
+  scrollSmooth: false
 });
 
 /* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */

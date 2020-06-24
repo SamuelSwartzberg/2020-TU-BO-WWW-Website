@@ -1,51 +1,37 @@
-#site-header{
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-#site-header::after{
-  content: " / ";
-  text-decoration: none;
-}
-#footnote-container{
-  margin-top: 3em;
-  border-top: 0.05em solid rgba(0,0,0,0.6);
-  padding-top: 1em;
-}
-#footnote-container ol{
-  margin-left: 0;
-  list-style-type: none;
-}
 #post-header .abstract{
   line-height: 1.5;
   font-style: italic;
-  color: rgba(0,0,0,0.6);
-}
+  color: var(--grey); }
+
 #post-header{
-  margin-bottom: 2em;
-}
+  margin-bottom: 2em; }
+
 #post-header h1{
-  margin-bottom: 0.5em;
-}
+  margin-bottom: 0.5em; }
+
 .creation-date{
   color: black;
   font-style: normal;}
+
 .creation-date::before{
   content: "•";
   margin: 0 1ch;
-  color: rgba(0,0,0,0.6);
-}
-#table-of-contents > ol{
-  margin: 1.5em 1em 1.5em 2em;
-}
+  color: var(--grey); }
+
+/* Table of contents */
+
 #table-of-contents{
   max-width: 100%;
   width: max-content;
   margin: 1em 0;
-  border: 0.05em solid rgba(0,0,0,0.3);
-  background-color: rgba(0,0,0,0.02);
+  border: var(--border-thickness) solid var(--light-grey);
+  background-color: var(--transparent-grey);
 }
 #table-of-contents:empty{
   display: none;
+}
+#table-of-contents > ol{
+  margin: 1.5em 1em 1.5em 2em;
 }
 #table-of-contents a{
   text-decoration: none;
@@ -54,7 +40,7 @@
   list-style-type: none;
   line-height: 1;
   counter-reset: section-counter 0;
-    margin-left: 2em;
+  margin-left: 2em;
 }
 #table-of-contents li{
   counter-increment: section-counter;
@@ -63,28 +49,62 @@
   content: counters(section-counter, ".");
   margin-right: 1ch;
 }
+
+/* Main Article */
+
 #main-article li > p:last-child{
-	margin-bottom: 0;
-}
+	margin-bottom: 0; }
 #main-article p{
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
+
+/* Bibliography */
+
 #bibliography~ol{
   list-style-type: none;
-  margin-left: 0
+  margin-left: 0; }
+
+/* Footnotes */
+
+.footnote{
+	vertical-align: super;
+  font-size: 0.7em;
+	line-height: 0;
+	text-decoration: none;}
+
+.footnote::after{
+	content:" "; }
+
+#footnote-container{
+  margin-top: 3em;
+  border-top: var(--border-thickness) solid var(--light-grey);
+  padding-top: 1em;}
+
+#footnote-container ol{
+  margin-left: 0;
+  list-style-type: none;
 }
+
+li:target{
+	width: max-content;
+	padding: 0 1ch;
+	background-color: rgba(0,0,0,0.1); }
+
+li:target .footnote{
+	padding-left: 2.5ch; }
+
+li:target:before{
+	margin-left: -3.5ch;
+	color: rgba(0,0,0,0.6);
+	content: ">"; }
+
+/* Print Styling */
 
 @media print {
   html{
-    font-size: 11pt;
-  }
+    font-size: 11pt; }
   #site-footer, #site-header{
-    display: none;
-  }
-}
+    display: none; } }
 @page{
-  margin: 2cm;
-}
+  margin: 2cm; }
 @page:first{
-  margin-top: 2.5cm;
-}
+  margin-top: 2.5cm; }

@@ -8,13 +8,3 @@
 .legal-contact li{
   margin-bottom: 0;
 }
-
-#site-header{
-  margin-top: 2em;
-  margin-bottom: 1em;
-  hyphens: manual;
-}
-#site-header::after{
-  content: " / ";
-  text-decoration: none;
-}
