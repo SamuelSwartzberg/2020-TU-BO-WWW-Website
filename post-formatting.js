@@ -22,69 +22,85 @@ function htmlToElement(html) {
     template.innerHTML = html;
     return template.content.firstChild;
 }
+function atLeastOneElementOfSelectorContainsClass(selector, itemClass) {
+  document.querySelectorAll(selector).forEach((item, i) => {
+    if (item.classList.includes(itemClass)){
+      return true;
+    }
+  });
+}
 
 document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
+let noFootnotes = atLeastOneElementOfSelectorContainsClass("script", "nofootnotes");
+let noFigures = atLeastOneElementOfSelectorContainsClass("script", "nofigures");
 
 var footnoteCounter = 0;
-//Footnotes
-document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-  console.log(item);
-  item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, $1) => {
-    console.log(match);
-    footnoteCounter++;
-    let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${$1}</span></li>`);
-    document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
-    return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
-    });
-  document.querySelectorAll('blockquote p a.footnote').forEach((footnote, i) => {
-    let parent = footnote.parentNode;
-    while (parent.nodeName !== "BLOCKQUOTE"){
-      parent = parent.parentNode;
-    }
-    let newFootnote = footnote.cloneNode(true);
-    parent.appendChild(newFootnote);
-    footnote.remove();
-  });
 
-});
+if (!noFootnotes){
+  //Footnotes
+  document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
+    console.log(item);
+    item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, $1) => {
+      console.log(match);
+      footnoteCounter++;
+      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${$1}</span></li>`);
+      document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
+      return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
+      });
+    document.querySelectorAll('blockquote p a.footnote').forEach((footnote, i) => {
+      let parent = footnote.parentNode;
+      while (parent.nodeName !== "BLOCKQUOTE"){
+        parent = parent.parentNode;
+      }
+      let newFootnote = footnote.cloneNode(true);
+      parent.appendChild(newFootnote);
+      footnote.remove();
+    });
+
+  });
+}
+
 if(footnoteCounter===0){
   document.querySelector('#footnote-container').style.display = "none";
 }
 
 //Figures
-document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-  console.log(item);
-  let fileLocation = document.location.href.split('.html')[0];
-  item.innerHTML = item.innerHTML.replace(
-    /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]*)\}/g,
-    (match, captionText, side, size, url, moreUrls) => {
-      var urlString = "";
-      if(moreUrls){
-        let urlArray = moreUrls.split(":");
-        for (let urlElement of urlArray) {
-          if(urlElement){
-            console.log(urlElement);
-            urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`;
+
+if (!noFigures){
+  document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
+    console.log(item);
+    let fileLocation = document.location.href.split('.html')[0];
+    item.innerHTML = item.innerHTML.replace(
+      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]*)\}/g,
+      (match, captionText, side, size, url, moreUrls) => {
+        var urlString = "";
+        if(moreUrls){
+          let urlArray = moreUrls.split(":");
+          for (let urlElement of urlArray) {
+            if(urlElement){
+              console.log(urlElement);
+              urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`;
+            }
+
           }
-
         }
+        let figureText =
+        `<figure class="${side}" style="--size: ${size}%">
+          <div class="image-container">
+            <img src="${fileLocation}/${url}" alt="${captionText}">
+            ${urlString}
+          </div>
+          <figcaption>${captionText}</figcaption>
+        </figure>`
+        return figureText;
       }
-      let figureText =
-      `<figure class="${side}" style="--size: ${size}%">
-        <div class="image-container">
-          <img src="${fileLocation}/${url}" alt="${captionText}">
-          ${urlString}
-        </div>
-        <figcaption>${captionText}</figcaption>
-      </figure>`
-      return figureText;
-    }
-  );
-});
-document.querySelectorAll('figure').forEach((item, i) => {
-  let newItem = item.cloneNode(true);
-  if(!item.parentNode.matches("#main-article")){
-    item.parentNode.before(newItem);
-    item.remove()};
+    );
+  });
+  document.querySelectorAll('figure').forEach((item, i) => {
+    let newItem = item.cloneNode(true);
+    if(!item.parentNode.matches("#main-article")){
+      item.parentNode.before(newItem);
+      item.remove()};
 
-});
+  });
+}

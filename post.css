@@ -38,7 +38,8 @@
   margin: 1.5em 1em 1.5em 2em;
 }
 #table-of-contents{
-  max-width: 30em;
+  max-width: 45em;
+  width: max-content;
   margin: 1em 0;
   border: 0.05em solid rgba(0,0,0,0.3);
   background-color: rgba(0,0,0,0.02);

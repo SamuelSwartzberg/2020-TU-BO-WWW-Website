@@ -1,7 +1,6 @@
 title|Paperify
 date|24.06.2020
-abstract|Aus Markdown-Dateien eine Sammlung von akademischen Papers, ansprechend formatiert, generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en"> Englisch </a> verfügbar.
-Gruppe \#2, David Samuel (Sam) Swartzberg
+abstract|Aus Markdown-Dateien eine Sammlung von akademischen Papers, ansprechend formatiert, generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2.
 
 ## Konzept
 
@@ -13,9 +12,9 @@ Studenten und ehemalige Studenten, Professoren und Lehrangestellte sowie andere 
 
 ### Inhalte
 
-S.o.
+Papers, Essays, Artikel.
 
-### Making the site
+### Deployment
 
 Da wir keinen Server haben, müssen wir vor deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks machen. Dafür muss das script init.sh aus einer shell aufrufen `./init.sh`. Init.sh verlangt als dependency `markdown-to-html`, was man so erhalten kann: `npm install -g cwjohan/markdown-to-html`. Ggf. muss man davor noch `npm` installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!
 
@@ -23,106 +22,108 @@ Da wir keinen Server haben, müssen wir vor deployment das Markdown zu HTML umwa
 
 #### Einfacher Schreibprozess
 
+In Markdown zu schreiben erlaubt einem, sich auf dem Inhalt zu konzentrieren, ohne sich um die Formatierung Gedanken zu machen. Markdown ist ein Plaintext-Format, also eines, das mit jedem gängigen Text-Editor bearbeitet werden kann - allerdings ist ein Code-Editor wie Atom zu empfehlen. Dinge wie Überschriften, Links, Zitate werden mittels einer sehr einfachen Syntax markiert. [Hier gibt es einen Guide.](https://guides.github.com/features/mastering-markdown/)
+Verglichen mit Word und Latex:
+Erlaubt schnelleres schreiben als Word, weil man sich nicht sorgen machen muss, dass eine Handlung wie copy/paste Einfluss auf die Formatierung irgendwo anders hat, und weil man sich sicher sein kann, dass Dinge wie Zitate automatisch richtig formatiert werden. Selbst die Anführungszeichen werden automatisch eingefügt!
+Leichter zu lesen als Latex, weil die Datei nicht so aussieht:
 
-Markdown allows for incredibly rapid writing without worrying about formatting, and is sublimely readable even when not rendered, given you are using a reasonable text editor (For example Atom, although many work).
-Compared to the two main alternatives, Word and Latex:
-Markdown obstructs the writing process less than Word, with endlessly-breaking formatting, or Latex, which is too verbose in its syntax, should you not be writing in the natural sciences.
-See further: https://blog.kdheepak.com/writing-papers-with-markdown.html
+```\\section{Section Name}
+This is text in the section
+\\subsection{Sub Section Name}
+The following is a list in this subsection
+\\begin{enumerate}
+\\item The first \\textbf{bold} item
+\\begin{enumerate}
+  \\item Nested item 1
+  \\item Nested item 2
+\\end{enumerate}
+\\item The second \\textit{italicized} item
+\\item The third etc \\ldots
+\\end{enumerate}```
 
-#### Easy Printing
+#### Andere Features
 
-Via CSS print styling, easy printing or export to .pdf.
+- *Drucken*: Via der Browser-Druckfunktion, dort ebenfalls Export zu .pdf.
+- *Archivieren*: Da die Dateien Plain-Text sind, gibt es keinen Grund, warum sie je nicht mehr funktionieren oder inkompatibel werden sollten. Kleine Fehler sind leicht zu entfernen.
+- *Einheitliche Formatierung*: Da alle Dateien von einem Set CSS-Dateien formatiert werden, werden alle Paper automatisch dieselbe Formatierung haben. Jede Änderung am CSS wird sofort auf alle Paper angewandt!
+- *Self-Hosting*: Du kannst deine Paperify-Instanz modifizieren, wie du willst, und dort hosten, wo du willst.
 
-#### Archival function
+### Umsetzung der Ergebnisse der Web-Recherche
 
-Show off your past writing while making it incredibly easy to edit out small errors. Since the text is stored as markdown, don't be worried that the file format will ever become unsupported, or produce errors or weird formatting after a couple of years.
-
-#### Unified style
-
-Since one CSS stylesheet is being applied across all posts, all your papers will have the same styling, without you even having to worry about it.
-
-#### Self-Hosting
-
-You control your instance of paperify, host it yourself, and can modify it as you see fit. No need to deal with researchgate or academia.edu and their incessant spam mail.
-
- ### Implementation of prior considerations from web research
-
- #### Links
-
- Possible appearance of deeplinks: Links below header, as sources in papers. Wegen Problematizität des Contents einzeln überprüfen.
-
- #### Impressum
-
- Link im Footer.
-
- #### Datenschutzerklärung
-
-Link im Footer.
-
- ####  Frames / Hotlinking
-
- Keine.
-
- #### Cookies
-
-Von haus aus keine - allerdings könnte je nach webserver der welche setzen.
+- *Links*: Der Besizter der Paperify-Instanz kann selber Content verlinken. Wegen Problematizität des Contents einzeln überprüfen.
+- *Impressum*: Link im Footer.
+- *Datenschutzerklärung*: Link im Footer.
+- *Frames / Hotlinking*: Keine.
+- *Cookies*: Von haus aus keine - allerdings könnte je nach Webserver dieser welche setzen.
 
 #### Urheberrecht
 
-##### Texte
-
-Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.
-
-##### Zitate
-
-Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.
-
-##### Bilder
-
-Können ggf. in artikeln vorkommen. Wenn, dann ist urheberrecht individuell zu klären. Die Bilder, die in time-of-eve.md zu sehen sind, sind screenshots von einer Serie, ich dürfte sie daher nicht verwenden, sobald ich die
+- *Texte*: Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.
+- *Zitate*: Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.
+- *Bilder*: Können ggf. in Papers vorkommen. Wenn, dann ist Urheberrecht individuell zu klären.
 
 #### Barrierefreiheit
 
 - Nutzung von semantischen HTML elementen wie `<q>`, `<article>` etc. wo immer möglich.
 - Alt-text für Bilder.
-- Browser-eigene cmd/ctrl + / - funktion für zoom.
-- Sprachliches Niveau der Texte nicht Barrierefrei! (inhärent in den texten)
+- Browser-eigene cmd/ctrl + / - funktion für Zoom.
+- Sprachliches Niveau der Texte nicht Barrierefrei! (inhärent in den Texten)
 
- ### Mockups
+### Mockups
 
- Simple Header - Body - Footer design.
- $INSERT SCREENSHOTS
+Einfaches Header - Body - Footer Design.
+$INSERT SCREENSHOTS
 
- ### Navigational Structure
+### Struktur
 
- One index.html, which contains 0 - n post preview items that link to each article.
- The links and the articles are generated automatically from markdown files.
- Sub-pages for the legally required stuff in the footer.
+Eine index.html seite, die 0 - n Snippets enthält, die jeweils auf die Paper-Seiten verlinken.
+Die Links und die Paper-Seiten werden automatisch aus den Markdown-Dateien generiert.
 
- ### List of Functions
+### Unique Features
 
- #### Extension of Markup - Footnotes
+#### Fußnoten
 
- Markup does not support footnotes out of the box. Specify them like so: `fn:{some footnote content}`.
+ Automatisch nummerierte und verlinkte Fußnoten. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: `fn:{Inhalt der Fußnote}`.
 
- #### Extension of Markup - Figures
+#### Extension of Markup - Figures
 
- Markup does not support figures out of the box. Specify them like so: `fig:{somecaption:someplace:somesize:someurl1(:optionally more urls)}`, where someplace is left|right|center and somesize is a value from 0 - 100 (percent).
+Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: ```fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}```
+Platzierung erlaubt als Werte `left``right``center` und Größe Werte von 0 - 100.
 
- ## Style Guide
+## Style-Guide
 
- ### Colors
+### Farben
 
- ### Typography
+- *Text*: Schwarz
+- *Links* & *Schwächerer Text*: rgba(0,0,0,0.6), also Schwarz mit 40% Transparenz -> Mittelgrau
+- *Code*, *Tabellen*, *Inhaltsverzeichnis**: Verschiedene rgba(0,0,0,?)-Werte von 0.02 - 0.3 -> Hellgrau
 
- ### Inspiration
+Ziel hinter der Farbgebung war ein seriöses, akademisch-anmutendes, einfach zu lesendes Design.
 
- https://www.gwern.net/
+### Typographie
 
- ## Thanks
+#### Schriftarten
 
- This page uses [tocbot](https://tscanlin.github.io/tocbot/) to generate tables of contents.
+Alle Schriftarten sind von Google Fonts, deren Fonts beliebig im Web nutzbar sind.
 
- ## Other
+- *Hauptschriftart*: Libre Baskerville
+- *Code-Schriftart*: Inconsolata
 
- Regex for replacing footnotes `\\\[(\d+)\\\]([^$]*?\n\1. +)(.*)`
+Libre Baskerville empfahl sich, weil sie eine Serifen-Schrift ist, (subjektiv gesehen) schön ist, und nicht so oft genutzt wird wie bspw. die Latex-Schriftart, der Website also einen eigenen Charakter verleiht.
+
+#### Größe, Gewicht, Abstand
+
+Die Idee hier war, die Schrift möglichst unauffällig zu gestalten, um nicht abzulenken, aber trotzdem den Überschriften etc. genug Fokus zu verleihen, um das Scannen des Texts zu ermöglichen. Daher haben die Überschriften, mit Ausnahme der Seitenüberschrift und den Top-Level Unterüberschriften die selbe Schriftgröße wie der Text, und arbeiten mehr mit margin-top und margin-bottom.
+Die restlichen Merkmale versuchen sowohl elegant zu sein, als auch sich nicht zu weit von den Konventionen von akdemischen Design zu entfernen.
+
+### Inspiration
+
+https://www.gwern.net/
+
+## Danksagung
+
+Paperify nutzt [tocbot](https://tscanlin.github.io/tocbot/), um das Inhaltsverzeichnis zu generieren.
+
+## Finale Worte
+
+Diese Dokumentation wurde in Markdown geschrieben und mittels Paperify formattiert!
