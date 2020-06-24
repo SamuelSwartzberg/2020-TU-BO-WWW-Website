@@ -31,6 +31,8 @@
 .profile-image{
   clip-path: circle(49%);
   height: var(--image-size);
+  width: unset;
+  margin: unset;
 }
 .name-container{
   margin: 1em 0;

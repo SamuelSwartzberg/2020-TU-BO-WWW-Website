@@ -1,6 +1,6 @@
 title|Paperify
 date|24.06.2020
-abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2.
+abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.
 arguments|nofootnotes
 ## Konzept
 
