@@ -72,6 +72,9 @@
 }
 
 @media print {
+  html{
+    font-size: 11pt;
+  }
   #site-footer, #site-header{
     display: none;
   }
@@ -80,5 +83,5 @@
   margin: 2cm;
 }
 @page:first{
-  margin: 2.5cm;
+  margin-top: 2.5cm;
 }

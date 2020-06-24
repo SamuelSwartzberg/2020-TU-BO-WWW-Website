@@ -1,7 +1,7 @@
 
 .site-container > *{
   width: 100%;
-	margin-bottom: 4em;
+
 }
 #site-header{
   display: grid;
@@ -11,6 +11,7 @@
       "image text";
   grid-template-rows: max-content max-content 1fr;
   grid-template-columns: max-content 1fr;
+  margin-bottom: 4em;
 }
 .profile-image-container{
   flex: 0 0 auto;
@@ -66,8 +67,10 @@
   grid-area: text;
   line-height: 1.2;
   text-align: left;
-  text-align: start;
 
+}
+.description-container p{
+  text-align: left;
 }
 
 .post-item{

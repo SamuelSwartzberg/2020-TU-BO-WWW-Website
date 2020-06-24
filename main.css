@@ -24,13 +24,13 @@ code{
 }
 :not(pre) > code{
 
-	background-color:rgba(0,0,0,0.02);
+	background-color:rgba(0,0,0,0.03);
 	padding: 0.2em 0.4em;
 	font-size: 95%;
 	border-radius: 0.2em;
 }
 pre{
-	background-color: rgba(0,0,0,0.02);
+	background-color: rgba(0,0,0,0.03);
 	padding: 1em;
 	width: max-content;
 	margin: 1em 0;

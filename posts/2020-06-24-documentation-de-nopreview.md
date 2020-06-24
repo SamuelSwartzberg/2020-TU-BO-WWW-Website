@@ -1,7 +1,7 @@
 title|Paperify
 date|24.06.2020
 abstract|Aus Markdown-Dateien eine Sammlung von akademischen Papers, ansprechend formatiert, generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2.
-
+arguments|nofootnotes nofigures
 ## Konzept
 
 Eine vanilla HTML/CSS/JS Website ohne Ansprüche ans Backend, die als Showcase für akademische oder ähnliche Werke des Autors fungiert, unabhängig davon, ob diese publiziert wurden. Wird aus Markdown-dateien (.md) generiert. Kann auch dafür genutzt werden, Paper, Essays und ähnliches ohne Stylingschwierigkeiten und unnötiges Markup zu schreiben.
@@ -20,14 +20,15 @@ Da wir keinen Server haben, müssen wir vor deployment das Markdown zu HTML umwa
 
 ### Use Case & Features
 
-#### Einfacher Schreibprozess
+Einfacher Schreibprozess:
 
 In Markdown zu schreiben erlaubt einem, sich auf dem Inhalt zu konzentrieren, ohne sich um die Formatierung Gedanken zu machen. Markdown ist ein Plaintext-Format, also eines, das mit jedem gängigen Text-Editor bearbeitet werden kann - allerdings ist ein Code-Editor wie Atom zu empfehlen. Dinge wie Überschriften, Links, Zitate werden mittels einer sehr einfachen Syntax markiert. [Hier gibt es einen Guide.](https://guides.github.com/features/mastering-markdown/)
 Verglichen mit Word und Latex:
 Erlaubt schnelleres schreiben als Word, weil man sich nicht sorgen machen muss, dass eine Handlung wie copy/paste Einfluss auf die Formatierung irgendwo anders hat, und weil man sich sicher sein kann, dass Dinge wie Zitate automatisch richtig formatiert werden. Selbst die Anführungszeichen werden automatisch eingefügt!
 Leichter zu lesen als Latex, weil die Datei nicht so aussieht:
 
-```\\section{Section Name}
+```
+\\section{Section Name}
 This is text in the section
 \\subsection{Sub Section Name}
 The following is a list in this subsection
@@ -39,9 +40,10 @@ The following is a list in this subsection
 \\end{enumerate}
 \\item The second \\textit{italicized} item
 \\item The third etc \\ldots
-\\end{enumerate}```
+\\end{enumerate}
+```
 
-#### Andere Features
+Andere Features:
 
 - *Drucken*: Via der Browser-Druckfunktion, dort ebenfalls Export zu .pdf.
 - *Archivieren*: Da die Dateien Plain-Text sind, gibt es keinen Grund, warum sie je nicht mehr funktionieren oder inkompatibel werden sollten. Kleine Fehler sind leicht zu entfernen.
@@ -56,13 +58,13 @@ The following is a list in this subsection
 - *Frames / Hotlinking*: Keine.
 - *Cookies*: Von haus aus keine - allerdings könnte je nach Webserver dieser welche setzen.
 
-#### Urheberrecht
+Urheberrecht:
 
 - *Texte*: Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.
 - *Zitate*: Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.
 - *Bilder*: Können ggf. in Papers vorkommen. Wenn, dann ist Urheberrecht individuell zu klären.
 
-#### Barrierefreiheit
+Barrierefreiheit:
 
 - Nutzung von semantischen HTML elementen wie `<q>`, `<article>` etc. wo immer möglich.
 - Alt-text für Bilder.
@@ -88,7 +90,7 @@ Die Links und die Paper-Seiten werden automatisch aus den Markdown-Dateien gener
 #### Extension of Markup - Figures
 
 Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: ```fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}```
-Platzierung erlaubt als Werte `left``right``center` und Größe Werte von 0 - 100.
+Platzierung erlaubt als Werte `left` `right` `center` und Größe Werte von 0 - 100.
 
 ## Style-Guide
 
@@ -96,7 +98,7 @@ Platzierung erlaubt als Werte `left``right``center` und Größe Werte von 0 - 10
 
 - *Text*: Schwarz
 - *Links* & *Schwächerer Text*: rgba(0,0,0,0.6), also Schwarz mit 40% Transparenz -> Mittelgrau
-- *Code*, *Tabellen*, *Inhaltsverzeichnis**: Verschiedene rgba(0,0,0,?)-Werte von 0.02 - 0.3 -> Hellgrau
+- *Code*, *Tabellen*, *Inhaltsverzeichnis*: Verschiedene rgba(0,0,0,?)-Werte von 0.02 - 0.3 -> Hellgrau
 
 Ziel hinter der Farbgebung war ein seriöses, akademisch-anmutendes, einfach zu lesendes Design.
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html class="nofootnotes nofigures">
   <head>
+    <title>Paperify</title>
     <link rel="stylesheet" href="../main.css" charset="utf-8">
     <link rel="stylesheet" href="../post.css" charset="utf-8">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,9 +36,9 @@
 <h3 id="deployment">Deployment</h3>
 <p>Da wir keinen Server haben, müssen wir vor deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks machen. Dafür muss das script init.sh aus einer shell aufrufen <code>./init.sh</code>. Init.sh verlangt als dependency <code>markdown-to-html</code>, was man so erhalten kann: <code>npm install -g cwjohan/markdown-to-html</code>. Ggf. muss man davor noch <code>npm</code> installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!</p>
 <h3 id="use-case-features">Use Case &amp; Features</h3>
-<h4 id="einfacher-schreibprozess">Einfacher Schreibprozess</h4>
+<p>Einfacher Schreibprozess:</p>
 <p>In Markdown zu schreiben erlaubt einem, sich auf dem Inhalt zu konzentrieren, ohne sich um die Formatierung Gedanken zu machen. Markdown ist ein Plaintext-Format, also eines, das mit jedem gängigen Text-Editor bearbeitet werden kann - allerdings ist ein Code-Editor wie Atom zu empfehlen. Dinge wie Überschriften, Links, Zitate werden mittels einer sehr einfachen Syntax markiert. <a href="https://guides.github.com/features/mastering-markdown/">Hier gibt es einen Guide.</a><br>Verglichen mit Word und Latex:<br>Erlaubt schnelleres schreiben als Word, weil man sich nicht sorgen machen muss, dass eine Handlung wie copy/paste Einfluss auf die Formatierung irgendwo anders hat, und weil man sich sicher sein kann, dass Dinge wie Zitate automatisch richtig formatiert werden. Selbst die Anführungszeichen werden automatisch eingefügt!<br>Leichter zu lesen als Latex, weil die Datei nicht so aussieht:</p>
-<p><code>\\section{Section Name}
+<pre><code>\\section{Section Name}
 This is text in the section
 \\subsection{Sub Section Name}
 The following is a list in this subsection
@@ -49,8 +50,8 @@ The following is a list in this subsection
 \\end{enumerate}
 \\item The second \\textit{italicized} item
 \\item The third etc \\ldots
-\\end{enumerate}</code></p>
-<h4 id="andere-features">Andere Features</h4>
+\\end{enumerate}
+</code></pre><p>Andere Features:</p>
 <ul>
 <li><em>Drucken</em>: Via der Browser-Druckfunktion, dort ebenfalls Export zu .pdf.</li>
 <li><em>Archivieren</em>: Da die Dateien Plain-Text sind, gibt es keinen Grund, warum sie je nicht mehr funktionieren oder inkompatibel werden sollten. Kleine Fehler sind leicht zu entfernen.</li>
@@ -65,13 +66,13 @@ The following is a list in this subsection
 <li><em>Frames / Hotlinking</em>: Keine.</li>
 <li><em>Cookies</em>: Von haus aus keine - allerdings könnte je nach Webserver dieser welche setzen.</li>
 </ul>
-<h4 id="urheberrecht">Urheberrecht</h4>
+<p>Urheberrecht:</p>
 <ul>
 <li><em>Texte</em>: Angenommen wird, dass der Websitenbesitzer nur seine eigenen Texte hochlädt.</li>
 <li><em>Zitate</em>: Generell sollten Zitate in einem wissenschaftlichem Werk den Standards des Rechts bezüglich Länge entsprechen.</li>
 <li><em>Bilder</em>: Können ggf. in Papers vorkommen. Wenn, dann ist Urheberrecht individuell zu klären.</li>
 </ul>
-<h4 id="barrierefreiheit">Barrierefreiheit</h4>
+<p>Barrierefreiheit:</p>
 <ul>
 <li>Nutzung von semantischen HTML elementen wie <code>&lt;q&gt;</code>, <code>&lt;article&gt;</code> etc. wo immer möglich.</li>
 <li>Alt-text für Bilder.</li>
@@ -86,13 +87,13 @@ The following is a list in this subsection
 <h4 id="fu-noten">Fußnoten</h4>
 <p> Automatisch nummerierte und verlinkte Fußnoten. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: <code>fn:{Inhalt der Fußnote}</code>.</p>
 <h4 id="extension-of-markup-figures">Extension of Markup - Figures</h4>
-<p>Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: <code>fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}</code><br>Platzierung erlaubt als Werte <code>left`</code>right<code></code>center` und Größe Werte von 0 - 100.</p>
+<p>Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: <code>fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}</code><br>Platzierung erlaubt als Werte <code>left</code> <code>right</code> <code>center</code> und Größe Werte von 0 - 100.</p>
 <h2 id="style-guide">Style-Guide</h2>
 <h3 id="farben">Farben</h3>
 <ul>
 <li><em>Text</em>: Schwarz</li>
 <li><em>Links</em> &amp; <em>Schwächerer Text</em>: rgba(0,0,0,0.6), also Schwarz mit 40% Transparenz -&gt; Mittelgrau</li>
-<li><em>Code</em>, <em>Tabellen</em>, *Inhaltsverzeichnis**: Verschiedene rgba(0,0,0,?)-Werte von 0.02 - 0.3 -&gt; Hellgrau</li>
+<li><em>Code</em>, <em>Tabellen</em>, <em>Inhaltsverzeichnis</em>: Verschiedene rgba(0,0,0,?)-Werte von 0.02 - 0.3 -&gt; Hellgrau</li>
 </ul>
 <p>Ziel hinter der Farbgebung war ein seriöses, akademisch-anmutendes, einfach zu lesendes Design.</p>
 <h3 id="typographie">Typographie</h3>

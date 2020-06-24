@@ -5,8 +5,7 @@ Specify your data here!
 var firstName = "Sam";
 var lastName = "Swartzberg";
 var description =
-`BA Culture and Technology student with multidisciplinary interests and experiences.
-I write about history, philosophy, linguistics, media, and whatever other academic subjects I'm currently interested in.`;
+`BA Culture and Technology student with multidisciplinary interests and experiences. I write about history, philosophy, linguistics, media, and whatever other academic subjects I'm currently interested in.`;
 var links = /* [text, href] */[
   ["Home page", "samswartzberg.com"],
   ["me@samswartzberg.com", "mailto:samswartzberg.com"]];

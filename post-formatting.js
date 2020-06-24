@@ -22,20 +22,13 @@ function htmlToElement(html) {
     template.innerHTML = html;
     return template.content.firstChild;
 }
-function atLeastOneElementOfSelectorContainsClass(selector, itemClass) {
-  document.querySelectorAll(selector).forEach((item, i) => {
-    if (item.classList.includes(itemClass)){
-      return true;
-    }
-  });
-}
 
 document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
-let noFootnotes = atLeastOneElementOfSelectorContainsClass("script", "nofootnotes");
-let noFigures = atLeastOneElementOfSelectorContainsClass("script", "nofigures");
+let noFootnotes = document.querySelector('html').classList.contains('nofootnotes');
+let noFigures = document.querySelector('html').classList.contains('nofigures');
 
 var footnoteCounter = 0;
-
+console.log(noFootnotes);
 if (!noFootnotes){
   //Footnotes
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
@@ -65,7 +58,7 @@ if(footnoteCounter===0){
 }
 
 //Figures
-
+console.log(noFigures);
 if (!noFigures){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
     console.log(item);
