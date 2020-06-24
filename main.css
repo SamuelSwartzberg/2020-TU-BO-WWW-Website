@@ -194,6 +194,18 @@ td:first-of-type, thead{
   content: " ";
 }
 
+@media (max-width: 700px){
+	figure{
+		width: calc(1.5 * var(--size));
+	}
+}
+@media (max-width: 500px){
+	figure, figure.right, figure.left, figure.center{
+		margin: 1.5em;
+		width: calc(100% - 2 * 1.5em);
+	}
+}
+
 /* inconsolata-regular - latin */
 @font-face {
   font-family: 'Inconsolata';
