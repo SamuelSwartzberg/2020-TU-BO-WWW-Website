@@ -33,30 +33,19 @@ Grice starts with the assumption that our conversations are cooperative efforts.
 How does one ‘make one’s conversational contribution such as is required’? How does one say something cooperative? For this, Grice proposes that there are certain maxims that, if followed, will (in general) result in cooperation with the CP. Put another way, these are rules that, taken together, will result in a conversational contribution that is cooperative. Grice divides these into four categories with certain supermaxims and submaxims:fn:{Cf. ibid.}
 
 - **Quantity:**
-
   - Make your contribution as informative as is required (for the
     current purpose of the exchange)
-
   - Do not make your contribution more informative than is required.
     fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated  <q> ’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995). </q>  I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
-
 - **Quality**: Try to make your contribution one that is true.
-
-  - > Do not say what you believe to be false.
-
-  - > Do not say that for which you lack adequate evidence.
-
+  - Do not say what you believe to be false.
+  - Do not say that for which you lack adequate evidence.
 - **Relation**: Be relevant.
-
 - **Manner**: Be perspicuous.
-
-  - > Avoid obscurity of expression.
-
-  - > Avoid ambiguity.
-
-  - > Be brief.
-
-  - > Be orderly.fn:{All: cf. Grice (1991) 26 - 27}
+  - Avoid obscurity of expression.
+  - Avoid ambiguity.
+  - Be brief.
+  - Be orderly.fn:{All: cf. Grice (1991) 26 - 27}
 
 Grice admits there might be other maxims that are at work in talk exchanges, but none as connected to the CP. fn:{Cf. ibid. 28}
 
@@ -65,13 +54,9 @@ Grice admits there might be other maxims that are at work in talk exchanges, but
 Our starting question was: ‘How do we say one thing, and mean another?’ We now know the rules of cooperatively contributing to a conversation. How are these connected? To answer that; to connect the CP and its maxims with conversational implicature, Grice offers the following definition:
 
 > **Grice’s definition of conversational implicature (d1):**  A man \[…\] may be said to have conversationally implicated that q, provided that \[Or: A person has conversationally implicated q iff\]
-
 > 0. \[he said p, and by saying (or making as if to say) that p he has implicated that q;\]
-
 > 1. he is to be presumed to be observing the conversational maxims, or at least the Cooperative Principle;
-
 > 2. the supposition that he is aware that, or thinks that, q is required to make his saying or making as if to say p \[…\] consistent with this presumption;
-
 > 3. and the speaker thinks (and would expect the hearer to think that the speaker thinks) that it is within the competences of the hearer to work out, or grasp intuitively, that the supposition mentioned in (2) is required.fn:{Ibid. 30f.}
 
 So, the fact that the speaker is presumed to be observing the Cooperative Principle, and the fact that the speaker thinks that the only way to observe the Cooperative Principle while saying what theyfn:{I use the singular they as a gender-neutral pronoun whenever possible, i.e. whenever I am not quoting or directly referring to a formulation of an author who used ‘he’ as a generic pronoun.} have said is to implicate q, is what connects the CP and implicature. (To be precise, it only connects presumption of the observance of the CP with conversational implicature while presuming that there is an implicature.fn:{This explanation also leaves out (3), the mutual knowledge clause. We will work with Davis’ definition, though, so nothing is lost by simplifying for explanatory purposes for now.})
@@ -98,19 +83,19 @@ Implicatures are created by violating the CP at the level of what is said, since
 
 So, how does one violate the CP, and therefore implicate something?
 
-1.  **Implicatures where the supposition of an implicature explains the violation of a maxim**
+#### Implicatures where the supposition of an implicature explains the violation of a maxim
 
 The speaker S says p, which violates a maxim, but is presumed to be following the CP. The supposition of the implicature q is necessary to conform to the CP. The reasoning process might be sketched as follows:
 
 (1, 2, 3) He has said that p; there is no reason to suppose that he is not observing the maxims, or at least the Cooperative Principle; but p violates the CP, more specifically the maxim M. His statement p is only in accordance with the CP and M if he, in fact, thought q. (4) he knows \[…\]fn:{Cf. ibid. 32. The sketch of the reasoning process is derived from the example given there and the working-out schema given above.}
 
-2.  **Implicatures where the supposition of a clash between maxims explains the violation of a maxim**
+#### Implicatures where the supposition of a clash between maxims explains the violation of a maxim
 
 Shortly:
 
 He has said that p; there is no reason to suppose that he is not observing the maxims, or at least the Cooperative Principle; but p violates the CP, more specifically the maxim M. The only reason for not observing M is that he would otherwise be violating another maxim M2, if he observed M. Therefore, he is implicating he cannot observe M.fn:{Cf. ibid. 32f., sketch derived as above.}
 
-3.  **Implicatures in which a maxim is flouted and exploited.**
+#### Implicatures in which a maxim is flouted and exploited
 
 If S violates a maxim very obviously, and not out of necessity, how can he still be following the CP? In short, he can’t mean what he said, so he must mean something different.fn:{Cf. ibid. 30} What is this something? Here the account faces major problems, as Davis will later show.
 
@@ -123,27 +108,18 @@ Davis covers much of the same groundwork as Grice, although he does slightly alt
 ### The Cooperative Principle and its maxims
 
 >**Cooperative Principle**. Contribute what is required by the acceptedpurpose of the conversation.
->
 > ***Maxim of Quality***. Make your contribution true; so do not convey what you believe false or unjustified.
->
 > ***Maxim of Quantity***. Be as informative as required.
->
 > ***Maxim of Relation***. Be relevant.
->
-> ***Maxim of Manner***. Be perspicuous; so avoid obscurity and ambiguity, and strive for brevity and order.”fn:{Ibid. 11f.}
+> ***Maxim of Manner***. Be perspicuous; so avoid obscurity and ambiguity, and strive for brevity and order.fn:{Ibid. 11f.}
 
 ### The theoretical backbone
 
 > The **theoretical definition:** S conversationally implicates p iff
-
-> 1)  S implicates p;
-
-> 2)  S is presumed to be observing the Cooperative Principle. (*cooperative presumption*);
-
-> 3)  The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle (*determinacy*); and
-
-> 4)  S believes (or knows), and expects H to believe that S believes, that H is able to determine that (iii) is true (*mutual knowledge*).fn:{Ibid. 13}
-
+> 1. S implicates p;
+> 2. S is presumed to be observing the Cooperative Principle. (*cooperative presumption*);
+> 3. The supposition that S believes p is required to make S’s utterance consistent with the Cooperative Principle (*determinacy*); and
+> 4. S believes (or knows), and expects H to believe that S believes, that H is able to determine that (iii) is true (*mutual knowledge*).fn:{Ibid. 13}
 > **Calculability Assumption**:Conversational implicatures must be capable of being worked out. fn:{Ibid. 14}
 
 ### The Generative Assumption
@@ -228,11 +204,11 @@ So, how do we solve these problems? Well, Grice posited that if you can work out
 
 There exist many ways in which the implicatures generated by Gricean theory do not match up with our experiences of what sentences *do* actually implicate:
 
-1.  **Disjunctions are predicted to be implicated, but not always actually implicated**
+#### Disjunctions are predicted to be implicated, but not always actually implicated
 
 Returning to disjunctions: Consider the following example: One writes a letter of recommendation for Claudette, writing ‘I cannot recommend Claudette highly enough.’ This sentence is violating the Maxim of Quantity, but there are two ways to make this sentence cooperative: Either I can say no more because I can’t find adequate words of praise or because she is so lacking I can’t give a sufficiently positive recommendation for the job. fn:{Cf. Saul (2001) 634 f.} If we don’t want determinacy to fail, I must mean the disjunction  <q> either Claudette is so wonderful that I cannot find adequate words of praise, or she is so lacking that I don’t feel I can give a sufficiently positive recommendation for the job. </q> fn:{Ibid. 635} Clearly, this isn’t what I mean, a completely false implicature is generated.fn:{Cf. ibid.} Therefore, positing disjunctions does not save determinacy in all cases, and the problem of 6.1 persists.
 
-2.  **Many of the maxims fail when applied to other languages**
+#### Many of the maxims fail when applied to other languages
 
 If the Cooperative Principle and maxims are derived from general psychosocial principles, as Grice’s Razor claims, one would expect them to generalize to other languages.
 
@@ -240,7 +216,7 @@ Consider quantity implicatures. In English, the sentence ‘I see a person.’ �
 
 Or consider ‘War is war’, carrying the tautology implicature ‘It is the nature of war that terrible things happen.’ In French, ‘La guerre est la guerre’ (‘War is war’) carries no implicature, hardly even makes sense. To convey the same implicature, one would have to say ‘C’est la guerre’ (‘That’s war’).fn:{Cf. ibid. 44} So it seems, rather than being general psychosocial principles, the maxims are merely conventions. fn:{Cf. ibid. 37}
 
-3.  **Many of the maxims fail when applied to specific English sentences**
+#### Many of the maxims fail when applied to specific English sentences
 
 Even for English, there are many implicatures that are misgenerated.
 

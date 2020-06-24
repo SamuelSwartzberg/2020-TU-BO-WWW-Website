@@ -63,7 +63,9 @@
   content: counters(section-counter, ".");
   margin-right: 1ch;
 }
-
+#main-article li > p:last-child{
+	margin-bottom: 0;
+}
 #main-article p{
   margin-bottom: 1em;
 }

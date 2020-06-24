@@ -45,8 +45,8 @@ hr{
 }
 
 blockquote, q { quotes: '"' '"' "'" "'"; }
-blockquote p:before, q:before{ content: open-quote;}
-q:after, blockquote p:after{ content: close-quote;}
+q:before{ content: open-quote;}
+q:after{ content: close-quote;}
 blockquote{
 	margin-bottom: 1em;
 	margin-left: 2em;
@@ -86,7 +86,7 @@ em{
 	font-style: italic;
 }
 strong{
-	font-style: bold;
+	font-weight: bold;
 }
 p{
 	text-align: justify;
@@ -106,6 +106,7 @@ ul, ol{
 li{
 	margin-bottom: .5em;
 }
+
 li > ul, li > ol{
 	margin: 0.5em 0 0.5em 2em;
 }
