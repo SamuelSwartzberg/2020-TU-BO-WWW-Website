@@ -35,8 +35,7 @@ How does one ‘make one’s conversational contribution such as is required’?
 - **Quantity:**
   - Make your contribution as informative as is required (for the
     current purpose of the exchange)
-  - Do not make your contribution more informative than is required.
-    fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated  <q> ’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995). </q>  I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
+  - Do not make your contribution more informative than is required.fn:{That this maxim should be counted among the others is disputed by Davis, and Grice also only hesitantly postulates it. Therefore, it is often not included among the maxims. For Davis treatment of this maxim, see: Davis (1998) 83. In a footnote on the same page, it is also stated  <q> ’Quantity-2’ is also affirmed by Berg (1991: 419) and Matsumoto (1995). </q>  I take this sentence to be implicating ‘No other important philosopher of language affirms it.’, using a quantity implicature.}
 - **Quality**: Try to make your contribution one that is true.
   - Do not say what you believe to be false.
   - Do not say that for which you lack adequate evidence.
