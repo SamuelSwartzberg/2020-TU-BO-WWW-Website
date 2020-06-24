@@ -109,7 +109,7 @@
   .name-contaner{
     margin: 1em 0 0.5em;
   }
-  #site-header .image-container{
+  #site-header .profile-image-container{
     margin-right: 1em;
     padding: 0;
     align-items: center;
@@ -123,5 +123,10 @@
     margin-top: 0.5em;
     border-left: 0.25em solid rgba(0,0,0,0.2);
     padding-left: 0.5em;
+  }
+}
+@media (max-width: 450px){
+  html{
+    font-size: 3.5vw;
   }
 }
