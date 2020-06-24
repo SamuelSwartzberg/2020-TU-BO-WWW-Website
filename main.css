@@ -140,8 +140,13 @@ figure.center{
 	text-decoration: none;
 
 }
+li:target{
+	width: max-content;
+	padding: 0 1ch;
+	background-color: rgba(0,0,0,0.1);
+}
 li:target .footnote{
-	padding-left: 3.5ch;
+	padding-left: 2.5ch;
 }
 li:target:before{
 	margin-left: -3.5ch;
@@ -164,6 +169,7 @@ body{
   flex-flow: column nowrap;
   justify-content: flex-start;
 	max-width: 50em;
+	overflow: hidden;
 }
 #site-header{
   margin-top: 1.5em;
@@ -181,10 +187,12 @@ table{
 		border: 0.05em solid rgba(0,0,0,0.3);
 		padding: 1em;
 		background-color: rgba(0,0,0,0.02);
+		overflow: scroll;
+		max-width: 100%;
 }
 
 td,th{padding: 0.5em;}
-th{
+table th{
 	padding-top: 1em;
 }
 td:first-child, th:first-child{padding-left: 1em;}
@@ -208,6 +216,15 @@ td:first-of-type, thead{
 		margin: 1.5em;
 		width: calc(100% - 2 * 1.5em);
 	}
+	td, th{
+		padding: 0.25em;
+	}
+}
+@media (max-width: 400px){
+	td, th{
+		padding: 0.2ch;
+	}
+
 }
 
 /* inconsolata-regular - latin */
