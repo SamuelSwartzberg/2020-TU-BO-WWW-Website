@@ -110,12 +110,16 @@ li{
 li > ul, li > ol{
 	margin: 0.5em 0 0.5em 2em;
 }
+img{
+	width: 100%;
+	margin: 1em 0;
+}
 figure{
 	width: var(--size);
 	margin: 1em;
 }
 figure img{
-	width: 100%;
+	margin: 0;
 }
 figure.right{
 	float: right;
