@@ -7,7 +7,7 @@ var lastName = "Swartzberg";
 var description =
 `BA Culture and Technology student with multidisciplinary interests and experiences. I write about history, philosophy, linguistics, media, and whatever other academic subjects I'm currently interested in.`;
 var links = /* [text, href] */[
-  ["Home page", "samswartzberg.com"],
+  ["Home page", "https://samswartzberg.com"],
   ["me@samswartzberg.com", "mailto:samswartzberg.com"]];
 var fullLegalName = "David Samuel Swartzberg";
 var legalEmail = "me@samswartzberg.com";

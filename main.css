@@ -18,6 +18,9 @@ input[type=text]{ border: none; font: inherit; color: inherit; resize: none; lin
 html{scroll-behavior: smooth;}
 *{box-sizing: border-box;}
 abbr{text-decoration: none;}
+p, a, li, span, section, figcaption, code{
+	overflow-wrap: break-word;
+}
 
 code{
 		font-family: "Inconsolata", Inconsolata, monospace;

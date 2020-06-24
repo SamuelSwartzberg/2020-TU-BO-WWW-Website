@@ -89,7 +89,7 @@ Die Links und die Paper-Seiten werden automatisch aus den Markdown-Dateien gener
 
 #### Extension of Markup - Figures
 
-Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: ```fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}```
+Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: `fig:{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}`
 Platzierung erlaubt als Werte `left` `right` `center` und Größe Werte von 0 - 100.
 
 ## Style-Guide
