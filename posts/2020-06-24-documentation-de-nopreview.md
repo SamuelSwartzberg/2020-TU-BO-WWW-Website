@@ -108,10 +108,11 @@ Ziel hinter der Farbgebung war ein seriöses, akademisch-anmutendes, einfach zu 
 
 Alle Schriftarten sind von Google Fonts, deren Fonts beliebig im Web nutzbar sind.
 
-- *Hauptschriftart*: Libre Baskerville
+- *Haupt-Schriftart*: Source Serif Pro
+- *Header-Schriftart*: Libre Baskerville
 - *Code-Schriftart*: Inconsolata
 
-Libre Baskerville empfahl sich, weil sie eine Serifen-Schrift ist, (subjektiv gesehen) schön ist, und nicht so oft genutzt wird wie bspw. die Latex-Schriftart, der Website also einen eigenen Charakter verleiht.
+Source Serif Pro empfahl sich, weil sie eine Serifen-Schrift ist, (subjektiv gesehen) schön ist, und nicht so oft genutzt wird wie bspw. die Latex-Schriftart, der Website also einen eigenen Charakter verleiht.
 
 #### Größe, Gewicht, Abstand
 
