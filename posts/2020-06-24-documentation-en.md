@@ -1,6 +1,6 @@
 title|Paperify
 date|24.06.2020
-abstract|Generate a personal website of papers, nicely and academically formatted, from Markdown files. This text is also available in <a href="2020-06-24-documentation-de-nopreview"> German</a>.
+abstract|Generate a personal website of papers, nicely and academically formatted, from Markdown files. This text is also available in <a href="2020-06-24-documentation-de-nopreview"> German</a>, the English version is still unfinished.
 arguments|nofootnotes nofigures
 By Group \##2, sole member David Samuel (Sam) Swartzberg
 
