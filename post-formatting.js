@@ -1,3 +1,10 @@
+let docLang = document.querySelector('html').lang;
+
+function formatCSLLocale(twoLetterSpecifier) {
+  let region = twoLetterSpecifier ==="en" ? "US" : twoLetterSpecifier.toUpperCase();
+  return `${twoLetterSpecifier}-${region}`;
+}
+
 if(!document.querySelector('html.notoc')){
   tocbot.init({
     // Where to render the table of contents.
@@ -18,6 +25,13 @@ if(!document.querySelector('html.notoc')){
   });
 }
 
+// Citations
+
+const Cite = require('citation-js');
+let citedWorksSet = new Set();
+let cslLocale = formatCSLLocale(docLang);
+console.log(cslLocale);
+
 /* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */
 function htmlToElement(html) {
     var template = document.createElement('template');
@@ -35,11 +49,22 @@ console.log(noFootnotes);
 if (!noFootnotes){
   //Footnotes
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-    console.log(item);
-    item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, $1) => {
-      console.log(match);
+    item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, footnoteContent) => {
       footnoteCounter++;
-      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${$1}</span></li>`);
+      if(footnoteContent.startsWith("c::")){ // It's trying to cite via the global citation store
+        let citations=footnoteContent.split("c::"); //Maybe it wants to cite more than one thing
+        footnoteContent = "";
+        for (let citation of citations) {
+          if (!citation){continue;} // We don't care about values like empty strings or undefined;
+          let citationString = citation.split(";;")[0]; //;; delimits the end of a citation, should the fn contain multiple or additional notes
+          citedWorksSet.add(citationString);
+          let citationObject = new Cite(citationMap.get(citationString));
+          window.citationObject = citationObject;
+          let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale});
+          footnoteContent = footnoteContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
+        }
+      }
+      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${footnoteContent}</span></li>`);
       document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
       return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
       });
@@ -100,4 +125,21 @@ if (!noFigures){
       item.remove()};
 
   });
+}
+
+// bibliography
+let bibliographyContainerList = document.querySelector('#bibliography-container ol');
+let sortedCitedWorksSet = Array.from(citedWorksSet).sort();
+console.log(sortedCitedWorksSet);
+for (let citedWork of sortedCitedWorksSet) {
+  if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
+  let citedWorkObject = new Cite(citationMap.get(citedWork));
+  bibliographyContainerList.appendChild(
+    htmlToElement(`<li> ${
+      citationObject.format(
+        'bibliography',
+        {format: 'html', template: 'apa', lang: cslLocale}
+      )} </li>`
+    )
+  );
 }

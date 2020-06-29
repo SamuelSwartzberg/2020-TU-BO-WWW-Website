@@ -57,11 +57,6 @@
 #main-article p{
   margin-bottom: 1em; }
 
-/* Bibliography */
-
-#bibliography~ol{
-  list-style-type: none;
-  margin-left: 0; }
 
 /* Footnotes */
 
@@ -74,14 +69,22 @@
 .footnote::after{
 	content:" "; }
 
-#footnote-container{
+/* Footnotes and Bibliography */
+
+#footnote-container, #bibliography-container{
   margin-top: 3em;
   border-top: var(--border-thickness) solid var(--light-grey);
   padding-top: 1em;}
 
-#footnote-container ol{
+#footnote-container ol, #bibliography-container ol{
   margin-left: 0;
   list-style-type: none;
+}
+
+/* Bibliography */
+
+#bibliography-container div{
+  display: inline;
 }
 
 li:target{
