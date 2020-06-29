@@ -1,20 +1,22 @@
-tocbot.init({
-  // Where to render the table of contents.
-  tocSelector: '#table-of-contents',
-  // Where to grab the headings to build the table of contents.
-  contentSelector: '#main-article',
-  // Which headings to grab inside of the contentSelector element.
-  headingSelector: 'h2, h3, h4, h5, h6',
-  // For headings inside relative or absolute positioned containers within content.
-  hasInnerContainers: true,
-  // How many heading levels should not be collapsed.
-// For example, number 6 will show everything since
-// there are only 6 heading levels and number 0 will collapse them all.
-// The sections that are hidden will open
-// and close as you scroll to headings within them.
-  collapseDepth: 6,
-  scrollSmooth: false
-});
+if(!document.querySelector('html.notoc')){
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '#table-of-contents',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '#main-article',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h2, h3, h4, h5, h6',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    // How many heading levels should not be collapsed.
+  // For example, number 6 will show everything since
+  // there are only 6 heading levels and number 0 will collapse them all.
+  // The sections that are hidden will open
+  // and close as you scroll to headings within them.
+    collapseDepth: 6,
+    scrollSmooth: false
+  });
+}
 
 /* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */
 function htmlToElement(html) {
@@ -65,8 +67,9 @@ if (!noFigures){
     console.log(item);
     let fileLocation = document.location.href.split('.html')[0];
     item.innerHTML = item.innerHTML.replace(
-      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}]*)\}/g,
+      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g,
       (match, captionText, side, size, url, moreUrls) => {
+        console.log(moreUrls);
         var urlString = "";
         if(moreUrls){
           let urlArray = moreUrls.split(":");

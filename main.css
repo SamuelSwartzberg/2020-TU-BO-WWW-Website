@@ -171,18 +171,28 @@ figure.left{
 	float: left;
 	margin: 1em 2em 1em 0; }
 
-figure.center{
+figure.center, figure.centerflex{
 	clear:both;
 	margin: 2em auto;
+}
+figure.centerflex .image-container{
+	display: flex;
+}
+figure.centerflex .image-container img{
+	flex: 1 1 auto;
+	min-width: 0;
 }
 .image-container{
 	border: 0.1em solid black;
 	margin-bottom: 0.75em;
+	max-width: 100%;
+	overflow: hidden;
 }
 
 @media (max-width: 700px){
 	figure{
-		width: calc(1.5 * var(--size));}}
+		width: calc(1.5 * var(--size));
+		max-width: 100%;}}
 @media (max-width: 500px){
 	figure, figure.right, figure.left, figure.center{
 		margin: 1.5em;

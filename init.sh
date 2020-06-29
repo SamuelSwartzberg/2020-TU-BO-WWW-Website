@@ -4,7 +4,7 @@ echo "<!-- This is the generated index.html. Any edits here will be overwritten!
 cat _index.html >> index.html # add the content of the master index.html file to the generated one
 
 for (( i = 0; i < ${#POSTS[@]}; i++ )); do
-  HEADER=$(head -n 4 ${POSTS[i]}) # Get the first three lines, which are header lines
+  HEADER=$(head -n 5 ${POSTS[i]}) # Get the first three lines, which are header lines
   IFS=$'\n'
   read -rd '' -a headerLineArray <<<"$HEADER"  # Split them into an array
   postTemplate=$(cat post-item-template.html) # get the html post template
