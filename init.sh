@@ -16,7 +16,7 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
     sed -i'.original' -e "s|{$key}|${value}|g" "${POSTS[i]%.md}temp.html"
   done
   postTemplate=${postTemplate/"{url}"/"${POSTS[i]%.md}.html"} # Replace the {key} instances in postTemplate by their values, filling the template
-  tail -n +5 "${POSTS[i]}" > tempMDpost.md
+  tail -n +6 "${POSTS[i]}" > tempMDpost.md
   markdown tempMDpost.md --template "${POSTS[i]%.md}temp.html" > "${POSTS[i]%.md}.html" #create the article html files
   # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
   perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
