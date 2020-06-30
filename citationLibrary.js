@@ -5,7 +5,6 @@ Value should be a CSL JSON object
 */
 var citationMap = new Map();
 
-/* Order keys alphabetically for ease of use */
 citationMap.set(
 	"DavisImpl",
 	{
