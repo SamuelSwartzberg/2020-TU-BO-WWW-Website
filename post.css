@@ -57,6 +57,37 @@
 #main-article p{
   margin-bottom: 1em; }
 
+/* Citations */
+
+.citation .publication-date::before{
+  content: " (";
+}
+
+.citation .publication-date::after{
+  content: ")";
+}
+
+.citation.ibid .authors, .citation.ibid  .publication-date{
+  display: none;
+}
+html[lang="en"] .citation.ibid::after{
+  content: "ibid.";
+}
+html[lang="en"] .citation.ibid.capitalize::after{
+  content: "Ibid.";
+}
+html[lang="de"] .citation.ibid::after{
+  content: "ebd.";
+}
+html[lang="de"] .citation.ibid.capitalize::after{
+  content: "Ebd.";
+}
+.authors.actually-title::before{
+  content: open-quote;
+}
+.authors.actually-title::after{
+  content: close-quote;
+}
 
 /* Footnotes */
 

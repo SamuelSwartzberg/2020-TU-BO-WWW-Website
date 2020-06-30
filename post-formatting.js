@@ -5,6 +5,10 @@ function formatCSLLocale(twoLetterSpecifier) {
   return `${twoLetterSpecifier}-${region}`;
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 if(!document.querySelector('html.notoc')){
   tocbot.init({
     // Where to render the table of contents.
@@ -32,6 +36,18 @@ let citedWorksSet = new Set();
 let cslLocale = formatCSLLocale(docLang);
 console.log(cslLocale);
 
+function formatCustomCitationAPA(citationString) {
+  console.log(citationString);
+  let authorClassList ="";
+  if(citationString.includes("“")) authorClassList += "actually-title";
+  citationString= citationString.replace(/[“”]/g, "");
+  citationString = citationString.slice(1,-1); //remove braces
+  let citationStringArray = citationString.split(",");
+  let authors = "".concat(...citationStringArray.slice(0,-1));
+  let date = citationStringArray[citationStringArray.length-1].trim();
+  return `<span class="citation"><span class="authors ${authorClassList}">${authors}</span><date class="publication-date">${date}</date></span>`;
+}
+
 /* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */
 function htmlToElement(html) {
     var template = document.createElement('template');
@@ -44,26 +60,34 @@ document.querySelector('.site-name').innerHTML = `<span class='name first-name'>
 let noFootnotes = document.querySelector('html').classList.contains('nofootnotes');
 let noFigures = document.querySelector('html').classList.contains('nofigures');
 
+document.querySelectorAll('body').forEach((item, i) => {
+  let htmlContent = item.innerHTML;
+  if(htmlContent.includes("c::")){ // It's trying to cite via the global citation store
+    let citations=htmlContent.split("c::"); //Maybe it wants to cite more than one thing
+    htmlContent = citations[0];
+    for (let citation of citations.slice(1)) {
+      console.log(citation);
+      if (!citation){continue;} // We don't care about values like empty strings or undefined;
+      let citationString = citation.split(";;")[0]; //;; delimits the end of a citation, should the fn contain multiple or additional notes
+      console.log(citationString);
+      citedWorksSet.add(citationString);
+      let citationObject = new Cite(citationMap.get(citationString));
+      window.citationObject = citationObject;
+      let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale});
+      formattedCitation = formatCustomCitationAPA(formattedCitation);
+      htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
+    }
+  }
+  item.innerHTML = htmlContent;
+});
+
 var footnoteCounter = 0;
-console.log(noFootnotes);
 if (!noFootnotes){
   //Footnotes
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
     item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, footnoteContent) => {
       footnoteCounter++;
-      if(footnoteContent.startsWith("c::")){ // It's trying to cite via the global citation store
-        let citations=footnoteContent.split("c::"); //Maybe it wants to cite more than one thing
-        footnoteContent = "";
-        for (let citation of citations) {
-          if (!citation){continue;} // We don't care about values like empty strings or undefined;
-          let citationString = citation.split(";;")[0]; //;; delimits the end of a citation, should the fn contain multiple or additional notes
-          citedWorksSet.add(citationString);
-          let citationObject = new Cite(citationMap.get(citationString));
-          window.citationObject = citationObject;
-          let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale});
-          footnoteContent = footnoteContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
-        }
-      }
+      footnoteContent = capitalizeFirstLetter(footnoteContent);
       let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${footnoteContent}</span></li>`);
       document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
       return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
@@ -80,6 +104,21 @@ if (!noFootnotes){
 
   });
 }
+let previousCitation = "";
+document.querySelectorAll('#footnote-container li > span').forEach((item, i) => {
+    item.querySelectorAll('.citation').forEach((item, i) => {
+      let currentCitation = item.innerHTML;
+      if (previousCitation === currentCitation ){
+        item.classList.add("ibid");
+      }
+      console.log(previousCitation===currentCitation);
+      previousCitation = currentCitation;
+    });
+    console.log(item.querySelector('.citation'));
+    if (!item.querySelector('.citation')) previousCitation = ""; //if there is a footnote with something else inbetween, don't use ibid
+
+});
+
 
 if(footnoteCounter===0){
   document.querySelector('#footnote-container').style.display = "none";
@@ -136,10 +175,17 @@ for (let citedWork of sortedCitedWorksSet) {
   let citedWorkObject = new Cite(citationMap.get(citedWork));
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
-      citationObject.format(
+      citedWorkObject.format(
         'bibliography',
         {format: 'html', template: 'apa', lang: cslLocale}
       )} </li>`
     )
   );
 }
+
+//Capitalize .ebd
+document.querySelectorAll('#footnote-container li > span').forEach((item, i) => {
+  if (item.children&&item.children[0]&&item.children[0].classList && item.children[0].classList.contains("ibid")){
+    item.children[0].classList.add("capitalize");
+  }
+});
