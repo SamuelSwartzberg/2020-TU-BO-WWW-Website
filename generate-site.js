@@ -4,7 +4,8 @@ let contactLinkList = document.querySelector(".contact-link-list");
 let personDescription = document.querySelector(".person-description");
 
 nameHeader.innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
-document.querySelector('title').innerHTML= `${firstName} ${lastName}'s Papers'`;
+document.querySelector('title').innerHTML= `${firstName} ${lastName}'s Papers`;
+document.querySelector('meta[name=description]').content= description;
 document.querySelector('.profile-image').alt= `A picture of ${firstName} ${lastName}.`;
 let linkListInnerHTML = "";
 for (var [text, href] of links) {
