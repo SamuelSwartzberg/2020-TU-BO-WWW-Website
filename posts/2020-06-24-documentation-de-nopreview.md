@@ -1,9 +1,10 @@
 title|Paperify
 date|24.06.2020
-abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.
+abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.
 arguments|nofootnotes
 lang|de
 author|site
+Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar.
 ## Konzept
 
 Eine vanilla HTML/CSS/JS Website ohne Ansprüche ans Backend, die als Showcase für akademische oder ähnliche Werke des Autors fungiert - unabhängig davon, ob diese publiziert wurden. Wird aus Markdown-Dateien (.md) generiert. Kann auch dafür genutzt werden, Paper, Essays und ähnliches ohne Stylingschwierigkeiten und unnötiges Markup zu schreiben.
