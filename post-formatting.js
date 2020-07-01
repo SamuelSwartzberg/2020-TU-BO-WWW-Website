@@ -29,6 +29,33 @@ if(!document.querySelector('html.notoc')){
   });
 }
 
+// Including authors
+
+let authorArray = document.querySelector('#author-array').content.split(',');
+console.log(authorArray);
+let documentHeaderAuthors = document.querySelector('#authors');
+let head = document.querySelector('head');
+let sortedAuthors = [];
+let authors = [];
+documentHeaderAuthors.innerHTML="";
+for (let author of authorArray) {
+  if (author==="site" || !author) author = firstName + " " + lastName;
+  author = author.trim();
+  let authorNameArray = author.split(" ");
+  sortedAuthors.push(authorNameArray[authorNameArray.length-1]);
+  authors.push(authorNameArray);
+  head.appendChild(htmlToElement(`<meta name="author" content="${author}">`));
+}
+sortedAuthors = sortedAuthors.sort();
+console.log(authors);
+for (var sortedAuthor of sortedAuthors) {
+  let authorEle = authors.find(element => element[element.length-1]===sortedAuthor);
+  console.log(authorEle);
+  documentHeaderAuthors.appendChild(htmlToElement(`<span class="author">${authorEle.join(" ")}</span>`));
+}
+document.querySelector('#author-array').outerHTML="";
+document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
+
 // Citations
 
 const Cite = require('citation-js');
@@ -56,7 +83,6 @@ function htmlToElement(html) {
     return template.content.firstChild;
 }
 
-document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
 let noFootnotes = document.querySelector('html').classList.contains('nofootnotes');
 let noFigures = document.querySelector('html').classList.contains('nofigures');
 

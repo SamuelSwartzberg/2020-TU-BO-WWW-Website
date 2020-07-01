@@ -2,6 +2,7 @@
 <html class="nofootnotes" lang="de">
   <head>
     <title>Paperify</title>
+    <meta name="author" id="author-array" content="site">
     <link rel="stylesheet" href="../main.css" charset="utf-8">
     <link rel="stylesheet" href="../post.css" charset="utf-8">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -25,8 +26,8 @@
       <main>
         <header id="post-header">
           <h1 class="title">Paperify</h1>
-          <section class="abstract">
-            Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.<time class="creation-date">24.06.2020</time>
+          <section class="info">
+            <article class="abstract">Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.</article><span id="authors">site</span><time class="creation-date">24.06.2020</time>
           </section>
         </header>
         <section id="table-of-contents">
@@ -93,7 +94,7 @@ The following is a list in this subsection
 <h4 id="abbildungen">Abbildungen</h4>
 <p>Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: <code>fig:<wbr>{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}</code><br><code>Platzierung</code> erlaubt als Werte <code>left</code> <code>right</code> <code>center</code> <code>centerflex</code> und <code>Größe</code> Werte von 0 - 100.</p>
 <h4 id="auto-citation">Auto-citation</h4>
-<p>Paperify unterstützt automatische Zitationen. So gehts: <code>citationLibrary.js</code> enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode <code>citationMap.set(citationKey, citation)</code> Einträge hinzufügen. Dabei ist der <code>citationKey</code> eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. <code>citationKey</code> muss ein String sein. <code>citation</code> ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array <code>[]</code> gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit <code>c::citationKey;;</code> Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit &#39;ibid.&#39;/&#39;ebd.&#39; ersetzt, je nach Sprache. Im Moment wird nach APA formattiert, möglicherweise kommen in der Zukunft mehr Optionen hinzu.</p>
+<p>Paperify unterstützt automatische Zitationen. So gehts: <code>citationLibrary.js</code> enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode <code>citationMap.set(citationKey, citation)</code> Einträge hinzufügen. Dabei ist der <code>citationKey</code> eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. <code>citationKey</code> muss ein String sein. <code>citation</code> ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array <code>[]</code> gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit <code>c::citationKey;;</code> Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit &#39;ibid.&#39;/&#39;ebd.&#39; ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, möglicherweise kommen in der Zukunft mehr Optionen hinzu.</p>
 <h2 id="style-guide">Style-Guide</h2>
 <h3 id="farben">Farben</h3>
 <ul>
@@ -125,9 +126,7 @@ The following is a list in this subsection
           </ol>
         </footer>
         <footer id="bibliography-container">
-          <ol>
-
-          </ol>
+          <ol></ol>
         </footer>
       </main>
       <footer id="site-footer"><a href="../impressum.html">Impressum / Datenschutzerklärung</a><span>Made with &lt;3 by <a href="https://samswartzberg.com">Sam Swartzberg</a></span></footer>

@@ -1,7 +1,12 @@
-#post-header .abstract{
+#post-header .info{
   line-height: 1.5;
+}
+#post-header .abstract{
+  display: inline;
   font-style: italic;
   color: var(--grey); }
+#post-header .abstract:empty{
+  display: none;}
 
 #post-header{
   margin-bottom: 2em; }
@@ -13,10 +18,14 @@
   color: black;
   font-style: normal;}
 
-.creation-date::before{
+.creation-date::before, .abstract:after{
   content: "•";
   margin: 0 1ch;
   color: var(--grey); }
+
+.author:not(:last-child)::after{
+  content: ", ";
+}
 
 /* Table of contents */
 
