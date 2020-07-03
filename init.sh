@@ -9,10 +9,14 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   read -rd '' -a headerLineArray <<<"$HEADER"  # Split them into an array
   postTemplate=$(cat post-item-template.html) # get the html post template
   cat markdown-template.html > "${POSTS[i]%.md}temp.html"
+  noPreview=false
   for (( j = 0; j < ${#headerLineArray[@]}; j++ )); do
     key=$(echo ${headerLineArray[j]} | cut -d "|" -f1)
     value=$(echo ${headerLineArray[j]} | cut -d "|" -f2)
     postTemplate=${postTemplate/"{$key}"/"$value"} # Replace the {key} instances in postTemplate by their values, filling the template
+    if [[ "$key" == "arguments" && "$value" == *nopreview* ]]; then
+      noPreview=true
+    fi
     sed -i'.original' -e "s|{$key}|${value}|g" "${POSTS[i]%.md}temp.html"
   done
   postTemplate=${postTemplate/"{url}"/"${POSTS[i]%.md}.html"} # Replace the {key} instances in postTemplate by their values, filling the template
@@ -21,7 +25,7 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
   echo $postTemplate > tempPostItem.html # create a temporary post item
   echo "https://samswartzberg.com/paper/${POSTS[i]%.md}.html" >> sitemap.txt
-  if [[ ${POSTS[i]} == *nopreview* ]]; then
+  if [ "$noPreview" = true ] ; then
     continue
   fi
   sed -i'.original' '/INSERT HERE-->/r tempPostItem.html' index.html # add the contents of the post item to the generated index.html
