@@ -20,7 +20,7 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   markdown tempMDpost.md --template "${POSTS[i]%.md}temp.html" > "${POSTS[i]%.md}.html" #create the article html files
   perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
   echo $postTemplate > tempPostItem.html # create a temporary post item
-  echo "${POSTS[i]%.md}.html" >> sitemap.txt
+  echo "https://samswartzberg.com/paper/${POSTS[i]%.md}.html" >> sitemap.txt
   if [[ ${POSTS[i]} == *nopreview* ]]; then
     continue
   fi
