@@ -2,7 +2,7 @@
 POSTS=(posts/*.md)
 echo "<!-- This is the generated index.html. Any edits here will be overwritten! -->" > index.html #add a warning to the generated index.html
 cat _index.html >> index.html # add the content of the master index.html file to the generated one
-
+echo "" > sitemap.txt
 for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   HEADER=$(head -n 6 ${POSTS[i]}) # Get the first three lines, which are header lines
   IFS=$'\n'
@@ -18,10 +18,9 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
   postTemplate=${postTemplate/"{url}"/"${POSTS[i]%.md}.html"} # Replace the {key} instances in postTemplate by their values, filling the template
   tail -n +7 "${POSTS[i]}" > tempMDpost.md
   markdown tempMDpost.md --template "${POSTS[i]%.md}temp.html" > "${POSTS[i]%.md}.html" #create the article html files
-  # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
   perl -pi -e 's| &lt;([^&]*?)&gt; |<\1>|g' "${POSTS[i]%.md}.html"
-  # head -n 36 "${POSTS[i]%.md}.html" | tail -n 3
   echo $postTemplate > tempPostItem.html # create a temporary post item
+  echo "${POSTS[i]%.md}.html" >> sitemap.txt
   if [[ ${POSTS[i]} == *nopreview* ]]; then
     continue
   fi
