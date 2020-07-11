@@ -33,5 +33,5 @@ done
 # Do some cleanup
 rm *.original
 rm posts/*.original
-rm temp*
+rm temp* # will not remove templates/, since it is a directory (which is good, since that's what we want, but it will display an alert in the console)
 rm posts/*temp.*
