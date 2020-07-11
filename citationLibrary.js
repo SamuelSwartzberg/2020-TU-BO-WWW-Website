@@ -693,3 +693,50 @@ citationMap.set(
 			]
 		}
 	})
+citationMap.set(
+	"Bondzio2005",
+	{
+		"id": "http://zotero.org/users/5451256/items/FMG6SLQM",
+		"type": "chapter",
+		"container-title": "Urbaner Metabolismus. Die städtische Infrastruktur von Berlin.",
+		"event-place": "Berlin",
+		"publisher": "Technische Universität Berlin",
+		"publisher-place": "Berlin",
+		"title": "Abwasser",
+		"URL": "http://www.urbaner-metabolismus.de/",
+		"author": [
+			{
+				"family": "Bondzio",
+				"given": "M."
+			},
+			{
+				"family": "Emslander",
+				"given": "T."
+			},
+			{
+				"family": "Katholy",
+				"given": "J."
+			},
+			{
+				"family": "Krüger",
+				"given": "S."
+			},
+			{
+				"family": "Simo",
+				"given": "A."
+			}
+		],
+		"editor": [
+			{
+				"family": "Prytula",
+				"given": "Michael"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	})
