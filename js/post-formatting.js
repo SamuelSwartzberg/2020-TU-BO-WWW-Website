@@ -1,5 +1,7 @@
 let docLang = document.querySelector('html').lang;
 
+/* Helper Methods */
+
 function formatCSLLocale(twoLetterSpecifier) {
   let region = twoLetterSpecifier ==="en" ? "US" : twoLetterSpecifier.toUpperCase();
   return `${twoLetterSpecifier}-${region}`;
@@ -8,6 +10,16 @@ function formatCSLLocale(twoLetterSpecifier) {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+/* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */
+function htmlToElement(html) {
+    var template = document.createElement('template');
+    html = html.trim(); // Never return a text node of whitespace as the result
+    template.innerHTML = html;
+    return template.content.firstChild;
+}
+
+/* TOC */
 
 if(!document.querySelector('html.notoc')){
   tocbot.init({
@@ -29,31 +41,33 @@ if(!document.querySelector('html.notoc')){
   });
 }
 
-// Including authors
+// Including authors both in document <head> as well as in the header of the post
 
 let authorArray = document.querySelector('#author-array').content.split(',');
-console.log(authorArray);
 let documentHeaderAuthors = document.querySelector('#authors');
 let head = document.querySelector('head');
 let sortedAuthors = [];
 let authors = [];
 documentHeaderAuthors.innerHTML="";
+
 for (let author of authorArray) {
-  if (author==="site" || !author) author = firstName + " " + lastName;
-  author = author.trim();
+  if (author==="site" || !author) author = firstName + " " + lastName; // The user can just enter 'site' as the author in their post, if they don't want to type their own name
+  author = author.trim(); // Remove unneccesary whitespace
+  head.appendChild(htmlToElement(`<meta name="author" content="${author}">`)); // append the author to the <head>. As far as the <head> is concerned, we're now done
+
   let authorNameArray = author.split(" ");
-  sortedAuthors.push(authorNameArray[authorNameArray.length-1]);
-  authors.push(authorNameArray);
-  head.appendChild(htmlToElement(`<meta name="author" content="${author}">`));
+  sortedAuthors.push(authorNameArray[authorNameArray.length-1]); // We assume that the last name specified is the Authors last name, by which we will later sort
+  authors.push(authorNameArray); // to be able to retrieve the author by name later, we store all the authors names as an array within a container array
 }
+
 sortedAuthors = sortedAuthors.sort();
-console.log(authors);
-for (var sortedAuthor of sortedAuthors) {
-  let authorEle = authors.find(element => element[element.length-1]===sortedAuthor);
-  console.log(authorEle);
-  documentHeaderAuthors.appendChild(htmlToElement(`<span class="author">${authorEle.join(" ")}</span>`));
+for (var sortedAuthor of sortedAuthors) {// for each of the alphabetically sorted last names
+  let authorEle = authors.find(element => element[element.length-1]===sortedAuthor); // get the authors full name from their last name
+  documentHeaderAuthors.appendChild(htmlToElement(`<span class="author">${authorEle.join(" ")}</span>`)); // add the author as the last child of the list of authors
 }
-document.querySelector('#author-array').outerHTML="";
+document.querySelector('#author-array').outerHTML=""; // Since everything has gone well, we can now delete the author array that originally contained the names unsorted
+
+
 document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
 
 // Citations
@@ -64,7 +78,9 @@ let cslLocale = formatCSLLocale(docLang);
 console.log(cslLocale);
 
 function formatCustomCitationAPA(citationString) {
-  console.log(citationString);
+
+  // This is a very hacky solution to the fact that APA formats inline citations slightly differently than what is appropriate in footnotes. Should be replaced with a more robust solution at some point.
+
   let authorClassList ="";
   if(citationString.includes("“")) authorClassList += "actually-title";
   citationString= citationString.replace(/[“”]/g, "");
@@ -75,42 +91,38 @@ function formatCustomCitationAPA(citationString) {
   return `<span class="citation"><span class="authors ${authorClassList}">${authors}</span><date class="publication-date">${date}</date></span>`;
 }
 
-/* from https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro */
-function htmlToElement(html) {
-    var template = document.createElement('template');
-    html = html.trim(); // Never return a text node of whitespace as the result
-    template.innerHTML = html;
-    return template.content.firstChild;
-}
+/* handle c::something;; style citations */
+
+document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely case that there are two or more <body>s ;)
+  let htmlContent = item.innerHTML; // get the entire html of the body
+  if(htmlContent.includes("c::")){ // It's trying to cite via the global citation store - if not, we can save all this effort
+    let citations=htmlContent.split("c::");
+    htmlContent = citations[0]; // this is everything before the first citations
+    for (let citation of citations.slice(1)) { //citations.slice(1) since the first element of citations does not actually contain a citation
+      if (!citation){continue;} // this handles the case of c::c::
+      let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
+      citedWorksSet.add(citationString); // add the citation to the set we will later use to generate the bibliography
+      let citationObject = new Cite(citationMap.get(citationString)); //retrieve the citation based on it's citation short name and format it as a Citations.js object
+      let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale}); //format it as as an APA citation
+      formattedCitation = formatCustomCitationAPA(formattedCitation); // Fix small error in default citations.js formatting
+      htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
+    }
+  }
+  item.innerHTML = htmlContent; // finally, make the site html the html we modified
+});
+
+/* get the boolean attributes that tell us we should skip generating footnotes or figures */
 
 let noFootnotes = document.querySelector('html').classList.contains('nofootnotes');
 let noFigures = document.querySelector('html').classList.contains('nofigures');
 
-document.querySelectorAll('body').forEach((item, i) => {
-  let htmlContent = item.innerHTML;
-  if(htmlContent.includes("c::")){ // It's trying to cite via the global citation store
-    let citations=htmlContent.split("c::"); //Maybe it wants to cite more than one thing
-    htmlContent = citations[0];
-    for (let citation of citations.slice(1)) {
-      console.log(citation);
-      if (!citation){continue;} // We don't care about values like empty strings or undefined;
-      let citationString = citation.split(";;")[0]; //;; delimits the end of a citation, should the fn contain multiple or additional notes
-      console.log(citationString);
-      citedWorksSet.add(citationString);
-      let citationObject = new Cite(citationMap.get(citationString));
-      window.citationObject = citationObject;
-      let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale});
-      formattedCitation = formatCustomCitationAPA(formattedCitation);
-      htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
-    }
-  }
-  item.innerHTML = htmlContent;
-});
+/* Footnotes */
 
 var footnoteCounter = 0;
 if (!noFootnotes){
-  //Footnotes
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
+
+    // create the footnotes both in the text and in the footnote container
     item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, footnoteContent) => {
       footnoteCounter++;
       footnoteContent = capitalizeFirstLetter(footnoteContent);
@@ -118,6 +130,8 @@ if (!noFootnotes){
       document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
       return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
       });
+
+    //Fix weird interaction between blockquotes and footnotes
     document.querySelectorAll('blockquote p a.footnote').forEach((footnote, i) => {
       let parent = footnote.parentNode;
       while (parent.nodeName !== "BLOCKQUOTE"){
@@ -130,17 +144,19 @@ if (!noFootnotes){
 
   });
 }
+
 let previousCitation = "";
+
+// Replace subsequent entries of the same author in footnotes with ibid/ebd.
+
 document.querySelectorAll('#footnote-container li > span').forEach((item, i) => {
     item.querySelectorAll('.citation').forEach((item, i) => {
       let currentCitation = item.innerHTML;
       if (previousCitation === currentCitation ){
         item.classList.add("ibid");
       }
-      console.log(previousCitation===currentCitation);
       previousCitation = currentCitation;
     });
-    console.log(item.querySelector('.citation'));
     if (!item.querySelector('.citation')) previousCitation = ""; //if there is a footnote with something else inbetween, don't use ibid
 
 });
@@ -154,12 +170,10 @@ if(footnoteCounter===0){
 console.log(noFigures);
 if (!noFigures){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-    console.log(item);
     let fileLocation = document.location.href.split('.html')[0];
     item.innerHTML = item.innerHTML.replace(
-      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g,
+      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g, // Ugly regex matches figure syntax
       (match, captionText, side, size, url, moreUrls) => {
-        console.log(moreUrls);
         var urlString = "";
         if(moreUrls){
           let urlArray = moreUrls.split(":");
@@ -183,6 +197,8 @@ if (!noFigures){
       }
     );
   });
+
+  // Move the figures out of containers into the main article container to prevent figures being stuck in elements that only permit phrasing content.
   document.querySelectorAll('figure').forEach((item, i) => {
     let newItem = item.cloneNode(true);
     if(!item.parentNode.matches("#main-article")){
