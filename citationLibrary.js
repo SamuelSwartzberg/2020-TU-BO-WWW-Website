@@ -740,3 +740,26 @@ citationMap.set(
 			]
 		}
 	})
+citationMap.set(
+	"Ochwadt1877",
+	{
+		"id": "http://zotero.org/users/5451256/items/9CSVM9XG",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Nicolai",
+		"publisher-place": "Berlin",
+		"title": "Die Kanalisation mit Berieselung und das Dr. Petri'sche Verfahren betreffend die Desinfection und Verwerthung der Fäcalstoffe",
+		"author": [
+			{
+				"family": "Ochwadt",
+				"given": "Alexander"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1877"
+				]
+			]
+		}
+	})
