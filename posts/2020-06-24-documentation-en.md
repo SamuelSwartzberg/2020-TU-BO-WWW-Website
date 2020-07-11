@@ -4,7 +4,7 @@ abstract|Generate a personal website of papers, nicely and academically formatte
 arguments|nofootnotes nofigures
 lang|en
 author|site
-This text is also available in <a href="2020-06-24-documentation-de-nopreview"> German</a>, the English version is still unfinished.
+This text is also available in [German](2020-06-24-documentation-de), the English version is still unfinished.
 By Group \##2, sole member David Samuel (Sam) Swartzberg
 
 ## Concept

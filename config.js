@@ -8,7 +8,7 @@ var description =
 `BA Culture and Technology student with multidisciplinary interests and experiences. I write about history, philosophy, linguistics, media, and whatever other academic subjects I'm currently interested in.`;
 var links = /* [text, href] */[
   ["Home page", "https://samswartzberg.com"],
-  ["me@samswartzberg.com", "mailto:samswartzberg.com"]];
+  ["me@samswartzberg.com", "mailto:me@samswartzberg.com"]];
 var fullLegalName = "David Samuel Swartzberg";
 var legalEmail = "me@samswartzberg.com";
 var legalPhone = "+49 173 35 72";

@@ -600,3 +600,166 @@ citationMap.set(
 			]
 		}
 	})
+
+citationMap.set(
+	"Schug2014",
+	{
+		"id": "http://zotero.org/users/5451256/items/248Y8RYH",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Vergangenheitsverlag",
+		"publisher-place": "Berlin",
+		"title": "Berliner Wasser: die Geschichte einer Lebensnotwendigkeit",
+		"author": [
+			{
+				"family": "Schug",
+				"given": "Alexander"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Krz2004",
+	{
+		"id": "http://zotero.org/users/5451256/items/FFZNES32",
+		"type": "article-journal",
+		"container-title": "FUndiert",
+		"issue": "2",
+		"title": "Die Entstehung der Berliner Kanalisation",
+		"volume": "6",
+		"author": [
+			{
+				"family": "Krzywanek",
+				"given": "Oliver"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Mohajeri2005",
+	{
+		"id": "http://zotero.org/users/5451256/items/3PLESI8I",
+		"type": "book",
+		"event-place": "Stuttgart",
+		"publisher": "Franz Steiner Verlag",
+		"publisher-place": "Stuttgart",
+		"title": "100 Jahre Berliner Wasserversorgung und Abwasserentsorgung 1840-1940",
+		"author": [
+			{
+				"family": "Mohajeri",
+				"given": "Shahrooz"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Tepasse2001",
+	{
+		"id": "http://zotero.org/users/5451256/items/D9LWXCSK",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Mann",
+		"publisher-place": "Berlin",
+		"title": "Stadttechnik im Städtebau Berlins - 19. Jahrhundert",
+		"author": [
+			{
+				"family": "Tepasse",
+				"given": "Heinrich"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Bondzio2005",
+	{
+		"id": "http://zotero.org/users/5451256/items/FMG6SLQM",
+		"type": "chapter",
+		"container-title": "Urbaner Metabolismus. Die städtische Infrastruktur von Berlin.",
+		"event-place": "Berlin",
+		"publisher": "Technische Universität Berlin",
+		"publisher-place": "Berlin",
+		"title": "Abwasser",
+		"URL": "http://www.urbaner-metabolismus.de/",
+		"author": [
+			{
+				"family": "Bondzio",
+				"given": "M."
+			},
+			{
+				"family": "Emslander",
+				"given": "T."
+			},
+			{
+				"family": "Katholy",
+				"given": "J."
+			},
+			{
+				"family": "Krüger",
+				"given": "S."
+			},
+			{
+				"family": "Simo",
+				"given": "A."
+			}
+		],
+		"editor": [
+			{
+				"family": "Prytula",
+				"given": "Michael"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Ochwadt1877",
+	{
+		"id": "http://zotero.org/users/5451256/items/9CSVM9XG",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Nicolai",
+		"publisher-place": "Berlin",
+		"title": "Die Kanalisation mit Berieselung und das Dr. Petri'sche Verfahren betreffend die Desinfection und Verwerthung der Fäcalstoffe",
+		"author": [
+			{
+				"family": "Ochwadt",
+				"given": "Alexander"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1877"
+				]
+			]
+		}
+	})
