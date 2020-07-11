@@ -600,3 +600,96 @@ citationMap.set(
 			]
 		}
 	})
+
+citationMap.set(
+	"Schug2014",
+	{
+		"id": "http://zotero.org/users/5451256/items/248Y8RYH",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Vergangenheitsverlag",
+		"publisher-place": "Berlin",
+		"title": "Berliner Wasser: die Geschichte einer Lebensnotwendigkeit",
+		"author": [
+			{
+				"family": "Schug",
+				"given": "Alexander"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Krz2004",
+	{
+		"id": "http://zotero.org/users/5451256/items/FFZNES32",
+		"type": "article-journal",
+		"container-title": "FUndiert",
+		"issue": "2",
+		"title": "Die Entstehung der Berliner Kanalisation",
+		"volume": "6",
+		"author": [
+			{
+				"family": "Krzywanek",
+				"given": "Oliver"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Mohajeri2005",
+	{
+		"id": "http://zotero.org/users/5451256/items/3PLESI8I",
+		"type": "book",
+		"event-place": "Stuttgart",
+		"publisher": "Franz Steiner Verlag",
+		"publisher-place": "Stuttgart",
+		"title": "100 Jahre Berliner Wasserversorgung und Abwasserentsorgung 1840-1940",
+		"author": [
+			{
+				"family": "Mohajeri",
+				"given": "Shahrooz"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	})
+citationMap.set(
+	"Tepasse2001",
+	{
+		"id": "http://zotero.org/users/5451256/items/D9LWXCSK",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Mann",
+		"publisher-place": "Berlin",
+		"title": "Stadttechnik im Städtebau Berlins - 19. Jahrhundert",
+		"author": [
+			{
+				"family": "Tepasse",
+				"given": "Heinrich"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		}
+	})
