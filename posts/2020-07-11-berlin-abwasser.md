@@ -3,7 +3,7 @@ date|13.07.2020
 abstract|
 arguments|noargs
 lang|de
-author|site
+author|Missing Authors
 
 Welche Bedeutung hat die Berliner Kanalisation für ihre Stadt? Wie wurde Berlin also durch den Bau der Berliner Kanalisation verändert? Eingebettet in den großen Trends der zweiten Hälfte des neunzehnten Jahrhunderts - der Industrialisierung und der sozialen Frage - gibt es naheliegende Antworten: Man würde erwarten, Berlin wäre gesünder geworden, die soziale Spannung hätte sich verringert, ganz allgemein wäre Berlin *besser*. Mittels dieses Blickwinkels, der Erwartungen, die sowohl Zeitgenossen als auch wir heute an die Wirkung der Kanalisation stellen, wollen wir die oben angerissene Frage beantworten: Wie hat sich Berlin durch die Kanalisation verändert?
 Zu diesem Zweck streifen wir zuerst die Straßen und überfüllten Rinnsteine des Berlins Mitte des neunzehnten Jahrhunderts. Wir umreißen, wie es dazu kam, dass die Kanalisation gebaut wurde. Schließlich nehmen wir verschiedene Erwartungsfelder unter die Lupe.
