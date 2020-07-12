@@ -115,7 +115,7 @@ if (!noFootnotes){
       if (match.includes("fnv:{")) footnoteClasslist+="cf";
       let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
       document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
-      return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
+      return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
       });
 
     //Fix weird interaction between blockquotes and footnotes

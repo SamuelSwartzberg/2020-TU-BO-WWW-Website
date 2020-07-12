@@ -103,12 +103,10 @@ html[lang="de"] .citation.ibid.capitalize::after{
 
 .footnote{
 	vertical-align: super;
+  user-select: none;
   font-size: 0.7em;
 	line-height: 0;
 	text-decoration: none;}
-
-.footnote::after{
-	content:" "; }
 
 .footnote-content::after{
   content: ".";
@@ -125,6 +123,8 @@ html[lang="de"] .citation.ibid.capitalize::after{
   margin-left: 0;
   list-style-type: none;
 }
+#footnote-container .footnote::after{
+	content:" ";}
 html[lang="de"] .cf .footnote-content::before{
   content: "Vgl. ";
 }
