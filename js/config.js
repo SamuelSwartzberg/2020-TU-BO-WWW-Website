@@ -1,7 +1,4 @@
-/* libraries */
-
-const Cite = require('citation-js');
-
+ console.log(window.origin);
 /*
 Specify your data here!
 */
