@@ -108,7 +108,7 @@ if (!noFootnotes){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
 
     // create the footnotes both in the text and in the footnote container
-    item.innerHTML = item.innerHTML.replace(/fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
+    item.innerHTML = item.innerHTML.replace(/ ?fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
       footnoteCounter++;
       footnoteContent = capitalizeFirstLetter(footnoteContent);
       let footnoteClasslist = ""
