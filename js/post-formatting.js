@@ -234,32 +234,6 @@ document.querySelector('.quote-highlighter').onclick = () => highlightThingsMatc
 
 document.querySelector('.footnote-highlighter').onclick = () => highlightThingsMatchingSelector(".footnote");
 
-// Highlight capital letters
-
-function highlightNodesUnder(node){
-  try{
-    for (node=node.firstChild;node;node=node.nextSibling){
-      console.log(node)
-      if (!node);
-      else if (node.nodeType==3) node.parentNode.innerHTML = node.textContent.replace(/([A-Z])/g,'<span class="capital-letter">$1</span>');
-      else highlightNodesUnder(node);
-    }
-  } catch (error) {
-    console.log(node);
-    console.log(node.parentNode);
-    throw error;
-  }
-}
-
-let firstRun = true;
-document.querySelector('.capital-highlighter').onclick = () => {
-  if (firstRun){
-    let siteContainer = document.querySelector('.site-container');
-    highlightNodesUnder(siteContainer);
-    firstRun = false;
-  }
-  highlightThingsMatchingSelector(".capital-letter");
-}
 
 // Allow Spellcheck
 

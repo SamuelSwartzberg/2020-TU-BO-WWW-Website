@@ -6,6 +6,7 @@ document.querySelector('.print-pager').onclick = () => {
     item.outerHTML += `<span id="${bottomFootnote.id}" class="${bottomFootnote.classList.value}">${bottomFootnote.innerHTML}</span>`;
   });
   document.querySelector('.footnote-container').outerHTML = "";
+  document.querySelector('body').classList.add("page-view");
   window.PagedPolyfill.preview();
   Paged.registerHandlers(class extends Paged.Handler {
     constructor(chunker, polisher, caller) {
