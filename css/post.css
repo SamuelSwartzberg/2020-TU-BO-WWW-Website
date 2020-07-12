@@ -158,20 +158,41 @@ li:target:before{
 
 /* Expirementail paged.js rules*/
 
+#main-article .footnote-bottom, .pagedjs_pages .footnote-bottom{ /* so we get these rules to apply before print styling takes effect*/
+  font-size: 10pt;
+  line-height: 1.0;
+  margin-bottom: 0.7em;
+  display: inline-block;
+  width:100%;
+  float: right;
+  page-break-inside: avoid;
+}
+.pagedjs_margin-bottom{
+  align-items: start;
+}
+
 @media print{
   html{
     font-size: 12pt; }
   #site-footer, #site-header{
     display: none; }
 
+
+
   @page{
     size: A4;
     margin: 20mm;
+    margin-bottom: 26mm;
 
     @bottom-right {
       color: var(--grey);
       content: counter(page);
+      margin-top: 2em;
     }
+  }
+  .site-container{
+    max-width: initial;
+    width: 100%;
   }
   #bibliography-container{
     break-before: page;
@@ -191,9 +212,6 @@ li:target:before{
   h2,h3,h4{
     break-after: avoid;
   }
-  .footnote-container{
-    display: none;
-  }
   #bibliography-container{
     margin-top: 0;
     border-top: none;
@@ -207,13 +225,8 @@ li:target:before{
   h1{
     margin-bottom: 3.5em;
   }
-  .footnote-bottom{
-    font-size: 10pt;
+  .footnote-area .footnote-bottom{
     line-height: 1.2;
-    margin-bottom: 0.15em;
-    display: inline-block;
-    width:100%;
-    float: right;
-    page-break-inside: avoid;
+    margin-bottom: 0.15em !important;
   }
 }
