@@ -52,9 +52,9 @@ pre{
 	margin: 1em 0; }
 
 hr{
+	border: none;
 	margin: 2em 0;
-	height: 0.05em;
-	background-color: var(--grey); }
+	border-bottom: 0.05em solid var(--grey); }
 
 /* Quote-related Styling */
 

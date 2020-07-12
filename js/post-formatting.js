@@ -114,8 +114,8 @@ if (!noFootnotes){
       let footnoteClasslist = ""
       if (match.includes("fnv:{")) footnoteClasslist+="cf";
       let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
-      document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
-      return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
+      document.querySelector('.footnote-container ol').appendChild(bottomFootnote);
+      return `<a class="footnote footnote-inline" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
       });
 
     //Fix weird interaction between blockquotes and footnotes
@@ -136,7 +136,7 @@ let previousCitation = "";
 
 // Replace subsequent entries of the same author in footnotes with ibid/ebd.
 
-document.querySelectorAll('#footnote-container li > span').forEach((item, i) => {
+document.querySelectorAll('.footnote-container li > span').forEach((item, i) => {
     item.querySelectorAll('.citation').forEach((item, i) => {
       let currentCitation = item.innerHTML;
       if (previousCitation === currentCitation ){
@@ -150,7 +150,7 @@ document.querySelectorAll('#footnote-container li > span').forEach((item, i) => 
 
 
 if(footnoteCounter===0){
-  document.querySelector('#footnote-container').style.display = "none";
+  document.querySelector('.footnote-container').style.display = "none";
 }
 
 //Figures
@@ -213,7 +213,7 @@ for (let citedWork of sortedCitedWorksSet) {
 }
 
 //Capitalize .ebd
-document.querySelectorAll('#footnote-container li > span').forEach((item, i) => {
+document.querySelectorAll('.footnote-container li > span').forEach((item, i) => {
   if (item.children&&item.children[0]&&item.children[0].classList && item.children[0].classList.contains("ibid")){
     item.children[0].classList.add("capitalize");
   }
@@ -277,5 +277,3 @@ document.querySelector('.font-selector').onchange = (event) => {
   }
   siteContainer.classList.add(event.target.value);
 }
-
-document.querySelector('.strict-submissions-mode').onclick = document.querySelector('html').classList.toggle("strict");

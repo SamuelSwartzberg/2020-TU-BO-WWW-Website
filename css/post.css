@@ -120,16 +120,16 @@ html[lang="de"] .citation.ibid.capitalize::after{
 
 /* Footnotes and Bibliography */
 
-#footnote-container, #bibliography-container{
+.footnote-container, #bibliography-container{
   margin-top: 3em;
   border-top: var(--border-thickness) solid var(--light-grey);
   padding-top: 1em;}
 
-#footnote-container ol, #bibliography-container ol{
+.footnote-container ol, #bibliography-container ol{
   margin-left: 0;
   list-style-type: none;
 }
-#footnote-container .footnote::after{
+.footnote-bottom .footnote::after{
 	content:" ";}
 html[lang="de"] .cf .footnote-content::before{
   content: "Vgl. ";
@@ -156,30 +156,11 @@ li:target:before{
 	color: var(--grey);
 	content: ">"; }
 
-/* Strict mode styling */
-
-.strict{
-  font-size: 12pt;
-}
-
-.strict #footnote-container {
-  font-size: 10pt;
-}
-
-.strict #footnote-container ol li {
-  margin-bottom: 0.2em;
-}
-
-/* @page{
-  margin: 2cm; }
-@page:first{
-  margin-top: 2cm; } */
-
 /* Expirementail paged.js rules*/
 
 @media print{
   html{
-    font-size: 11pt; }
+    font-size: 12pt; }
   #site-footer, #site-header{
     display: none; }
 
@@ -208,16 +189,31 @@ li:target:before{
     margin-bottom: 1em;
     line-height: 1.2;}
   h2,h3,h4{
-    break-after: avoid
+    break-after: avoid;
   }
-  #footnote-container, #bibliography-container{
+  .footnote-container{
+    display: none;
+  }
+  #bibliography-container{
     margin-top: 0;
     border-top: none;
     padding-top: 0;}
   .info{
     display: none;
   }
-  .strict #table-of-contents {
+  #table-of-contents {
     display: none;
+  }
+  h1{
+    margin-bottom: 3.5em;
+  }
+  .footnote-bottom{
+    font-size: 10pt;
+    line-height: 1.2;
+    margin-bottom: 0.15em;
+    display: inline-block;
+    width:100%;
+    float: right;
+    page-break-inside: avoid;
   }
 }
