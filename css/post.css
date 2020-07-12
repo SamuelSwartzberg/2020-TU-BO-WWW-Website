@@ -237,7 +237,7 @@ li:target:before{
   #table-of-contents {
     display: none;
   }
-  h1{
+  h1.title{
     margin-bottom: 3.5em;
   }
   .footnote-area .footnote-bottom{
