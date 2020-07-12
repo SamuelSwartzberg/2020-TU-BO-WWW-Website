@@ -72,24 +72,10 @@ document.querySelector('.site-name').innerHTML = `<span class='name first-name'>
 
 // Citations
 
-const Cite = require('citation-js');
 let citedWorksSet = new Set();
 let cslLocale = formatCSLLocale(docLang);
 console.log(cslLocale);
 
-function formatCustomCitationAPA(citationString) {
-
-  // This is a very hacky solution to the fact that APA formats inline citations slightly differently than what is appropriate in footnotes. Should be replaced with a more robust solution at some point.
-
-  let authorClassList ="";
-  if(citationString.includes("“")) authorClassList += "actually-title";
-  citationString= citationString.replace(/[“”]/g, "");
-  citationString = citationString.slice(1,-1); //remove braces
-  let citationStringArray = citationString.split(",");
-  let authors = "".concat(...citationStringArray.slice(0,-1));
-  let date = citationStringArray[citationStringArray.length-1].trim();
-  return `<span class="citation"><span class="authors ${authorClassList}">${authors}</span><date class="publication-date">${date}</date></span>`;
-}
 
 /* handle c::something;; style citations */
 
@@ -103,8 +89,7 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
       let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
       citedWorksSet.add(citationString); // add the citation to the set we will later use to generate the bibliography
       let citationObject = new Cite(citationMap.get(citationString)); //retrieve the citation based on it's citation short name and format it as a Citations.js object
-      let formattedCitation = citationObject.format('citation', {format: 'html', template: 'apa', lang: cslLocale}); //format it as as an APA citation
-      formattedCitation = formatCustomCitationAPA(formattedCitation); // Fix small error in default citations.js formatting
+      let formattedCitation = `<span class="citation"><span class="citation-inner">${citationObject.format('citation', {format: 'html', template: 'apa-modified-year', lang: cslLocale})}</span></span>`; //format it as as an APA citation
       htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
     }
   }
@@ -123,10 +108,12 @@ if (!noFootnotes){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
 
     // create the footnotes both in the text and in the footnote container
-    item.innerHTML = item.innerHTML.replace(/fn:\{([^\}]+)\}/g, (match, footnoteContent) => {
+    item.innerHTML = item.innerHTML.replace(/fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
       footnoteCounter++;
       footnoteContent = capitalizeFirstLetter(footnoteContent);
-      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span>${footnoteContent}</span></li>`);
+      let footnoteClasslist = ""
+      if (match.includes("fnv:{")) footnoteClasslist+="cf";
+      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
       document.querySelector('#footnote-container ol').appendChild(bottomFootnote);
       return `<a class="footnote" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a>`
       });
@@ -231,3 +218,53 @@ document.querySelectorAll('#footnote-container li > span').forEach((item, i) => 
     item.children[0].classList.add("capitalize");
   }
 });
+// Highlight things
+
+function highlightThingsMatchingSelector(selector){
+  document.querySelectorAll(selector).forEach((item, i) => {
+    item.classList.toggle("highlight");
+  });
+}
+
+// Highlight Programmatic Quotes
+
+document.querySelector('.quote-highlighter').onclick = () => highlightThingsMatchingSelector("blockquote,q");
+
+// Highlight footnotes
+
+document.querySelector('.footnote-highlighter').onclick = () => highlightThingsMatchingSelector(".footnote");
+
+// Highlight capital letters
+
+function highlightNodesUnder(node){
+  try{
+    for (node=node.firstChild;node;node=node.nextSibling){
+      console.log(node)
+      if (!node);
+      else if (node.nodeType==3) node.parentNode.innerHTML = node.textContent.replace(/([A-Z])/g,'<span class="capital-letter">$1</span>');
+      else highlightNodesUnder(node);
+    }
+  } catch (error) {
+    console.log(node);
+    console.log(node.parentNode);
+    throw error;
+  }
+}
+
+let firstRun = true;
+document.querySelector('.capital-highlighter').onclick = () => {
+  if (firstRun){
+    let siteContainer = document.querySelector('.site-container');
+    highlightNodesUnder(siteContainer);
+    firstRun = false;
+  }
+  highlightThingsMatchingSelector(".capital-letter");
+}
+
+// Allow Spellcheck
+
+document.querySelector('.spellcheck').onclick = () => {
+  let mainArticle = document.querySelector('#main-article');
+  mainArticle.toggleAttribute("contenteditable");
+  mainArticle.spellcheck = mainArticle.spellcheck ? "false" : "true"; // spellcheck is enumerated
+}

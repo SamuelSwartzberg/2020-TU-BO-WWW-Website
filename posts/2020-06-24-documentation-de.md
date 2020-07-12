@@ -93,7 +93,7 @@ Die Links und die Paper-Seiten werden automatisch aus den Markdown-Dateien gener
 
 #### Fußnoten
 
-Automatisch nummerierte und verlinkte Fußnoten. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: `fn:{Inhalt der Fußnote}`.
+Automatisch nummerierte und verlinkte Fußnoten. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: `fn:{Inhalt der Fußnote}`. Für Fußnoten mit Vgl. / Cf. `fnv:{Inhalt der Fußnote}`.
 
 #### Abbildungen
 
@@ -102,7 +102,7 @@ Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht T
 
 #### Auto-citation
 
-Paperify unterstützt automatische Zitationen. So gehts: `citationLibrary.js` enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode `citationMap.set(citationKey, citation)` Einträge hinzufügen. Dabei ist der `citationKey` eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. `citationKey` muss ein String sein. `citation` ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array `[]` gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit `c::citationKey;;` Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit 'ibid.'/'ebd.' ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, möglicherweise kommen in der Zukunft mehr Optionen hinzu.
+Paperify unterstützt automatische Zitationen. So gehts: `citationLibrary.js` enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode `citationMap.set(citationKey, citation)` Einträge hinzufügen. Dabei ist der `citationKey` eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. `citationKey` muss ein String sein. `citation` ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array `[]` gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit `c::citationKey;;` Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit 'ibid.'/'ebd.' ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, allerdings kann man mittels dem Schema in csl-templates.js auch andere Zitationsformen registrieren und diese dann in post-formatting.js austauschen.
 
 ## Style-Guide
 

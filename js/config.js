@@ -1,3 +1,7 @@
+/* libraries */
+
+const Cite = require('citation-js');
+
 /*
 Specify your data here!
 */

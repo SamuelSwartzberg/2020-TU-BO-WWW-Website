@@ -1,3 +1,14 @@
+#site-header{
+  display: flex;
+  justify-content: space-between;
+}
+.highlighter{
+
+}
+.spellcheck{
+  text-decoration: underline dotted #fc483e;
+}
+
 #post-header .info{
   line-height: 1.5;
 }
@@ -68,15 +79,7 @@
 
 /* Citations */
 
-.citation .publication-date::before{
-  content: " (";
-}
-
-.citation .publication-date::after{
-  content: ")";
-}
-
-.citation.ibid .authors, .citation.ibid  .publication-date{
+.ibid .citation-inner{
   display: none;
 }
 html[lang="en"] .citation.ibid::after{
@@ -91,11 +94,9 @@ html[lang="de"] .citation.ibid::after{
 html[lang="de"] .citation.ibid.capitalize::after{
   content: "Ebd.";
 }
-.authors.actually-title::before{
-  content: open-quote;
-}
-.authors.actually-title::after{
-  content: close-quote;
+
+.highlight{
+  background-color: #fdec96;
 }
 
 /* Footnotes */
@@ -109,6 +110,10 @@ html[lang="de"] .citation.ibid.capitalize::after{
 .footnote::after{
 	content:" "; }
 
+.footnote-content::after{
+  content: ".";
+}
+
 /* Footnotes and Bibliography */
 
 #footnote-container, #bibliography-container{
@@ -120,7 +125,12 @@ html[lang="de"] .citation.ibid.capitalize::after{
   margin-left: 0;
   list-style-type: none;
 }
-
+html[lang="de"] .cf .footnote-content::before{
+  content: "Vgl. ";
+}
+html[lang="en"] .cf .footnote-content::before{
+  content: "Cf. ";
+}
 /* Bibliography */
 
 #bibliography-container div{
@@ -150,4 +160,4 @@ li:target:before{
 @page{
   margin: 2cm; }
 @page:first{
-  margin-top: 2.5cm; }
+  margin-top: 2cm; }
