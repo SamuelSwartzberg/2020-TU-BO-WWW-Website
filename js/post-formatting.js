@@ -268,3 +268,14 @@ document.querySelector('.spellcheck').onclick = () => {
   mainArticle.toggleAttribute("contenteditable");
   mainArticle.spellcheck = mainArticle.spellcheck ? "false" : "true"; // spellcheck is enumerated
 }
+
+document.querySelector('.font-selector').onchange = (event) => {
+  console.log(event);
+  let siteContainer = document.querySelector('.site-container');
+  for (let option of event.target.children) {
+    siteContainer.classList.remove(option.value);
+  }
+  siteContainer.classList.add(event.target.value);
+}
+
+document.querySelector('.strict-submissions-mode').onclick = document.querySelector('html').classList.toggle("strict");

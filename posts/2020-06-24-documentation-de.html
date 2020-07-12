@@ -22,12 +22,23 @@
     <script src="../js/config.js" charset="utf-8"></script>
     <script src="../js/csl-templates.js" charset="utf-8"></script>
     <script src="../js/citationLibrary.js" charset="utf-8"></script>
-    <!-- <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script> -->
-    <!-- <script src="../js/print.js" charset="utf-8"></script> -->
+    <script type="text/javascript">
+    window.PagedConfig = {
+      auto: false,
+      after: (flow) => { console.log("after", flow) }
+    };
+    </script>
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
     <div class="site-container">
       <header id="site-header">
         <span class="site-name-wrapper"><a href="../" class="site-name">Home</a></span>
         <span class="tool-container">
+          <select class="font-selector" name="font-selector">
+            <option value="default">Default</option>
+            <option value="times">Times</option>
+          </select>
+          <a class="strict-submissions-mode">Enable strict submission mode</a>
+          <a class="print-pager">Print</a>
           <a class="quote-highlighter highlighter">"a"</a>
           <a class="footnote-highlighter highlighter">a<sup>1</sup></a>
           <a class="capital-highlighter highlighter">AB</a>
@@ -145,5 +156,6 @@ The following is a list in this subsection
     </div>
     <script src="../js/tocbot.min.js"></script>
     <script src="../js/post-formatting.js"></script>
+    <script src="../js/print.js" charset="utf-8"></script>
   </body>
 </html>

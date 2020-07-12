@@ -1,3 +1,9 @@
+.site-container.times{
+  font-family: "Times New Roman", Times, serif;
+}
+.site-container.default{
+  font-family: inherit;
+}
 #site-header{
   display: flex;
   justify-content: space-between;
@@ -147,17 +153,71 @@ li:target .footnote{
 
 li:target:before{
 	margin-left: -3.5ch;
-	color: rgba(0,0,0,0.6);
+	color: var(--grey);
 	content: ">"; }
 
-/* Print Styling */
+/* Strict mode styling */
 
-@media print {
+.strict{
+  font-size: 12pt;
+}
+
+.strict #footnote-container {
+  font-size: 10pt;
+}
+
+.strict #footnote-container ol li {
+  margin-bottom: 0.2em;
+}
+
+/* @page{
+  margin: 2cm; }
+@page:first{
+  margin-top: 2cm; } */
+
+/* Expirementail paged.js rules*/
+
+@media print{
   html{
     font-size: 11pt; }
   #site-footer, #site-header{
-    display: none; } }
-@page{
-  margin: 2cm; }
-@page:first{
-  margin-top: 2cm; }
+    display: none; }
+
+  @page{
+    size: A4;
+    margin: 20mm;
+
+    @bottom-right {
+      color: var(--grey);
+      content: counter(page);
+    }
+  }
+  #bibliography-container{
+    break-before: page;
+  }
+  [lang="de"] #bibliography-container::before{
+    content:"Literaturverzeichnis";
+  }
+  [lang="en"] #bibliography-container::before{
+    content:"Bibliography";
+  }
+  #bibliography-container::before{
+    display: block;
+    font-size:1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    line-height: 1.2;}
+  h2,h3,h4{
+    break-after: avoid
+  }
+  #footnote-container, #bibliography-container{
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;}
+  .info{
+    display: none;
+  }
+  .strict #table-of-contents {
+    display: none;
+  }
+}

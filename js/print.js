@@ -1,7 +1,5 @@
-window.PagedConfig = {
-	auto: false
-	after: (flow) => { console.log("after", flow) },
-};
+
 document.querySelector('.print-pager').onclick = () => {
+  console.log("paging");
   window.PagedPolyfill.preview();
 }
