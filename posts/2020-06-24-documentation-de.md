@@ -103,6 +103,14 @@ Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht T
 
 Paperify unterstützt automatische Zitationen. So gehts: `citationLibrary.js` enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode `citationMap.set(citationKey, citation)` Einträge hinzufügen. Dabei ist der `citationKey` eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. `citationKey` muss ein String sein. `citation` ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array `[]` gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit `c <wbr> ::citationKey;;` Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit 'ibid.'/'ebd.' ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, allerdings kann man mittels dem Schema in csl-templates.js auch andere Zitationsformen registrieren und diese dann in post-formatting.js austauschen.
 
+#### Textkorrektur
+
+Mittels der Knöpfe rechts können verschiedene Teile des Texts, bspw. Zitate, Fußnoten, oder Rechtschreibfehler hervorgehoben werden, um diese manuell überprüfen zu können.
+
+#### Print-layout
+
+Um eine ansprechend formatierte Print-Seite zu bekommen, zuerst den Knopf in der oberen Leiste clicken. Es erscheint eine Printvorschau, die dann mittels strg/cmd p gedruckt werden kann.
+
 ## Style-Guide
 
 ### Farben
