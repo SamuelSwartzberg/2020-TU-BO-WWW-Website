@@ -166,7 +166,7 @@ li:target:before{
 #main-article .footnote-bottom, .pagedjs_pages .footnote-bottom{ /* so we get these rules to apply before print styling takes effect*/
   font-size: 10pt;
   line-height: 1.0;
-  margin-bottom: 0.7em;
+  margin-bottom: 0.68em;
   display: inline-block;
   width:100%;
   float: right;
