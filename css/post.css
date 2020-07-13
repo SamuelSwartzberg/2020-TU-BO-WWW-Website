@@ -96,14 +96,26 @@
 html[lang="en"] .citation.ibid::after{
   content: "ibid.";
 }
+html[lang="en"] .citation.ibid.nodot::after{
+  content: "ibid";
+}
 html[lang="en"] .citation.ibid.capitalize::after{
   content: "Ibid.";
+}
+html[lang="en"] .citation.ibid.nodot::after{
+  content: "Ibid";
 }
 html[lang="de"] .citation.ibid::after{
   content: "ebd.";
 }
-html[lang="de"] .citation.ibid.capitalize::after{
-  content: "Ebd.";
+html[lang="de"] .citation.ibid.nodot::after{
+  content: "Ebd";
+}
+html[lang="de"] .citation.ibid::after{
+  content: "ebd.";
+}
+html[lang="de"] .citation.ibid.nodot::after{
+  content: "Ebd";
 }
 
 .highlight{
