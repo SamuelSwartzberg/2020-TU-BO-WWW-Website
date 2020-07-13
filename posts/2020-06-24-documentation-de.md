@@ -1,6 +1,6 @@
 title|Paperify
 date|24.06.2020
-abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. 
+abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren.
 arguments|nofootnotes
 lang|de
 author|site
@@ -78,10 +78,10 @@ Barrierefreiheit:
 ### Mockups
 
 Einfaches Header - Body - Footer Design:
-![Ein Mockup der Startseite](2020-06-24-documentation-de-nopreview/mockup1.png)
-![Ein Mockup eines Posts](2020-06-24-documentation-de-nopreview/mockup2.png)
-![Ein Mockup eines Posts in einer kleineren Ansicht](2020-06-24-documentation-de-nopreview/mockup3.png)
-![Ein Mockup der Startseite in einer kleineren Ansicht](2020-06-24-documentation-de-nopreview/mockup4.png)
+![Ein Mockup der Startseite](2020-06-24-documentation-de/mockup1.png)
+![Ein Mockup eines Posts](2020-06-24-documentation-de/mockup2.png)
+![Ein Mockup eines Posts in einer kleineren Ansicht](2020-06-24-documentation-de/mockup3.png)
+![Ein Mockup der Startseite in einer kleineren Ansicht](2020-06-24-documentation-de/mockup4.png)
 
 ### Struktur
 
@@ -134,7 +134,7 @@ https://www.gwern.net/
 
 ## Danksagung
 
-Paperify nutzt [tocbot](https://tscanlin.github.io/tocbot/), um das Inhaltsverzeichnis zu generieren.
+Paperify nutzt [tocbot](https://tscanlin.github.io/tocbot/), um das Inhaltsverzeichnis zu generieren und [citation.js](https://citation.js.org/), um Referenzen wissenschaftlich zu formattieren.
 
 ## Finale Worte
 

@@ -67,7 +67,12 @@ for (var sortedAuthor of sortedAuthors) {// for each of the alphabetically sorte
 }
 document.querySelector('#author-array').outerHTML=""; // Since everything has gone well, we can now delete the author array that originally contained the names unsorted
 
-
+// Fix the problem of overly big headers and overflowing words
+let h1 = document.querySelector('h1');
+if (h1.innerHTML.length>85) {h1.classList.add("shrink-header")};
+for (var word of h1.innerHTML.split(" ")) {
+  if (word.length>12) h1.innerHTML = h1.innerHTML.replace(word, word.substring(0,6)+"&shy;"+word.substring(6,word.length-1));
+}
 document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
 
 // Citations
