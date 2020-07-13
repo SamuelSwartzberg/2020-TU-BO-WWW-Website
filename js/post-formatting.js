@@ -111,19 +111,21 @@ let noFigures = document.querySelector('html').classList.contains('nofigures');
 
 var footnoteCounter = 0;
 if (!noFootnotes){
+  let selector = 'p, ul, ol, table';
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-
-    // create the footnotes both in the text and in the footnote container
-    item.innerHTML = item.innerHTML.replace(/ ?fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
-      footnoteCounter++;
-      footnoteContent = capitalizeFirstLetter(footnoteContent);
-      let footnoteClasslist = ""
-      if (match.includes("fnv:{")) footnoteClasslist+="cf";
-      let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
-      document.querySelector('.footnote-container ol').appendChild(bottomFootnote);
-      return `<a class="footnote footnote-inline" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
-      });
-
+    console.log(item.innerHTML);
+    if (!item.querySelector(selector)){ //This one will come later, we need to avoid duplicate
+      // create the footnotes both in the text and in the footnote container
+      item.innerHTML = item.innerHTML.replace(/ ?fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
+        footnoteCounter++;
+        footnoteContent = capitalizeFirstLetter(footnoteContent);
+        let footnoteClasslist = ""
+        if (match.includes("fnv:{")) footnoteClasslist+="cf";
+        let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
+        document.querySelector('.footnote-container ol').appendChild(bottomFootnote);
+        return `<a class="footnote footnote-inline" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
+        });
+      }
     //Fix weird interaction between blockquotes and footnotes
     document.querySelectorAll('blockquote p a.footnote').forEach((footnote, i) => {
       let parent = footnote.parentNode;
@@ -219,9 +221,12 @@ for (let citedWork of sortedCitedWorksSet) {
 }
 
 //Capitalize .ebd
-document.querySelectorAll('.footnote-container li > span').forEach((item, i) => {
+document.querySelectorAll('.footnote-bottom .footnote-content').forEach((item, i) => {
   if (item.children&&item.children[0]&&item.children[0].classList && item.children[0].classList.contains("ibid")){
     item.children[0].classList.add("capitalize");
+  }
+  if (item.childNodes&&item.childNodes[item.childNodes.length-1]&&item.childNodes[item.childNodes.length-1].classList&&item.childNodes[item.childNodes.length-1].classList.contains("ibid")){
+    item.childNodes[item.childNodes.length-1].classList.add("nodot");
   }
 });
 // Highlight things
