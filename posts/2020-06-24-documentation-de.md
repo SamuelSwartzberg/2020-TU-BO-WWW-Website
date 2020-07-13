@@ -1,10 +1,9 @@
 title|Paperify
 date|24.06.2020
-abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.
-arguments|nofootnotes nopreview
+abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren.
+arguments|nofootnotes
 lang|de
 author|site
-Dieser Text ist auch auf [Englisch](2020-06-24-documentation-en) verfügbar.
 ## Konzept
 
 Eine vanilla HTML/CSS/JS Website ohne Ansprüche ans Backend, die als Showcase für akademische oder ähnliche Werke des Autors fungiert - unabhängig davon, ob diese publiziert wurden. Wird aus Markdown-Dateien (.md) generiert. Kann auch dafür genutzt werden, Paper, Essays und ähnliches ohne Stylingschwierigkeiten und unnötiges Markup zu schreiben.
@@ -19,8 +18,8 @@ Papers, Essays, Artikel.
 
 ### Nutzung / Deployment
 
-Da wir keinen Server haben, müssen wir vor Deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks ausführen. Dafür muss das Script init.sh aus einer Shell (z. B. Terminal auf Mac OS) aufrufen: `./init.sh`. Init.sh hat als Dependency `markdown-to-html`, was man so erhalten kann: `npm install -g cwjohan/markdown-to-html`. Ggf. ist es nötig, davor noch `npm` zu installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!
-Die Variablen wie Name etc. sind in der Datei config.js zu finden. Die Metadaten für die Posts folgen dem Schema `name|wert`. Init.sh erwartet genau 6 Zeilen Metadaten, also darauf achten, dass alle 6 Header `name` `date` `abstract` `arguments` `author` `lang` spezifiziert sind. `arguments` akzeptiert als Werte noargs (keine Argumente; theoretisch nicht notwendig, nur zur Klarheit), nofootnotes (Keine Fußnoten generieren), nofigures (keine Bilder mit der Synax fig:{...}, s.u. generieren). `author` akzeptiert mehrere Autoren, solange verschiedene Namen mit Komma getrennt sind, und sortiert diese nach Nachnamen. `lang` akzeptiert Zwei-Zeichen-Ländercodes wie 'de' oder 'en'. Nach den 4 Zeilen keine Leerzeile lassen, markdown-to-html produziert sonst manchmal keinen oder falschen Output (außerhalb meiner Kontrolle).
+Da wir keinen Server haben, müssen wir vor Deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks ausführen. Dafür muss das Script init.sh aus einer Shell (z. B. Terminal auf Mac OS) aufgerufen werden: `./init.sh`. Init.sh hat als Dependency `markdown-to-html`, was man so erhalten kann: `npm install -g cwjohan/markdown-to-html`. Ggf. ist es nötig, davor noch `npm` zu installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!
+Die Variablen wie Name etc. sind in der Datei config.js zu finden. Die Metadaten für die Posts folgen dem Schema `name|wert`. Init.sh erwartet genau 6 Zeilen Metadaten, also darauf achten, dass alle 6 Header `name` `date` `abstract` `arguments` `author` `lang` spezifiziert sind. `arguments` akzeptiert als Werte noargs (keine Argumente; theoretisch nicht notwendig, nur zur Klarheit), nofootnotes (Keine Fußnoten generieren), nofigures (keine Bilder mit der Synax fig:{...}, s.u. generieren) sowie nopreview (kein link in der index.html). `author` akzeptiert mehrere Autoren, solange verschiedene Namen mit Komma getrennt sind, und sortiert diese nach Nachnamen. `lang` akzeptiert Zwei-Zeichen-Ländercodes wie 'de' oder 'en'. Nach den 6 Zeilen keine Leerzeile lassen, markdown-to-html produziert sonst manchmal keinen oder falschen Output (außerhalb meiner Kontrolle).
 Der Dateiname der Posts sollten mit dem Datum YYYY-MM-DD beginnen, um sicherzugehen, dass sie chronologisch sortiert werden.
 Falls HTML-Tags im Markdown genutzt werden, sollten sie mit Leerzeichen umgeben sein, Block-Level Tags mit einer Leerzeile.
 
@@ -79,10 +78,10 @@ Barrierefreiheit:
 ### Mockups
 
 Einfaches Header - Body - Footer Design:
-![Ein Mockup der Startseite](2020-06-24-documentation-de-nopreview/mockup1.png)
-![Ein Mockup eines Posts](2020-06-24-documentation-de-nopreview/mockup2.png)
-![Ein Mockup eines Posts in einer kleineren Ansicht](2020-06-24-documentation-de-nopreview/mockup3.png)
-![Ein Mockup der Startseite in einer kleineren Ansicht](2020-06-24-documentation-de-nopreview/mockup4.png)
+![Ein Mockup der Startseite](2020-06-24-documentation-de/mockup1.png)
+![Ein Mockup eines Posts](2020-06-24-documentation-de/mockup2.png)
+![Ein Mockup eines Posts in einer kleineren Ansicht](2020-06-24-documentation-de/mockup3.png)
+![Ein Mockup der Startseite in einer kleineren Ansicht](2020-06-24-documentation-de/mockup4.png)
 
 ### Struktur
 
@@ -102,7 +101,7 @@ Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht T
 
 #### Auto-citation
 
-Paperify unterstützt automatische Zitationen. So gehts: `citationLibrary.js` enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode `citationMap.set(citationKey, citation)` Einträge hinzufügen. Dabei ist der `citationKey` eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. `citationKey` muss ein String sein. `citation` ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array `[]` gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit `c::citationKey;;` Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit 'ibid.'/'ebd.' ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, allerdings kann man mittels dem Schema in csl-templates.js auch andere Zitationsformen registrieren und diese dann in post-formatting.js austauschen.
+Paperify unterstützt automatische Zitationen. So gehts: `citationLibrary.js` enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode `citationMap.set(citationKey, citation)` Einträge hinzufügen. Dabei ist der `citationKey` eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. `citationKey` muss ein String sein. `citation` ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array `[]` gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit `c <wbr> ::citationKey;;` Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit 'ibid.'/'ebd.' ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, allerdings kann man mittels dem Schema in csl-templates.js auch andere Zitationsformen registrieren und diese dann in post-formatting.js austauschen.
 
 ## Style-Guide
 
@@ -135,7 +134,7 @@ https://www.gwern.net/
 
 ## Danksagung
 
-Paperify nutzt [tocbot](https://tscanlin.github.io/tocbot/), um das Inhaltsverzeichnis zu generieren.
+Paperify nutzt [tocbot](https://tscanlin.github.io/tocbot/), um das Inhaltsverzeichnis zu generieren und [citation.js](https://citation.js.org/), um Referenzen wissenschaftlich zu formatieren.
 
 ## Finale Worte
 

@@ -2,6 +2,7 @@
 Needs an unique key which you will also use to refer to the source when writing MD
 Key should be of type String
 Value should be a CSL JSON object
+CSL JSON objects can be exported by most citation managers
 */
 var citationMap = new Map();
 

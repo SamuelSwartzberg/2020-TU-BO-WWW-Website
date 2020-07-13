@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="nofootnotes nopreview" lang="de">
+<html class="nofootnotes" lang="de">
   <head>
     <title>Paperify</title>
     <meta name="author" id="author-array" content="site">
@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.">
+    <meta name="description" content="Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren.">
     <meta charset="utf-8">
   </head>
   <body>
@@ -48,20 +48,19 @@
         <header id="post-header">
           <h1 class="title">Paperify</h1>
           <section class="info">
-            <article class="abstract">Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren. Von David Samuel (Sam) Swartzberg, Gruppe 2, $MATRIKELNUMMER.</article><span id="authors">site</span><time class="creation-date">24.06.2020</time>
+            <article class="abstract">Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren.</article><span id="authors">site</span><time class="creation-date">24.06.2020</time>
           </section>
         </header>
         <section id="table-of-contents">
         </section>
-        <article id="main-article"><p>Dieser Text ist auch auf <a href="2020-06-24-documentation-en">Englisch</a> verfügbar.</p>
-<h2 id="konzept">Konzept</h2>
+        <article id="main-article"><h2 id="konzept">Konzept</h2>
 <p>Eine vanilla HTML/CSS/JS Website ohne Ansprüche ans Backend, die als Showcase für akademische oder ähnliche Werke des Autors fungiert - unabhängig davon, ob diese publiziert wurden. Wird aus Markdown-Dateien (.md) generiert. Kann auch dafür genutzt werden, Paper, Essays und ähnliches ohne Stylingschwierigkeiten und unnötiges Markup zu schreiben.</p>
 <h3 id="zielgruppe">Zielgruppe</h3>
 <p>Student*innen und ehemalige Student*innen, Professor*innen und Lehrangestellte sowie andere, die Papers, Essays, Artikel oder Ähnliches teilen wollen. Kann auch als Blog o. Ä. fungieren.</p>
 <h3 id="inhalte">Inhalte</h3>
 <p>Papers, Essays, Artikel.</p>
 <h3 id="nutzung-deployment">Nutzung / Deployment</h3>
-<p>Da wir keinen Server haben, müssen wir vor Deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks ausführen. Dafür muss das Script init.sh aus einer Shell (z. B. Terminal auf Mac OS) aufrufen: <code>./init.sh</code>. Init.sh hat als Dependency <code>markdown-to-html</code>, was man so erhalten kann: <code>npm install -g cwjohan/markdown-to-html</code>. Ggf. ist es nötig, davor noch <code>npm</code> zu installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!<br>Die Variablen wie Name etc. sind in der Datei config.js zu finden. Die Metadaten für die Posts folgen dem Schema <code>name|wert</code>. Init.sh erwartet genau 6 Zeilen Metadaten, also darauf achten, dass alle 6 Header <code>name</code> <code>date</code> <code>abstract</code> <code>arguments</code> <code>author</code> <code>lang</code> spezifiziert sind. <code>arguments</code> akzeptiert als Werte noargs (keine Argumente; theoretisch nicht notwendig, nur zur Klarheit), nofootnotes (Keine Fußnoten generieren), nofigures (keine Bilder mit der Synax fig:{...}, s.u. generieren). <code>author</code> akzeptiert mehrere Autoren, solange verschiedene Namen mit Komma getrennt sind, und sortiert diese nach Nachnamen. <code>lang</code> akzeptiert Zwei-Zeichen-Ländercodes wie &#39;de&#39; oder &#39;en&#39;. Nach den 4 Zeilen keine Leerzeile lassen, markdown-to-html produziert sonst manchmal keinen oder falschen Output (außerhalb meiner Kontrolle).<br>Der Dateiname der Posts sollten mit dem Datum YYYY-MM-DD beginnen, um sicherzugehen, dass sie chronologisch sortiert werden.<br>Falls HTML-Tags im Markdown genutzt werden, sollten sie mit Leerzeichen umgeben sein, Block-Level Tags mit einer Leerzeile.</p>
+<p>Da wir keinen Server haben, müssen wir vor Deployment das Markdown zu HTML umwandeln und einige andere kleine Tasks ausführen. Dafür muss das Script init.sh aus einer Shell (z. B. Terminal auf Mac OS) aufgerufen werden: <code>./init.sh</code>. Init.sh hat als Dependency <code>markdown-to-html</code>, was man so erhalten kann: <code>npm install -g cwjohan/markdown-to-html</code>. Ggf. ist es nötig, davor noch <code>npm</code> zu installieren. Nach jeder Änderung einer .md Datei muss das Script erneut laufen, um die HTML Dateien zu generieren. Änderungen an den HTML-Dateien selbst werden ohne Warnung überschrieben!<br>Die Variablen wie Name etc. sind in der Datei config.js zu finden. Die Metadaten für die Posts folgen dem Schema <code>name|wert</code>. Init.sh erwartet genau 6 Zeilen Metadaten, also darauf achten, dass alle 6 Header <code>name</code> <code>date</code> <code>abstract</code> <code>arguments</code> <code>author</code> <code>lang</code> spezifiziert sind. <code>arguments</code> akzeptiert als Werte noargs (keine Argumente; theoretisch nicht notwendig, nur zur Klarheit), nofootnotes (Keine Fußnoten generieren), nofigures (keine Bilder mit der Synax fig:{...}, s.u. generieren) sowie nopreview (kein link in der index.html). <code>author</code> akzeptiert mehrere Autoren, solange verschiedene Namen mit Komma getrennt sind, und sortiert diese nach Nachnamen. <code>lang</code> akzeptiert Zwei-Zeichen-Ländercodes wie &#39;de&#39; oder &#39;en&#39;. Nach den 6 Zeilen keine Leerzeile lassen, markdown-to-html produziert sonst manchmal keinen oder falschen Output (außerhalb meiner Kontrolle).<br>Der Dateiname der Posts sollten mit dem Datum YYYY-MM-DD beginnen, um sicherzugehen, dass sie chronologisch sortiert werden.<br>Falls HTML-Tags im Markdown genutzt werden, sollten sie mit Leerzeichen umgeben sein, Block-Level Tags mit einer Leerzeile.</p>
 <h3 id="use-case-features">Use Case &amp; Features</h3>
 <p>Einfacher Schreibprozess:</p>
 <p>In Markdown zu schreiben erlaubt es einem, sich auf dem Inhalt zu konzentrieren, ohne sich um die Formatierung Gedanken zu machen. Markdown ist ein Klartext-Format, also eines, das mit jedem gängigen Text-Editor bearbeitet werden kann - allerdings ist ein Code-Editor wie Atom zu empfehlen. Dinge wie Überschriften, Links, Zitate werden mittels einer sehr einfachen Syntax markiert. <a href="https://guides.github.com/features/mastering-markdown/">Hier gibt es einen Guide.</a><br>Verglichen mit Word und Latex, erlaubt es schnelleres Schreiben als Word, weil man sich nicht sorgen machen muss, dass eine Handlung wie copy/paste Einfluss auf die Formatierung irgendwo anders hat, und weil man sich sicher sein kann, dass Dinge wie Zitate automatisch richtig formatiert werden. Selbst die Anführungszeichen werden automatisch eingefügt!<br>Es ist leichter zu lesen als Latex, weil die Datei nicht so aussieht:</p>
@@ -107,7 +106,7 @@ The following is a list in this subsection
 <li>Sprachliches Niveau der Texte nicht Barrierefrei! (inhärent in den Texten)</li>
 </ul>
 <h3 id="mockups">Mockups</h3>
-<p>Einfaches Header - Body - Footer Design:<br><img src="2020-06-24-documentation-de-nopreview/mockup1.png" alt="Ein Mockup der Startseite"><br><img src="2020-06-24-documentation-de-nopreview/mockup2.png" alt="Ein Mockup eines Posts"><br><img src="2020-06-24-documentation-de-nopreview/mockup3.png" alt="Ein Mockup eines Posts in einer kleineren Ansicht"><br><img src="2020-06-24-documentation-de-nopreview/mockup4.png" alt="Ein Mockup der Startseite in einer kleineren Ansicht"></p>
+<p>Einfaches Header - Body - Footer Design:<br><img src="2020-06-24-documentation-de/mockup1.png" alt="Ein Mockup der Startseite"><br><img src="2020-06-24-documentation-de/mockup2.png" alt="Ein Mockup eines Posts"><br><img src="2020-06-24-documentation-de/mockup3.png" alt="Ein Mockup eines Posts in einer kleineren Ansicht"><br><img src="2020-06-24-documentation-de/mockup4.png" alt="Ein Mockup der Startseite in einer kleineren Ansicht"></p>
 <h3 id="struktur">Struktur</h3>
 <p>Eine index.html-Seite, die 0 - n Snippets enthält, die jeweils auf die Paper-Seiten verlinken.<br>Die Links und die Paper-Seiten werden automatisch aus den Markdown-Dateien generiert.</p>
 <h3 id="unique-features">Unique Features</h3>
@@ -138,7 +137,7 @@ The following is a list in this subsection
 <h3 id="inspiration">Inspiration</h3>
 <p><a href="https://www.gwern.net/">https://www.gwern.net/</a></p>
 <h2 id="danksagung">Danksagung</h2>
-<p>Paperify nutzt <a href="https://tscanlin.github.io/tocbot/">tocbot</a>, um das Inhaltsverzeichnis zu generieren.</p>
+<p>Paperify nutzt <a href="https://tscanlin.github.io/tocbot/">tocbot</a>, um das Inhaltsverzeichnis zu generieren und <a href="https://citation.js.org/">citation.js</a>, um Referenzen wissenschaftlich zu formatieren.</p>
 <h2 id="finale-worte">Finale Worte</h2>
 <p>Diese Dokumentation wurde in Markdown geschrieben und mittels Paperify formatiert!</p>
 </article>

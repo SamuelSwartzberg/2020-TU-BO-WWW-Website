@@ -1,4 +1,5 @@
-/* CSS Reset*/
+/* CSS Reset
+Modified & expanded from https://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
@@ -88,6 +89,7 @@ h1, h2, h3, h4, h5, h6{
 	line-height: 1.2; }
 
 h1{
+	hyphens: none;
 	font-size: 2.5em;
 	font-weight: bold;
 	margin-bottom: 1em; }
@@ -249,15 +251,24 @@ td:first-of-type, thead{
 
 @media (max-width: 500px){
 	td, th{
-		padding: 0.25em; } }
+		padding: 0.25em; }
+	h1.shrink-header{
+		font-size: 2em;
+		} }
 
 @media (max-width: 400px){
 	td, th{
-		padding: 0.2ch; } }
+		padding: 0.2ch; }
+	h1 {
+		hyphens: manual;
+		}}
 
 .first-name::after{
   content: " ";
 }
+
+/* Local font files for google fonts and respective declarations
+from https://google-webfonts-helper.herokuapp.com/fonts */
 
 /* inconsolata-regular - latin */
 @font-face {
