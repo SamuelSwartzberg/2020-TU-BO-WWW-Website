@@ -846,3 +846,31 @@ citationMap.set(
 		}
 	}
 )
+citationMap.set(
+	"Arnold2007",
+	{
+		"id": "http://zotero.org/users/5451256/items/9AN5CMCU",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Christoph Links Verlag",
+		"publisher-place": "Berlin",
+		"title": "Dunkle Welten: Bunker, Tunnel und Gewölbe unter Berlin",
+		"author": [
+			{
+				"family": "Arnold",
+				"given": "Dietmar"
+			},
+			{
+				"family": "Salm",
+				"given": "Frieder"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		}
+	}
+)
