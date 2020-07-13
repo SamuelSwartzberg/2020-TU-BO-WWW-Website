@@ -786,3 +786,63 @@ citationMap.set(
 		}
 	}
 )
+citationMap.set(
+	"Beare1901",
+	{
+		"id": "http://zotero.org/users/5451256/items/VJ7X2YMI",
+		"type": "entry-encyclopedia",
+		"container-title": "Dictionary of National Biography, 1901 supplement",
+		"event-place": "London",
+		"publisher": "Elder Smith & Co.",
+		"publisher-place": "London",
+		"title": "Lindley William",
+		"author": [
+			{
+				"family": "Beare",
+				"given": "Thomas Hudson"
+			}
+		],
+		"editor": [
+			{
+				"family": "Lee",
+				"given": "Sidney"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1901"
+				]
+			]
+		}
+	}
+)
+citationMap.set(
+	"Metcalf1914",
+	{
+		"id": "http://zotero.org/users/5451256/items/IP2WAK5S",
+		"type": "book",
+		"edition": "1st ed",
+		"event-place": "New York",
+		"publisher": "McGraw-Hill Book Company, inc",
+		"publisher-place": "New York",
+		"title": "American sewerage practice",
+		"author": [
+			{
+				"family": "Metcalf",
+				"given": "Leonard"
+			},
+			{
+				"family": "Eddy",
+				"given": "Harrison Prescott"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1914"
+				]
+			]
+		}
+	}
+)
