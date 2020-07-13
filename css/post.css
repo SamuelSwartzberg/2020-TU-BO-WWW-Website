@@ -188,7 +188,7 @@ li:target:before{
 
 @media print{
   html{
-    font-size: 12pt; }
+    font-size: 4mm; }
   #site-footer, #site-header{
     display: none; }
 

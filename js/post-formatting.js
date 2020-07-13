@@ -252,3 +252,16 @@ document.querySelector('.font-selector').onchange = (event) => {
   }
   siteContainer.classList.add(event.target.value);
 }
+
+// Hide elements
+
+document.querySelector('.hide-selector').onclick = () => {
+  let selector = window.prompt("Enter a selector to delete these Elements from the DOM", "<selector>");
+  try {
+    document.querySelectorAll(selector).forEach((item, i) => {
+      item.outerHTML="";
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
