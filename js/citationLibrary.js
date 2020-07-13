@@ -763,3 +763,26 @@ citationMap.set(
 			]
 		}
 	})
+citationMap.set(
+	"BerlStat1999",
+	{
+		"id": "http://zotero.org/users/5451256/items/ZQIRCHW6",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Kulturbuch-Verlag",
+		"publisher-place": "Berlin",
+		"title": "Statistisches Jahrbuch 1999",
+		"author": [
+			{
+				"literal": "Statistisches Landesamt Berlin"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		}
+	}
+)
