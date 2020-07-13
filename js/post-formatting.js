@@ -87,6 +87,7 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
     for (let citation of citations.slice(1)) { //citations.slice(1) since the first element of citations does not actually contain a citation
       if (!citation){continue;} // this handles the case of c::c::
       let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
+      if (citationString.includes(" ")) throw new Error("Citation string includes a space. Perhaps you forgot to terminate the citation with ';;'?");
       citedWorksSet.add(citationString); // add the citation to the set we will later use to generate the bibliography
       let citationObject = new Cite(citationMap.get(citationString)); //retrieve the citation based on it's citation short name and format it as a Citations.js object
       let formattedCitation = `<span class="citation"><span class="citation-inner">${citationObject.format('citation', {format: 'html', template: 'apa-modified-year', lang: cslLocale})}</span></span>`; //format it as as an APA citation
