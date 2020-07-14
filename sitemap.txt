@@ -11,3 +11,4 @@ https://samswartzberg.com/paper/posts/2020-06-24-documentation-en.html
 https://samswartzberg.com/paper/posts/2020-06-29-chinese-ports.html
 https://samswartzberg.com/paper/posts/2020-07-01-heine-aufsässige-elemente.html
 https://samswartzberg.com/paper/posts/2020-07-11-berlin-abwasser.html
+https://samswartzberg.com/paper/posts/2020-07-14-reader-writer-prose.html
