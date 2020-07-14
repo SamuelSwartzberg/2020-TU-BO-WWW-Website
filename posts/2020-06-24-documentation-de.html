@@ -116,6 +116,10 @@ The following is a list in this subsection
 <p>Bilder mit Bildunterschrift, an denen der Text vorbeifließt. Diese sind nicht Teil der Markdown-Syntax, sondern sind in JS realisiert. Syntax: <code>fig:<wbr>{Bildunterschrift:Platzierung:Größe:Bildurl(:Beliebig viele weitere URLs)}</code><br><code>Platzierung</code> erlaubt als Werte <code>left</code> <code>right</code> <code>center</code> <code>centerflex</code> und <code>Größe</code> Werte von 0 - 100.</p>
 <h4 id="auto-citation">Auto-citation</h4>
 <p>Paperify unterstützt automatische Zitationen. So gehts: <code>citationLibrary.js</code> enthält ein Objekt citationMap. Diesem könnt ihr mittels der Methode <code>citationMap.set(citationKey, citation)</code> Einträge hinzufügen. Dabei ist der <code>citationKey</code> eine Kurzbezeichnung des Titels, die frei wählbar ist, die aber mit den ersten Buchstaben des Nachnamens des Autors beginnen sollte. <code>citationKey</code> muss ein String sein. <code>citation</code> ist ein CSL JSON Objekt, was bspw. Zotero (Ein Citation Manager) als Exportoption anbietet. Manchmal sind diese in einem Array <code>[]</code> gesammelt - dann müssen die Array-Klammern vorher entfernt werden. Nun ist es möglich, in jedem .md Post auf ein Werk mit <code>c<wbr>::citationKey;;</code> Bezug zu nehmen, in Fußnoten wie außerhalb. Dies wird im Fließtext mit einer Citation ersetzt, zusätzlich wird aus den verwendeten Werken automatisch eine Bibliographie generiert. Falls in den Fußnoten ein Werk mehrmals hintereinander genannt wird, werden folgende Einträge automatisch mit &#39;ibid.&#39;/&#39;ebd.&#39; ersetzt, je nach Sprache. Im Moment wird nach APA formatiert, allerdings kann man mittels dem Schema in csl-templates.js auch andere Zitationsformen registrieren und diese dann in post-formatting.js austauschen.</p>
+<h4 id="textkorrektur">Textkorrektur</h4>
+<p>Mittels der Knöpfe rechts können verschiedene Teile des Texts, bspw. Zitate, Fußnoten, oder Rechtschreibfehler hervorgehoben werden, um diese manuell überprüfen zu können.</p>
+<h4 id="print-layout">Print-layout</h4>
+<p>Um eine ansprechend formatierte Print-Seite zu bekommen, zuerst den Knopf in der oberen Leiste clicken. Es erscheint eine Printvorschau, die dann mittels strg/cmd p gedruckt werden kann.</p>
 <h2 id="style-guide">Style-Guide</h2>
 <h3 id="farben">Farben</h3>
 <ul>
@@ -155,5 +159,6 @@ The following is a list in this subsection
     <script src="../js/tocbot.min.js"></script>
     <script src="../js/post-formatting.js"></script>
     <script src="../js/print.js" charset="utf-8"></script>
+    <script src="../js/unit-tests.js" charset="utf-8"></script>
   </body>
 </html>
