@@ -210,6 +210,7 @@ console.log(sortedCitedWorksSet);
 for (let citedWork of sortedCitedWorksSet) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
   let citedWorkObject = new Cite(citationMap.get(citedWork));
+  console.log(bibliographyContainerList);
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
       citedWorkObject.format(
@@ -236,22 +237,34 @@ function highlightThingsMatchingSelector(selector){
     item.classList.toggle("highlight");
   });
 }
+function toggleActive(element){
+  element = element.matches("a") ? element : element.closest("a");
+  element.classList.toggle("active");
+}
+
 
 // Highlight Programmatic Quotes
 
-document.querySelector('.quote-highlighter').onclick = () => highlightThingsMatchingSelector("blockquote,q");
+document.querySelector('.quote-highlighter').onclick = (event) => {
+  highlightThingsMatchingSelector("blockquote,q")
+  toggleActive(event.target);
+  };
 
 // Highlight footnotes
 
-document.querySelector('.footnote-highlighter').onclick = () => highlightThingsMatchingSelector(".footnote");
+document.querySelector('.footnote-highlighter').onclick = (event) => {
+  highlightThingsMatchingSelector(".footnote")
+  toggleActive(event.target);
+};
 
 
 // Allow Spellcheck
 
-document.querySelector('.spellcheck').onclick = () => {
+document.querySelector('.spellcheck').onclick = (event) => {
   let mainArticle = document.querySelector('#main-article');
   mainArticle.toggleAttribute("contenteditable");
   mainArticle.spellcheck = mainArticle.spellcheck ? "false" : "true"; // spellcheck is enumerated
+  toggleActive(event.target);
 }
 
 document.querySelector('.font-selector').onchange = (event) => {
@@ -274,4 +287,11 @@ document.querySelector('.hide-selector').onclick = () => {
   } catch (e) {
     console.log(e);
   }
+}
+
+// delete bibliography container
+
+console.log(bibliographyContainerList.children.length);
+if(bibliographyContainerList.children.length === 0){
+  document.querySelector('#bibliography-container').outerHTML = "";
 }

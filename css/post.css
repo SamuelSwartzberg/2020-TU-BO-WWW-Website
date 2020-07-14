@@ -13,6 +13,9 @@
   color: var(--grey);
 	text-decoration: underline rgba(0,0,0,0.6);
 }
+.tool-container > a:active, .tool-container > a.active{
+  background-color: #fdec96;
+}
 .tool-container .offset{
   color: rgba(0,0,0,0.45);
 }
@@ -243,12 +246,6 @@ li:target:before{
     margin-top: 0;
     border-top: none;
     padding-top: 0;}
-  .info{
-    display: none;
-  }
-  #table-of-contents {
-    display: none;
-  }
   h1.title{
     margin-bottom: 3.5em;
   }

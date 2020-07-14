@@ -1,6 +1,14 @@
+function promptAndHide(selector, shortName){
+  let hideChar = window.prompt(`Do you want to (s)how the ${shortName}, or (h)ide it?`, "h");
+  hideChar = hideChar.trim().substring(0,1).toLowerCase();
+  if (hideChar==="h") document.querySelector(selector).outerHTML = "";
+}
 
 document.querySelector('.print-pager').onclick = () => {
-  console.log("paging");
+
+  promptAndHide(".info", "info container containing abstract, date, and authors");
+  promptAndHide("#table-of-contents", "table of contents");
+
   document.querySelectorAll('.footnote-inline').forEach((item, i) => {
     let bottomFootnote = document.querySelector("#"+item.href.split("#")[1]);
     item.outerHTML += `<span id="${bottomFootnote.id}" class="${bottomFootnote.classList.value}">${bottomFootnote.innerHTML}</span>`;
