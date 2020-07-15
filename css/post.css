@@ -246,8 +246,8 @@ li:target:before{
     margin-top: 0;
     border-top: none;
     padding-top: 0;}
-  h1.title{
-    margin-bottom: 3.5em;
+  #post-header + #main-article{
+    margin-top: 10.5em;
   }
   .footnote-area .footnote-bottom{
     line-height: 1.2;
