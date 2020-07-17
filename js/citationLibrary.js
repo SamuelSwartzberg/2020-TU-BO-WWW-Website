@@ -31,36 +31,6 @@ citationMap.set(
 		}
 	});
 citationMap.set(
-	"GalOtaku",
-	{
-		"id": "http://zotero.org/users/5451256/items/FL548K8J",
-		"type": "book",
-		"abstract": "From computer games to figurines and maid cafes, men called “otaku” develop intense fan relationships with “cute girl” characters from manga, anime, and related media and material in contemporary Japan. While much of the Japanese public considers the forms of character love associated with “otaku” to be weird and perverse, the Japanese government has endeavored to incorporate “otaku” culture into its branding of “Cool Japan.” In Otaku and the Struggle for Imagination in Japan, Patrick W. Galbraith explores the conflicting meanings of “otaku” culture and its significance to Japanese popular culture, masculinity, and the nation. Tracing the history of “otaku” and “cute girl” characters from their origins in the 1970s to his recent fieldwork in Akihabara, Tokyo (“the Holy Land of Otaku”), Galbraith contends that the discourse surrounding “otaku” reveals tensions around contested notions of gender, sexuality, and ways of imagining the nation that extend far beyond Japan. At the same time, in their relationships with characters and one another, “otaku” are imagining and creating alternative social worlds.",
-		"ISBN": "978-1-4780-0701-2",
-		"language": "en",
-		"note": "Google-Books-ID: 0d28DwAAQBAJ",
-		"number-of-pages": "245",
-		"publisher": "Duke University Press",
-		"source": "Google Books",
-		"title": "Otaku and the Struggle for Imagination in Japan",
-		"author": [
-			{
-				"family": "Galbraith",
-				"given": "Patrick W."
-			}
-		],
-		"issued": {
-			"date-parts": [
-				[
-					"2019",
-					12,
-					6
-				]
-			]
-		}
-	}
-)
-citationMap.set(
 	"GriceWay",
 	{
 		"id": "http://zotero.org/users/5451256/items/ASGVNM36",
@@ -877,3 +847,463 @@ citationMap.set(
 		}
 	}
 )
+citationMap.set(
+	"PauseOtherMiyazaki",
+	{
+		"id": "http://zotero.org/users/5451256/items/RNAHMWHY",
+		"type": "webpage",
+		"title": "The Other Miyazaki",
+		"URL": "https://www.youtube.com/watch?v=q2KK0U3gcaE",
+		"author": [
+			{
+				"family": "Pause and Select"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					5,
+					20
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"McLelMasculinities",
+	{
+		"id": "http://zotero.org/users/5451256/items/883V8K2E",
+		"type": "chapter",
+		"container-title": "Genders, Transgenders and Sexualities in Japan",
+		"event-place": "Abingdon, UK",
+		"page": "153-167",
+		"publisher": "Taylor & Francis",
+		"publisher-place": "Abingdon, UK",
+		"title": "Rethinking Japanese masculinities: Recent research trends",
+		"editor": [
+			{
+				"family": "McLelland",
+				"given": "Mark"
+			},
+			{
+				"family": "Dasgupta",
+				"given": "Romit"
+			}
+		],
+		"author": [
+			{
+				"family": "Taga",
+				"given": "Futoshi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"McLelSalarymen",
+	{
+		"id": "http://zotero.org/users/5451256/items/PG6QZJ9Z",
+		"type": "chapter",
+		"container-title": "Genders, Transgenders and Sexualities in Japan",
+		"event-place": "Abingdon, UK",
+		"page": "168-182",
+		"publisher": "Taylor & Francis",
+		"publisher-place": "Abingdon, UK",
+		"title": "Salarymen doing straight: Heterosexual men and the dynamics of gender conformity",
+		"title-short": "Salarymen doing straight",
+		"editor": [
+			{
+				"family": "McLelland",
+				"given": "Mark"
+			},
+			{
+				"family": "Dasgupta",
+				"given": "Romit"
+			}
+		],
+		"author": [
+			{
+				"family": "Dasgupta",
+				"given": "Romit"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalFujoshi",
+	{
+		"id": "http://zotero.org/users/5451256/items/VTAX2N9Z",
+		"type": "article-journal",
+		"container-title": "Signs: Journal of Women in Culture and Society",
+		"issue": "1",
+		"page": "211-232",
+		"title": "Fujoshi : Fantasy Play and Transgressive Intimacy among “Rotten Girls” in Contemporary Japan",
+		"volume": "37",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalOtaku",
+	{
+		"id": "http://zotero.org/users/5451256/items/UB7JU9X2",
+		"type": "book",
+		"event-place": "Durham",
+		"publisher": "Duke University Press",
+		"publisher-place": "Durham",
+		"title": "Otaku and the struggle for imagination in Japan",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalMoeFujoshi",
+	{
+		"id": "http://zotero.org/users/5451256/items/WS8PMKJX",
+		"type": "chapter",
+		"container-title": "Boys love manga and beyond: history, culture, and community in Japan",
+		"event-place": "Jackson",
+		"publisher": "University Press of Mississippi",
+		"publisher-place": "Jackson",
+		"title": "Moe Talk",
+		"editor": [
+			{
+				"family": "McLelland",
+				"given": "Mark J."
+			},
+			{
+				"family": "Nagaike",
+				"given": "Kazumi"
+			},
+			{
+				"family": "Suganuma",
+				"given": "Katsuhiko"
+			},
+			{
+				"family": "Welker",
+				"given": "James"
+			}
+		],
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"HillsTranscultOtaku",
+	{
+		"id": "http://zotero.org/users/5451256/items/QG6DRNVF",
+		"type": "article-journal",
+		"container-title": "Media in Transition",
+		"page": "10-12",
+		"title": "Transcultural otaku: Japanese representations of fandom and representations of Japan in anime/manga fan cultures",
+		"volume": "2",
+		"author": [
+			{
+				"family": "Hills",
+				"given": "Matt"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"FreedmanTrainMan",
+	{
+		"id": "http://zotero.org/users/5451256/items/DAJXGIB9",
+		"type": "article-journal",
+		"container-title": "Intersections: Gender and Sexuality in Asia and the Pacific",
+		"issue": "20",
+		"title": "Train Man and the Gender Politics of Japanese 'Otaku' Culture: The Rise of New Media, Nerd Heroes and Consumer Communities",
+		"author": [
+			{
+				"family": "Freedman",
+				"given": "A."
+			}
+		],
+		"editor": [
+			{
+				"family": "McLelland",
+				"given": "Mark"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2009"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"KanadaOthering",
+	{
+		"id": "http://zotero.org/users/5451256/items/RP8TQFTK",
+		"type": "paper-conference",
+		"container-title": "JALT 2003 at Shizuoka: Conference Proceedings",
+		"event": "JALT 2003",
+		"event-place": "Tokyo",
+		"page": "475-482",
+		"publisher": "The Japan Association for Language Teaching",
+		"publisher-place": "Tokyo",
+		"title": "Conceptualizing Multilingual and Multi-Ethnic “Othering” in Japan",
+		"author": [
+			{
+				"family": "Kamada",
+				"given": "L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"BurgessHomogeneity",
+	{
+		"id": "http://zotero.org/users/5451256/items/VCF9UASN",
+		"type": "article-journal",
+		"container-title": "electronic journal of contemporary japanese studies",
+		"issue": "1",
+		"note": "ISBN: 1476-9158\npublisher: electronic journal of contemporary japanese studies",
+		"title": "Maintaining identities: Discourses of homogeneity in a rapidly globalizing Japan",
+		"URL": "http://www.japanesestudies.org.uk/articles/Burgess.html?pagewanted=all",
+		"volume": "4",
+		"author": [
+			{
+				"family": "Burgess",
+				"given": "Chris"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"TakaOtakuDiscontents",
+	{
+		"id": "http://zotero.org/users/5451256/items/R3KUU5DN",
+		"type": "speech",
+		"event": "The Colloquium in Visual and Cultural Studies",
+		"event-place": "Rochester",
+		"publisher-place": "Rochester",
+		"title": "Otaku culture and its discontents",
+		"author": [
+			{
+				"family": "Ueda",
+				"given": "Takahiro"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalOtakuFailedMen",
+	{
+		"id": "http://zotero.org/users/5451256/items/KH2H4VAM",
+		"type": "chapter",
+		"container-title": "Debating Otaku in Contemporary Japan: Historical Perspectives and New Horizons",
+		"edition": "1",
+		"event-place": "London",
+		"page": "21-34",
+		"publisher": "Bloomsbury Academic",
+		"publisher-place": "London",
+		"title": "‘“Otaku” Research’ and Anxiety About Failed Men",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"editor": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			},
+			{
+				"family": "Kam",
+				"given": "Thiam Huat"
+			},
+			{
+				"family": "Kamm",
+				"given": "Björn-Ole"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"SavageJusLooking",
+	{
+		"id": "http://zotero.org/users/5451256/items/FJYWWIPE",
+		"type": "article-journal",
+		"container-title": "Visual Culture & Gender",
+		"note": "ISBN: 1936-1912",
+		"page": "37-46",
+		"title": "Just looking: Tantalization, lolicon, and virtual girls",
+		"volume": "10",
+		"author": [
+			{
+				"family": "Savage",
+				"given": "Shari L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalLoliconReal",
+	{
+		"id": "http://zotero.org/users/5451256/items/7PZ4XITW",
+		"type": "article-journal",
+		"container-title": "Image and Narrative: Online Magazine of the Visual Narrative",
+		"issue": "1",
+		"page": "83-119",
+		"title": "Lolicon: The Reality of ‘Virtual Child Pornography’ in Japan",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalAkiba",
+	{
+		"id": "http://zotero.org/users/5451256/items/ZBFBAZ5Z",
+		"type": "article-journal",
+		"container-title": "Mechademia",
+		"page": "210-230",
+		"title": "Akihabara: Conditioning a Public \"Otaku\" Image",
+		"volume": "5",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GalCoolJapan",
+	{
+		"id": "http://zotero.org/users/5451256/items/WM2KUQIV",
+		"type": "chapter",
+		"container-title": "The End of Cool Japan",
+		"edition": "1",
+		"event-place": "London",
+		"page": "125-149",
+		"publisher": "Routledge",
+		"publisher-place": "London",
+		"title": "“The lolicon guy”: Some observations on researching unpopular topics in Japan",
+		"author": [
+			{
+				"family": "Galbraith",
+				"given": "Patrick W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016"
+				]
+			]
+		}
+	}
+);

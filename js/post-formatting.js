@@ -77,7 +77,7 @@ document.querySelector('.site-name').innerHTML = `<span class='name first-name'>
 
 // Citations
 
-let citedWorksSet = new Set();
+let localCitationMap = new Map();
 let cslLocale = formatCSLLocale(docLang);
 console.log(cslLocale);
 
@@ -93,14 +93,35 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
       if (!citation){continue;} // this handles the case of c::c::
       let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
       if (citationString.includes(" ")) throw new Error("Citation string includes a space. Perhaps you forgot to terminate the citation with ';;'?");
-      citedWorksSet.add(citationString); // add the citation to the set we will later use to generate the bibliography
-      let citationObject = new Cite(citationMap.get(citationString)); //retrieve the citation based on it's citation short name and format it as a Citations.js object
-      let formattedCitation = `<span class="citation"><span class="citation-inner">${citationObject.format('citation', {format: 'html', template: 'apa-modified-year', lang: cslLocale})}</span></span>`; //format it as as an APA citation
+      localCitationMap.set(citationString, citationMap.get(citationString));
+      let formattedCitation = `<span class="citation"><span class="citation-inner">${citationString}</span></span>`; //format it as as an APA citation
       htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
     }
   }
   item.innerHTML = htmlContent; // finally, make the site html the html we modified
 });
+
+/* Deal with multiple of the same Author (year) */
+
+for (var citationObject of localCitationMap.values()) {
+  let counter = 0;
+  localCitationMap.forEach((filteredCiteObj, key) => {
+    if ((citationObject.author[0].family === filteredCiteObj.author[0].family)
+    && (citationObject.issued["date-parts"][0][0] === filteredCiteObj.issued["date-parts"][0][0])){
+      filteredCiteObj["note"]=String.fromCharCode(97 + counter);
+      counter++;
+    }
+  });
+
+}
+
+document.querySelectorAll('.citation-inner').forEach((item, i) => {
+  let citation = new Cite(citationMap.get(item.innerHTML));
+  console.log(citation);
+  item.innerHTML = citation.format('citation', {format: 'html', template: 'apa-modified-year', lang: cslLocale});
+
+});
+
 
 /* get the boolean attributes that tell us we should skip generating footnotes or figures */
 
@@ -205,17 +226,16 @@ if (!noFigures){
 
 // bibliography
 let bibliographyContainerList = document.querySelector('#bibliography-container ol');
-let sortedCitedWorksSet = Array.from(citedWorksSet).sort();
-console.log(sortedCitedWorksSet);
-for (let citedWork of sortedCitedWorksSet) {
+let sortedCitedKeys = Array.from(localCitationMap.keys()).sort();
+for (let citedWork of sortedCitedKeys) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
-  let citedWorkObject = new Cite(citationMap.get(citedWork));
-  console.log(bibliographyContainerList);
+  let citedWorkObject = new Cite(localCitationMap.get(citedWork)); // BUG: Is looking in wrong place atm, should be getting from citedWorksSet
+  console.log(citedWorkObject);
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
       citedWorkObject.format(
         'bibliography',
-        {format: 'html', template: 'apa', lang: cslLocale}
+        {format: 'html', template: 'apa-modified-year', lang: cslLocale}
       )} </li>`
     )
   );

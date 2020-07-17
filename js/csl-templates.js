@@ -899,6 +899,7 @@ config.templates.add('apa-modified-year', `<?xml version="1.0" encoding="utf-8"?
           <date variable="issued">
             <date-part name="year"/>
           </date>
+
           <text variable="year-suffix"/>
           <choose>
             <if type="speech">
@@ -952,6 +953,7 @@ config.templates.add('apa-modified-year', `<?xml version="1.0" encoding="utf-8"?
       <else>
         <date variable="issued">
           <date-part name="year"/>
+
         </date>
       </else>
     </choose>
@@ -1460,6 +1462,7 @@ config.templates.add('apa-modified-year', `<?xml version="1.0" encoding="utf-8"?
         <text macro="author-short"/>
         <group prefix=" (" suffix=")">
           <text macro="issued-citation"/>
+          <text variable="note"/>
         </group>
         <text macro="citation-locator"/>
       </group>
@@ -1483,7 +1486,11 @@ config.templates.add('apa-modified-year', `<?xml version="1.0" encoding="utf-8"?
               </group>
             </if>
             <else>
-              <text macro="issued" prefix=" (" suffix=")"/>
+              <group prefix=" (" suffix=")">
+                <text macro="issued" />
+                <text variable="note"/>
+              </group>
+
             </else>
           </choose>
           <group delimiter=" ">
