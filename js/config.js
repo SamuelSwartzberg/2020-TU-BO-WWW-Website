@@ -1,3 +1,4 @@
+ console.log(window.origin);
 /*
 Specify your data here!
 */

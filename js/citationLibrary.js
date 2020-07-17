@@ -2,6 +2,7 @@
 Needs an unique key which you will also use to refer to the source when writing MD
 Key should be of type String
 Value should be a CSL JSON object
+CSL JSON objects can be exported by most citation managers
 */
 var citationMap = new Map();
 
@@ -763,3 +764,116 @@ citationMap.set(
 			]
 		}
 	})
+citationMap.set(
+	"BerlStat1999",
+	{
+		"id": "http://zotero.org/users/5451256/items/ZQIRCHW6",
+		"type": "book",
+		"event-place": "Berlin",
+		"publisher": "Kulturbuch-Verlag",
+		"publisher-place": "Berlin",
+		"title": "Statistisches Jahrbuch 1999",
+		"author": [
+			{
+				"literal": "Statistisches Landesamt Berlin"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		}
+	}
+)
+citationMap.set(
+	"Beare1901",
+	{
+		"id": "http://zotero.org/users/5451256/items/VJ7X2YMI",
+		"type": "entry-encyclopedia",
+		"container-title": "Dictionary of National Biography, 1901 supplement",
+		"volume": "3",
+		"event-place": "London",
+		"publisher": "Elder Smith & Co.",
+		"publisher-place": "London",
+		"title": "Lindley William",
+		"author": [
+			{
+				"family": "Beare",
+				"given": "Thomas Hudson"
+			}
+		],
+		"editor": [
+			{
+				"family": "Lee",
+				"given": "Sidney"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1901"
+				]
+			]
+		}
+	}
+)
+citationMap.set(
+	"Metcalf1914",
+	{
+		"id": "http://zotero.org/users/5451256/items/IP2WAK5S",
+		"type": "book",
+		"edition": "1. Aufl.",
+		"event-place": "New York",
+		"publisher": "McGraw-Hill Book Company, inc",
+		"publisher-place": "New York",
+		"title": "American sewerage practice",
+		"author": [
+			{
+				"family": "Metcalf",
+				"given": "Leonard"
+			},
+			{
+				"family": "Eddy",
+				"given": "Harrison Prescott"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1914"
+				]
+			]
+		}
+	}
+)
+citationMap.set(
+	"Arnold2007",
+	{
+		"id": "http://zotero.org/users/5451256/items/9AN5CMCU",
+		"type": "book",
+		"event-place": "Berlin",
+		"edition": "8. Aufl.",
+		"publisher": "Christoph Links Verlag",
+		"publisher-place": "Berlin",
+		"title": "Dunkle Welten: Bunker, Tunnel und Gewölbe unter Berlin",
+		"author": [
+			{
+				"family": "Arnold",
+				"given": "Dietmar"
+			},
+			{
+				"family": "Salm",
+				"given": "Frieder"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		}
+	}
+)

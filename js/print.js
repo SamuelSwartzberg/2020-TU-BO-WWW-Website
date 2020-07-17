@@ -1,0 +1,60 @@
+function promptAndHide(selector, shortName){
+  let hideChar = window.prompt(`Do you want to (s)how the ${shortName}, or (h)ide it?`, "h");
+  hideChar = hideChar.trim().substring(0,1).toLowerCase();
+  if (hideChar==="h") document.querySelector(selector).outerHTML = "";
+}
+
+document.querySelector('.print-pager').onclick = () => {
+
+  promptAndHide(".info", "info container containing abstract, date, and authors");
+  promptAndHide("#table-of-contents", "table of contents");
+
+  document.querySelectorAll('.footnote-inline').forEach((item, i) => {
+    let bottomFootnote = document.querySelector("#"+item.href.split("#")[1]);
+    item.outerHTML += `<span id="${bottomFootnote.id}" class="${bottomFootnote.classList.value}">${bottomFootnote.innerHTML}</span>`;
+  });
+  document.querySelector('.footnote-container').outerHTML = "";
+  document.querySelector('body').classList.add("page-view");
+  window.PagedPolyfill.preview();
+  Paged.registerHandlers(class extends Paged.Handler {
+    constructor(chunker, polisher, caller) {
+      super(chunker, polisher, caller);
+
+    }
+
+    afterRendered(pages) {
+      for (var page of pages) {
+        var footnotes = page.element.querySelectorAll('.footnote-bottom');
+        console.log(page);
+        if (footnotes.length === 0) {
+          continue;
+        }
+
+        var pageContent = page.element.querySelector('.pagedjs_page_content');
+        var hr = document.createElement('hr');
+        var footnoteArea = document.createElement('div');
+
+        pageContent.style.display = 'flex';
+        pageContent.style.flexDirection = 'column';
+
+        hr.className = 'footnote-break';
+        hr.style.marginTop = 'auto';
+        hr.style.paddingTop = "0.5em";
+        hr.style.marginBottom = "1em";
+        hr.style.marginLeft = 0;
+        hr.style.marginRight = 'auto';
+        hr.style.width = "20%";
+        pageContent.appendChild(hr);
+
+        footnoteArea.className = 'footnote-area';
+        pageContent.appendChild(footnoteArea);
+
+        for (var footnote of footnotes) {
+
+          footnoteArea.appendChild(footnote);
+
+        }
+      }
+    }
+  });
+}

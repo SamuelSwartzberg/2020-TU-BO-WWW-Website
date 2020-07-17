@@ -5,6 +5,5 @@ massReplaceInnerHTMLWithArgument(
   [".legal-email", legalEmail],
   [".legal-phone", legalPhone],
   [".legal-storage-duration", logfileStorageDurationDays],
+  [".site-name", `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`],
 )
-console.log(fullLegalName);
-document.querySelector('.site-name').innerHTML = `<span class='name first-name'>${firstName}</span><span class='name last-name'>${lastName}</span>`;
