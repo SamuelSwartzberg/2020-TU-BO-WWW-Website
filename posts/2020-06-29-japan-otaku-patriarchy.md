@@ -43,4 +43,8 @@ What is an otaku? At first blush, someone who consumes a lot of Japanese animate
 
 ## I want to break free
 
-- Back to western otaku
+- Back to western otaku c::GalMoeFujoshi;;
+
+
+
+Galbraith multiple same year! c::GalOtakuFailedMen;;
