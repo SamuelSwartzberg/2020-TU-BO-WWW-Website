@@ -871,7 +871,7 @@ citationMap.set(
 	}
 );
 citationMap.set(
-	"McLelMasculinities",
+	"TagaMasculinities",
 	{
 		"id": "http://zotero.org/users/5451256/items/883V8K2E",
 		"type": "chapter",
@@ -907,7 +907,7 @@ citationMap.set(
 	}
 );
 citationMap.set(
-	"McLelSalarymen",
+	"DasguSalarymen",
 	{
 		"id": "http://zotero.org/users/5451256/items/PG6QZJ9Z",
 		"type": "chapter",
