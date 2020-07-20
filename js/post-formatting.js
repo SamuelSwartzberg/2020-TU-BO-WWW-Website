@@ -105,11 +105,16 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
 
 for (var citationObject of localCitationMap.values()) {
   let counter = 0;
+  console.log(citationObject);
   localCitationMap.forEach((filteredCiteObj, key) => {
-    if ((citationObject.author[0].family === filteredCiteObj.author[0].family)
-    && (citationObject.issued["date-parts"][0][0] === filteredCiteObj.issued["date-parts"][0][0])){
-      filteredCiteObj["note"]=String.fromCharCode(97 + counter);
-      counter++;
+    if (citationObject !== filteredCiteObj){ // prevent false positives from self-identity
+      if (citationObject.author && filteredCiteObj.author && citationObject.issued && filteredCiteObj.issued){ // if the relevant properties even exist
+        if ((citationObject.author[0].family === filteredCiteObj.author[0].family)
+        && (citationObject.issued["date-parts"][0][0] === filteredCiteObj.issued["date-parts"][0][0])){ //author (year) is the same
+          filteredCiteObj["note"]=String.fromCharCode(97 + counter);
+          counter++;
+        }
+      }
     }
   });
 
