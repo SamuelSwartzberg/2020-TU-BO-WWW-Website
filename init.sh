@@ -18,6 +18,9 @@ for (( i = 0; i < ${#POSTS[@]}; i++ )); do
       noPreview=true
     fi
     sed -i'.original' -e "s|{$key}|${value}|g" "${POSTS[i]%.md}temp.html" # In the temp post item we created above, replace all instances of key with value, filling the template with the headers
+    if [[ "$key" == "arguments" && "$value" == *norobots* ]]; then
+      sed -i'.original2' -e "s|<!--norobotshead-->|<meta name='robots' content='noindex'>|" "${POSTS[i]%.md}temp.html"
+    fi
   done
   postTemplate=${postTemplate/"{url}"/"${POSTS[i]%.md}.html"} # Replace the {key} instances in postTemplate by their values, filling the template
   tail -n +7 "${POSTS[i]}" > tempMDpost.md # add everything except the six header lines to a temporary markdown post
