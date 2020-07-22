@@ -193,7 +193,7 @@ if (!noFigures){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
     let fileLocation = document.location.href.split('.html')[0];
     item.innerHTML = item.innerHTML.replace(
-      /fig:\{([^:]+):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g, // Ugly regex matches figure syntax
+      /fig:\{([^:]*):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g, // Ugly regex matches figure syntax
       (match, captionText, side, size, url, moreUrls) => {
         var urlString = "";
         if(moreUrls){
@@ -212,7 +212,7 @@ if (!noFigures){
             <img src="${fileLocation}/${url}" alt="${captionText}">
             ${urlString}
           </div>
-          <figcaption>${captionText}</figcaption>
+          ${captionText!==""?("<figcaption>" + captionText +"</figcaption>"):""}
         </figure>`
         return figureText;
       }
@@ -320,3 +320,12 @@ console.log(bibliographyContainerList.children.length);
 if(bibliographyContainerList.children.length === 0){
   document.querySelector('#bibliography-container').outerHTML = "";
 }
+
+// cleanup: If paragraphs only contain whitespace or <br>s, delete theme
+document.querySelectorAll('p').forEach((item, i) => {
+  let trimmedInnerHTML = item.innerHTML.trim();
+  if (trimmedInnerHTML==="") // was only whitespace
+    item.outerHTML = "";
+  else if (trimmedInnerHTML.match(/^(<br>)+$/))
+    item.outerHTML = "";
+});
