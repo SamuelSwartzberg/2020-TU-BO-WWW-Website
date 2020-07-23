@@ -1307,3 +1307,130 @@ citationMap.set(
 		}
 	}
 );
+});
+citationMap.set(
+	"TagaRethinkingJaMasc",
+	{
+		"id": "http://zotero.org/users/5451256/items/883V8K2E",
+		"type": "chapter",
+		"container-title": "Genders, Transgenders and Sexualities in Japan",
+		"event-place": "Abingdon, UK",
+		"page": "153-167",
+		"publisher": "Taylor & Francis",
+		"publisher-place": "Abingdon, UK",
+		"title": "Rethinking Japanese masculinities: Recent research trends",
+		"editor": [
+			{
+				"family": "McLelland",
+				"given": "Mark"
+			},
+			{
+				"family": "Dasgupta",
+				"given": "Romit"
+			}
+		],
+		"author": [
+			{
+				"family": "Taga",
+				"given": "Futoshi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		}
+	});
+citationMap.set(
+	"ManeetaphoTheMoe",
+	{
+		"id": "http://zotero.org/users/5451256/items/N6B8JJ2R",
+		"type": "webpage",
+		"abstract": "Today I look at the origins and evolution of Anime's hottest thing: Cute Anime Girls\n\nMother Fuckin Tea Mug: https://teespring.com/stores/gigguk\n\n\nAssistant Writer/Researcher: Bakashift\n\nEdited by: Bakashift\nhttps://twitter.com/BakaShift\n\nPatreon: http://www.Patreon.com/Gigguk\n--------------------------------------------------------------------------\nFollow me on Twitter: http://twitter.com/GiggukAZ\nLike me on Facebook: http://www.facebook.com/GiggukAZ\nFollow me on Instagram: https://www.instagram.com/giggukaz/",
+		"title": "The Moe Anime Revolution",
+		"URL": "https://www.youtube.com/watch?v=E1x1RicXFMk",
+		"author": [
+			{
+				"family": "Maneetapho",
+				"given": "Garnt"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					7,
+					22
+				]
+			]
+		}
+	});
+citationMap.set(
+	"name",
+	{
+		"id": "http://zotero.org/users/5451256/items/X5QKT6VU",
+		"type": "webpage",
+		"container-title": "comiket.co.jp",
+		"title": "What is Comic Market?",
+		"URL": "https://www.comiket.co.jp/info-a/WhatIsEng201401.pdf",
+		"author": [
+			{
+				"literal": "Comic Market Committee"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2008",
+					1
+				]
+			]
+		}
+	});
+citationMap.set(
+	"SalterToxicGeekMasc",
+	{
+		"id": "http://zotero.org/users/5451256/items/CK58K7UW",
+		"type": "book",
+		"event-place": "London",
+		"publisher": "Palgrave Macmillan",
+		"publisher-place": "London",
+		"title": "Toxic Geek Masculinity in Media: Sexism, Trolling, and Identity Policing",
+		"author": [
+			{
+				"family": "Salter",
+				"given": "Anastasia"
+			},
+			{
+				"family": "Blodgett",
+				"given": "Bridget"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	});
