@@ -1433,3 +1433,96 @@ citationMap.set(
 			]
 		}
 	});
+citationMap.set(
+	"ButlerGenderTrouble",
+	{
+		"id": "http://zotero.org/users/5451256/items/245WRQ2Q",
+		"type": "book",
+		"event-place": "New York",
+		"publisher": "Routledge",
+		"publisher-place": "New York",
+		"title": "Gender Trouble",
+		"author": [
+			{
+				"family": "Butler",
+				"given": "Judith"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1990"
+				]
+			]
+		}
+	});
+citationMap.set(
+	"KuboJapanKiddiePorn",
+	{
+		"id": "http://zotero.org/users/5451256/items/8MXVKS3B",
+		"type": "article-newspaper",
+		"abstract": "Tokyo is finally making it illegal to buy or own child pornography showing real children, but the manga, anime and computer graphic versions aren’t touched by the new law.",
+		"container-title": "The Daily Beast",
+		"language": "en",
+		"section": "world",
+		"title": "Japan's Kiddie Porn Empire: Bye-Bye?",
+		"title-short": "Japan's Kiddie Porn Empire",
+		"URL": "https://www.thedailybeast.com/articles/2014/06/03/japan-s-kiddie-porn-empire-bye-bye",
+		"author": [
+			{
+				"family": "Kubo",
+				"given": "Jake Adelstein",
+				"suffix": "Angela Erika"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					6,
+					3
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"AhlströmJishoOtaku",
+	{
+		"id": "http://zotero.org/users/5451256/items/K9GS4R8B",
+		"type": "webpage",
+		"container-title": "Jisho",
+		"title": "Jisho - お宅",
+		"URL": "https://jisho.org/word/%E3%81%8A%E5%AE%85",
+		"author": [
+			{
+				"family": "Ahlström",
+				"given": "Kim"
+			},
+			{
+				"family": "Ahlström",
+				"given": "Miwa"
+			},
+			{
+				"family": "Plummer",
+				"given": "Andrew"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020"
+				]
+			]
+		}
+	}
+);
