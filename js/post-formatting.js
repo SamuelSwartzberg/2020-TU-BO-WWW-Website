@@ -229,7 +229,7 @@ let bibliographyContainerList = document.querySelector('#bibliography-container 
 let sortedCitedKeys = Array.from(localCitationMap.keys()).sort();
 for (let citedWork of sortedCitedKeys) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
-  let citedWorkObject = new Cite(localCitationMap.get(citedWork)); // BUG: Is looking in wrong place atm, should be getting from citedWorksSet
+  let citedWorkObject = new Cite(localCitationMap.get(citedWork)); 
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
       citedWorkObject.format(
@@ -241,14 +241,19 @@ for (let citedWork of sortedCitedKeys) {
 }
 
 //Capitalize .ebd
-document.querySelectorAll('.footnote-bottom .footnote-content').forEach((item, i) => {
+document.querySelectorAll('.footnote-bottom:not(.cf) .footnote-content').forEach((item, i) => {
   if (item.children&&item.children[0]&&item.children[0].classList && item.children[0].classList.contains("ibid")){
     item.children[0].classList.add("capitalize");
   }
+});
+
+//Remove the dot from ibid if it is the last item, since it will already recieve the footnote-ending dot
+document.querySelectorAll('.footnote-bottom .footnote-content').forEach((item, i) => {
   if (item.childNodes&&item.childNodes[item.childNodes.length-1]&&item.childNodes[item.childNodes.length-1].classList&&item.childNodes[item.childNodes.length-1].classList.contains("ibid")){
     item.childNodes[item.childNodes.length-1].classList.add("nodot");
   }
 });
+
 // Highlight things
 
 function highlightThingsMatchingSelector(selector){
