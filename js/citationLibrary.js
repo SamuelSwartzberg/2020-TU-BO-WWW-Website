@@ -1538,3 +1538,55 @@ citationMap.set(
 		}
 	}
 );
+citationMap.set(
+	"ChoFacetAnime",
+	{
+		"id": "http://zotero.org/users/5451256/items/E6CN7EZ4",
+		"type": "article-journal",
+		"abstract": "Anime, as a growing form of multimedia, needs a better and more\nthorough organization for its myriad unique terminologies. Existing\nstudies show patrons’ desire to search and get recommendations for\nanime. However, due to inadequate indexing and often confusing or\ninaccurate usage of terms, searching and acquiring recommendations\nremain challenging. Our research seeks to close the gap and make\ndiscovery and recommendations more viable. In this study, we conducted\na facet analysis of anime genre terms that are currently used in\nthirty-six anime-related English-language databases and websites.\nUsing a card sorting method with an inductive approach to the 1,597\nterms collected, we identified and defined nine facets and 153 foci\nterms that describe different genres of anime. Identified terms can be\nimplemented within different organizational systems including library\ncatalogs, recommendation systems, and online databases to improve\ngenre definitions and search experiences.",
+		"container-title": "Knowledge Organisation",
+		"issue": "6",
+		"language": "en",
+		"page": "484-499",
+		"title": "Facet Analysis of Anime Genres: The Challenges of Defining Genre Information for Popular Cultural Objects",
+		"volume": "45",
+		"author": [
+			{
+				"family": "Cho",
+				"given": "Hyerim"
+			},
+			{
+				"family": "Disher",
+				"given": "Thomas"
+			},
+			{
+				"family": "Lee",
+				"given": "Wan-Chen"
+			},
+			{
+				"family": "Keating",
+				"given": "Stephen A."
+			},
+			{
+				"family": "Lee",
+				"given": "Jin Ha"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2018"
+				]
+			]
+		}
+	}
+);
