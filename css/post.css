@@ -190,6 +190,10 @@ li:target:before{
 .pagedjs_margin-bottom{
   align-items: start;
 }
+[data-align-last-split-element='justify']{
+  text-align: auto;
+}
+
 
 @media screen {
   .page-view{
@@ -252,5 +256,12 @@ li:target:before{
   .footnote-area .footnote-bottom{
     line-height: 1.2;
     margin-bottom: 0.15em !important;
+  }
+  figure.center-long .image-container{
+    columns: 2;
+    max-height: calc(var(--pagedjs-pagebox-height) * 0.8);
+  }
+  figure{
+        break-inside: avoid-page;
   }
 }
