@@ -1,6 +1,6 @@
-title|Weil die Berliner Rinnen stanken! Die Entwicklung der Abwasserentsorgung und wie der Bau der Kanalisation Berlin veränderte
+title|Weil die Berliner Rinnen stanken!
 date|13.07.2020
-abstract|
+abstract|Die Entwicklung der Abwasserentsorgung und wie der Bau der Kanalisation Berlin veränderte
 arguments|noargs
 lang|de
 author|Missing Authors
