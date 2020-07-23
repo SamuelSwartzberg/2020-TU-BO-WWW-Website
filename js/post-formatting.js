@@ -79,7 +79,6 @@ document.querySelector('.site-name').innerHTML = `<span class='name first-name'>
 
 let localCitationMap = new Map();
 let cslLocale = formatCSLLocale(docLang);
-console.log(cslLocale);
 
 
 /* handle c::something;; style citations */
@@ -105,7 +104,6 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
 
 for (var citationObject of localCitationMap.values()) {
   let counter = 0;
-  console.log(citationObject);
   localCitationMap.forEach((filteredCiteObj, key) => {
     if (citationObject !== filteredCiteObj){ // prevent false positives from self-identity
       if (citationObject.author && filteredCiteObj.author && citationObject.issued && filteredCiteObj.issued){ // if the relevant properties even exist
@@ -122,7 +120,6 @@ for (var citationObject of localCitationMap.values()) {
 
 document.querySelectorAll('.citation-inner').forEach((item, i) => {
   let citation = new Cite(citationMap.get(item.innerHTML));
-  console.log(citation);
   item.innerHTML = citation.format('citation', {format: 'html', template: 'apa-modified-year', lang: cslLocale});
 
 });
@@ -139,7 +136,6 @@ var footnoteCounter = 0;
 if (!noFootnotes){
   let selector = 'p, ul, ol, table';
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
-    console.log(item.innerHTML);
     if (!item.querySelector(selector)){ //This one will come later, we need to avoid duplicate
       // create the footnotes both in the text and in the footnote container
       item.innerHTML = item.innerHTML.replace(/ ?fnv?:\{([^\}]+)\}/g, (match, footnoteContent) => {
@@ -188,19 +184,18 @@ if(footnoteCounter===0){
 }
 
 //Figures
-console.log(noFigures);
 if (!noFigures){
   document.querySelectorAll('p, ul, ol, table').forEach((item, i) => {
     let fileLocation = document.location.href.split('.html')[0];
     item.innerHTML = item.innerHTML.replace(
-      /fig:\{([^:]*):([^:]+):([^:]+):([^:]+)([^\}\{]*)\}/g, // Ugly regex matches figure syntax
+      /fig:\{([^:]*):([^:]+):([^:]+):([^:]+?)(:[^\}\{]*?)?\}/g, // Ugly regex matches figure syntax
       (match, captionText, side, size, url, moreUrls) => {
         var urlString = "";
         if(moreUrls){
+          moreUrls = moreUrls.slice(1);
           let urlArray = moreUrls.split(":");
           for (let urlElement of urlArray) {
             if(urlElement){
-              console.log(urlElement);
               urlString += `<img src="${fileLocation}/${urlElement}" alt="${captionText}">`;
             }
 
@@ -235,7 +230,6 @@ let sortedCitedKeys = Array.from(localCitationMap.keys()).sort();
 for (let citedWork of sortedCitedKeys) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
   let citedWorkObject = new Cite(localCitationMap.get(citedWork)); // BUG: Is looking in wrong place atm, should be getting from citedWorksSet
-  console.log(citedWorkObject);
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
       citedWorkObject.format(
@@ -293,7 +287,6 @@ document.querySelector('.spellcheck').onclick = (event) => {
 }
 
 document.querySelector('.font-selector').onchange = (event) => {
-  console.log(event);
   let siteContainer = document.querySelector('.site-container');
   for (let option of event.target.children) {
     siteContainer.classList.remove(option.value);
@@ -316,7 +309,6 @@ document.querySelector('.hide-selector').onclick = () => {
 
 // delete bibliography container
 
-console.log(bibliographyContainerList.children.length);
 if(bibliographyContainerList.children.length === 0){
   document.querySelector('#bibliography-container').outerHTML = "";
 }
