@@ -23,7 +23,26 @@ document.querySelector('.print-pager').onclick = () => {
     }
 
     afterRendered(pages) {
+
+
       for (var page of pages) {
+        if(page.element){
+          let toclist = page.element.querySelector('#table-of-contents .toc-list');
+          let toc = page.element.querySelector('#table-of-contents');
+          if( toc && toclist ){
+            toclist.querySelectorAll('ol').forEach((orderedListItem, i) => {
+              orderedListItem.style.counterIncrement = "none";
+              orderedListItem.style.counterReset = "section-counter 0";
+              console.log(orderedListItem);
+            });
+            toc.querySelectorAll('li').forEach((listItem, i) => {
+              listItem.style.counterIncrement = "section-counter";
+              console.log(listItem);
+            });
+          }
+        }
+
+
         var footnotes = page.element.querySelectorAll('.footnote-bottom');
         console.log(page);
         if (footnotes.length === 0) {
