@@ -183,10 +183,12 @@ figure.centerflex .image-container img{
 	min-width: 0;
 }
 .image-container{
-	border: 0.1em solid black;
-	margin-bottom: 0.75em;
+	border: 0.05em solid black;
 	max-width: 100%;
 	overflow: hidden;
+}
+.image-container:not(:only-child){
+	margin-bottom: 0.75em;
 }
 
 @media (max-width: 700px){
@@ -201,7 +203,7 @@ figure.centerflex .image-container img{
 body{
   display: flex;
   justify-content: center;
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro", YuGothic , 'Yu Gothic', 'Montserrat', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , 'ＭＳ ゴシック' , 'MS Gothic', sans-serif;
 	width: 100%;
 }
 .site-container {
