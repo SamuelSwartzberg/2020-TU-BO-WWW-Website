@@ -867,6 +867,15 @@ citationMap.set(
 					20
 				]
 			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					4
+				]
+			]
 		}
 	}
 );
