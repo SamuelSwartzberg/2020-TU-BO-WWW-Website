@@ -1307,7 +1307,6 @@ citationMap.set(
 		}
 	}
 );
-});
 citationMap.set(
 	"TagaRethinkingJaMasc",
 	{
@@ -1377,7 +1376,7 @@ citationMap.set(
 		}
 	});
 citationMap.set(
-	"name",
+	"ComicMarketWhat",
 	{
 		"id": "http://zotero.org/users/5451256/items/X5QKT6VU",
 		"type": "webpage",
