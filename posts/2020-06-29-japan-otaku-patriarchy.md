@@ -1,4 +1,4 @@
-animetitle|What, really, is an otaku?
+title|What, really, is an otaku?
 date|23.07.2020
 abstract|The otaku is, through many lenses, distorted in such a way that the shadow they cast bears little resemblance to the actual thing. By being the point at which many different identities are negotiated, such as nationalism and orientalism but mainly gender and the good life, the otaku signifies many things to many people, but rarely themselves. Can we see through these narratives?
 arguments|noargs
