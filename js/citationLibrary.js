@@ -1479,9 +1479,12 @@ citationMap.set(
 		"URL": "https://www.thedailybeast.com/articles/2014/06/03/japan-s-kiddie-porn-empire-bye-bye",
 		"author": [
 			{
+				"family": "Adelstein",
+				"given": "Jake",
+			},
+			{
 				"family": "Kubo",
-				"given": "Jake Adelstein",
-				"suffix": "Angela Erika"
+				"given": "Angela Erika",
 			}
 		],
 		"issued": {

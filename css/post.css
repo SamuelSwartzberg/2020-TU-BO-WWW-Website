@@ -171,7 +171,9 @@ html[lang="en"] .cf .footnote-content::before{
 }
 
 li:target{
-	width: max-content;
+  width: auto; /* IE, earlier edge, weird mobile browsers */
+  width: moz-fit-content; /*FF*/
+  width: fit-content; /* All others*/
 	padding: 0 1ch;
 	background-color: rgba(0,0,0,0.1); }
 

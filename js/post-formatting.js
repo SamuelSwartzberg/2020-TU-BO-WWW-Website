@@ -106,19 +106,23 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
 /* Deal with multiple of the same Author (year) */
 
 for (var citationObject of localCitationMap.values()) {
-  let counter = 0;
-  localCitationMap.forEach((filteredCiteObj, key) => {
-    if (citationObject !== filteredCiteObj){ // prevent false positives from self-identity
-      if (citationObject.author && filteredCiteObj.author && citationObject.issued && filteredCiteObj.issued){ // if the relevant properties even exist
-        if ((citationObject.author[0].family === filteredCiteObj.author[0].family)
-        && (citationObject.issued["date-parts"][0][0] === filteredCiteObj.issued["date-parts"][0][0])){ //author (year) is the same
-          filteredCiteObj["note"]=String.fromCharCode(97 + counter);
-          counter++;
+  if (!citationObject["note"]){
+    let isNonUnique = false; // In theory, every work is the (YYYYa) version by default, but of course we only want to show it as that if there are multiple author(year)
+    let counter = 1;
+    localCitationMap.forEach((filteredCiteObj, key) => {
+      if (citationObject !== filteredCiteObj){ // prevent false positives from self-identity
+        if (citationObject.author && filteredCiteObj.author && citationObject.issued && filteredCiteObj.issued){ // if the relevant properties even exist
+          if ((citationObject.author[0].family === filteredCiteObj.author[0].family)
+          && (citationObject.issued["date-parts"][0][0] === filteredCiteObj.issued["date-parts"][0][0])){ //author (year) is the same
+            isNonUnique = true; // there was a b (at least)
+            filteredCiteObj["note"]=String.fromCharCode(97 + counter); //will start at b and cout up
+            counter++;
+          }
         }
       }
-    }
-  });
-
+    });
+    if (isNonUnique) citationObject["note"]=String.fromCharCode(97); // if there was a b, we need an a
+  }
 }
 
 document.querySelectorAll('.citation-inner').forEach((item, i) => {
@@ -146,6 +150,7 @@ if (!noFootnotes){
         footnoteContent = capitalizeFirstLetter(footnoteContent);
         let footnoteClasslist = ""
         if (match.includes("fnv:{")) footnoteClasslist+="cf";
+        match.includes("school") ? console.log(match) : "";
         let bottomFootnote = htmlToElement(`<li id="fn-${footnoteCounter}-content" class="footnote-bottom ${footnoteClasslist}"><a class="footnote" href="#fn-${footnoteCounter}">${footnoteCounter}</a><span class="footnote-content">${footnoteContent}</span></li>`);
         document.querySelector('.footnote-container ol').appendChild(bottomFootnote);
         return `<a class="footnote footnote-inline" id="fn-${footnoteCounter}" href="#fn-${footnoteCounter}-content">${footnoteCounter}</a> `
@@ -228,8 +233,37 @@ if (!noFigures){
 }
 
 // bibliography
+
+let sortCitations = function (a, b) {
+  let citationObjectA = a[1];
+  let citationObjectB = b[1];
+  let citObjAFamily = citationObjectA.author[0].family || citationObjectA.author[0].literal;
+  let citObjBFamily = citationObjectB.author[0].family || citationObjectB.author[0].literal;
+  if (citObjAFamily > citObjBFamily){
+    return 1; // b is earlier in the alphabet and comes first
+  } else if (citObjAFamily === citObjBFamily){
+    if (Number(citationObjectA.issued["date-parts"][0]) > Number(citationObjectB.issued["date-parts"][0])){
+      return 1;
+    } else if (Number(citationObjectA.issued["date-parts"][0]) === Number(citationObjectB.issued["date-parts"][0])){
+      if (citationObjectA.note && citationObjectB.note
+      && citationObjectA.note > citationObjectB.note){
+        return 1;
+      } else if (citationObjectA.note < citationObjectB.note){
+        return -1;
+      } else {
+        return 0;
+      }
+    } else {
+      return -1;
+    }
+  } else {
+    return -1;
+  }
+}
+
 let bibliographyContainerList = document.querySelector('#bibliography-container ol');
-let sortedCitedKeys = Array.from(localCitationMap.keys()).sort();
+let citationMapEntriesArray = Array.from(localCitationMap.entries());
+let sortedCitedKeys = citationMapEntriesArray.sort(sortCitations).map(keyValArr => keyValArr[0]);
 for (let citedWork of sortedCitedKeys) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
   let citedWorkObject = new Cite(localCitationMap.get(citedWork));
