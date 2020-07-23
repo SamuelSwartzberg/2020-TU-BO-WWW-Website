@@ -125,6 +125,13 @@ html[lang="de"] .citation.ibid.nodot::after{
   background-color: #fdec96;
 }
 
+html[lang="de"] .page-number::before{
+  content: ", s. "
+}
+html[lang="en"] .page-number::before{
+  content: ", p. "
+}
+
 /* Footnotes */
 
 .footnote{

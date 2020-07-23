@@ -92,8 +92,11 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
       if (!citation){continue;} // this handles the case of c::c::
       let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
       if (citationString.includes(" ")) throw new Error("Citation string includes a space. Perhaps you forgot to terminate the citation with ';;'?");
+      // Handle page number:
+      let pageNumber = citationString.includes(":") ? citationString.split(":")[1] : false;
+      citationString=citationString.split(":")[0];
       localCitationMap.set(citationString, citationMap.get(citationString));
-      let formattedCitation = `<span class="citation"><span class="citation-inner">${citationString}</span></span>`; //format it as as an APA citation
+      let formattedCitation = `<span class="citation"><span class="citation-inner">${citationString}</span></span>${pageNumber ? "<span class='page-number'>"+pageNumber+"</span>" : ""}`; //format it as as an APA citation
       htmlContent = htmlContent.concat(formattedCitation,...citation.split(";;").slice(1)); //rejoin everything we sliced off
     }
   }
@@ -229,7 +232,7 @@ let bibliographyContainerList = document.querySelector('#bibliography-container 
 let sortedCitedKeys = Array.from(localCitationMap.keys()).sort();
 for (let citedWork of sortedCitedKeys) {
   if (!citedWork){continue;} //we don't care about empty strings / undefined / whatever
-  let citedWorkObject = new Cite(localCitationMap.get(citedWork)); 
+  let citedWorkObject = new Cite(localCitationMap.get(citedWork));
   bibliographyContainerList.appendChild(
     htmlToElement(`<li> ${
       citedWorkObject.format(
