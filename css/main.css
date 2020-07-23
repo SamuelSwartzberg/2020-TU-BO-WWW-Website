@@ -61,7 +61,7 @@ hr{
 
 blockquote, q { quotes: '"' '"' "'" "'"; }
 q:before{ content: " " open-quote;}
-q:after{ content: " " close-quote;}
+q:after{ content: close-quote " ";}
 blockquote{
 	margin-bottom: 1em;
 	margin-left: 2em; }
