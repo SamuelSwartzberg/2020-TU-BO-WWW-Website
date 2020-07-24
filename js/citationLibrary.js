@@ -1590,3 +1590,57 @@ citationMap.set(
 		}
 	}
 );
+citationMap.set(
+	"FreedmanCountHave",
+	{
+		"id": "http://zotero.org/users/5451256/items/ISBBHAVL",
+		"type": "article-journal",
+		"container-title": "Asian Studies Review",
+		"issue": "3",
+		"language": "en",
+		"page": "295-313",
+		"title": "“Count What You Have Now. Don't Count What You Don't Have”: The Japanese Television Drama Around 40 and the Politics of Women's Happiness",
+		"volume": "35",
+		"author": [
+			{
+				"family": "Freedman",
+				"given": "Alisa"
+			},
+			{
+				"family": "Iwata-Weickgenannt",
+				"given": "Kristina"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"RubinDeviations",
+	{
+		"id": "http://zotero.org/users/5451256/items/37M4FGH2",
+		"type": "book",
+		"event-place": "Durham",
+		"publisher": "Duke University Press",
+		"publisher-place": "Durham",
+		"title": "Deviations: A Gayle Rubin Reader",
+		"author": [
+			{
+				"family": "Rubin",
+				"given": "Gayle S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	}
+);
