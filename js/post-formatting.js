@@ -91,7 +91,9 @@ document.querySelectorAll('body').forEach((item, i) => { // handles the unlikely
     for (let citation of citations.slice(1)) { //citations.slice(1) since the first element of citations does not actually contain a citation
       if (!citation){continue;} // this handles the case of c::c::
       let citationString = citation.split(";;")[0]; //;; delimits the end of a citation
-      if (citationString.includes(" ")) throw new Error("Citation string includes a space. Perhaps you forgot to terminate the citation with ';;'?");
+      if (citationString.includes(" ")){
+        console.log(citationString);
+        throw new Error("Citation string includes a space. Perhaps you forgot to terminate the citation with ';;'?");}
       // Handle page number:
       let pageNumber = citationString.includes(":") ? citationString.split(":")[1] : false;
       citationString=citationString.split(":")[0];
