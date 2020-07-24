@@ -1644,3 +1644,62 @@ citationMap.set(
 		}
 	}
 );
+citationMap.set(
+	"KamTheCommonSenseOtaku",
+	{
+		"id": "http://zotero.org/users/5451256/items/4DCZB97J",
+		"type": "article-journal",
+		"container-title": "Japan Forum",
+		"issue": "2",
+		"journalAbbreviation": "Japan Forum",
+		"page": "151-173",
+		"title": "The common sense that makes the ‘otaku’: rules for consuming popular culture in contemporary Japan",
+		"volume": "25",
+		"author": [
+			{
+				"family": "Kam",
+				"given": "Thiam Huat"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		}
+	}
+);
+citationMap.set(
+	"GoogleAnimeIsTrash",
+	{
+		"id": "http://zotero.org/users/5451256/items/MUGZ4BH5",
+		"type": "webpage",
+		"container-title": "Google Images",
+		"title": "anime is trash and so am I meme - Google Search",
+		"URL": "https://web.archive.org/web/20200724182625/https://www.google.com/search?q=anime+is+trash+and+so+am+I+meme&sxsrf=ALeKk00gPKV0m0QvNoonM0V8zX6ewNKemw%3A1595614913212&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjFiubgwObqAhWDMewKHZLjAvoQ_AUoAXoECGUQAw&biw=1024&bih=1173",
+		"author": [
+			{
+				"literal": "Google"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					24
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					7,
+					24
+				]
+			]
+		}
+	}
+);
