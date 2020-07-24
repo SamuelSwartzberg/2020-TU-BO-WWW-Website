@@ -189,8 +189,8 @@ li:target:before{
 
 #main-article .footnote-bottom, .pagedjs_pages .footnote-bottom{ /* so we get these rules to apply before print styling takes effect*/
   font-size: 10pt;
-  line-height: 1.0;
-  margin-bottom: 0.68em;
+  line-height: 1.2;
+  margin-bottom: 0.8em; /* It's impossible to find exactly the right distance, as this has to account for the hr, which is not relative to the amount of footnotes, and increasing the distance causes things to reflow, which might excarbate problems */
   display: inline-block;
   width:100%;
   float: right;
