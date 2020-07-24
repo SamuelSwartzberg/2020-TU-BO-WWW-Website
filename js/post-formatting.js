@@ -281,8 +281,8 @@ for (let citedWork of sortedCitedKeys) {
 
 //Capitalize .ebd
 document.querySelectorAll('.footnote-bottom:not(.cf) .footnote-content').forEach((item, i) => {
-  if (item.children&&item.children[0]&&item.children[0].classList && item.children[0].classList.contains("ibid")){
-    item.children[0].classList.add("capitalize");
+  if (item.childNodes&&item.childNodes[0]&&item.childNodes[0].classList && item.childNodes[0].classList.contains("ibid")){
+    item.childNodes[0].classList.add("capitalize");
   }
 });
 
