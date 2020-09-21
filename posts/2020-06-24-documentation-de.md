@@ -1,7 +1,7 @@
 title|Paperify
 date|24.06.2020
 abstract|Aus Markdown-Dateien eine Sammlung von akademischen, ansprechend formatierten Papers generieren.
-arguments|nofootnotes
+arguments|nofootnotes nopreview
 lang|de
 author|site
 ## Konzept

@@ -1,7 +1,7 @@
 title|Paperify
 date|24.06.2020
 abstract|Generate a personal website of papers, nicely and academically formatted, from Markdown files.
-arguments|nofootnotes nofigures
+arguments|nofootnotes nofigures nopreview
 lang|en
 author|site
 This text is also available in [German](2020-06-24-documentation-de), the English version is still unfinished.
